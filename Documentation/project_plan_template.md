@@ -30,7 +30,7 @@
 Authors:
 Isabelle Grunewald,
 Alina Bobysheva,
-Anna Rosputina,
+Anna "Charlie" Rosputina,
 Flavio Florovits,
 Stephen Obiri-Ibe,
 Mikhail Trubnikov
@@ -126,14 +126,14 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
 ### Project Organization
 
-| Name               | Roles                                            | Contact                  |
-| --------------     | -----------------------                          | -----------------------  |
-| Alina Bobysheva    | Scrum Master, Producing and Publishing, Graphics | <AD1097@student.jamk.fi> |
-| Isabelle Grunewald | Product Owner (Art & Design), Graphics           | <AD0237@student.jamk.fi> |
-| Anna Rosputina     | Product Owner (Tech), Programmer, Graphics       | <AD2257@student.jamk.fi> |
-| Flavio Florovits   | Programmer, QA Lead                              | <AD0285@student.jamk.fi> |
-| Stephen Obiri-Ibe  | Audio, Narrative, Business                       | <AD1859@student.jamk.fi> |
-| Mikhail Trubnikov  | Design, Implementation, Business                 | <AD2089@student.jamk.fi> |
+| Name                         | Roles                                            | Contact                  |
+| --------------            | -----------------------                          | -----------------------  |
+| Alina Bobysheva           | Scrum Master, Producing and Publishing, Graphics | <AD1097@student.jamk.fi> |
+| Isabelle Grunewald        | Product Owner (Art & Design), Graphics           | <AD0237@student.jamk.fi> |
+| Anna "Charlie" Rosputina  | Product Owner (Tech), Programmer, Graphics       | <AD2257@student.jamk.fi> |
+| Flavio Florovits          | Programmer, QA Lead                              | <AD0285@student.jamk.fi> |
+| Stephen Obiri-Ibe         | Audio, Narrative, Business                       | <AD1859@student.jamk.fi> |
+| Mikhail Trubnikov         | Design, Implementation, Business                 | <AD2089@student.jamk.fi> |
 
 ### Steering Group
 
@@ -161,6 +161,8 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 ● Visual Studio
 
 ● Adobe Illustrator
+
+● Adobe Photoshop
 
 ### Timetable
 
