@@ -137,8 +137,8 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
 ### Steering Group
 
-| Name           | Roles     | Contact                 |
-| -------------- | --------- | ----------------------- |
+| Name               | Roles   | Contact                       |
+| ------------------ | ------- | ----------------------------- |
 | Jere Lamberg       | Teacher | <lamberg.jere@jamk.fi>        |
 | Risto Koskenkorva  | Teacher | <koskenkorva.risto@jamk.fi>   |
 | Ilari Miikkulainen | Teacher | <miikkulainen.ilari@jamk.fi>  |
@@ -146,7 +146,7 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
 ### Tools
 
-• Unity 2D
+• Unity 2D 2022.3.17f1
 
 ● GitHub
 
