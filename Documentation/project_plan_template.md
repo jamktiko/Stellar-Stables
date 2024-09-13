@@ -1,40 +1,34 @@
 # Project Plan
 
-- [Project Plan] (#project-plan)
-  - [Project Information] (#project-information)
-  - [Terms and Abbreviations] (#terms-and-abbreviations)
-  - [References] (#references)
-  - [Project Contents] (#project-contents)
-  - [Introduction] (#introduction)
-  - [Project Background and Objectives] (#project-background-and-objectives]
-  - [End Products] (#end-products)
-  - [Project Qualifications) (#project-qualifications)
-  - [Plan of Action] (#plan-of-action)
-    - [Project Start] (#project-start)
-  - [Project Implementation] (#project-implementation)
-  - [Project Testing] (#project-testing)
-  - [Project Ending] (#project-ending)
-  - [Project Resources] (#project-resources)
-  - [Project Organization] (#project-organization)
-  - [Steering Group] (#steering-group)
-  - [Work Groups] (#work-groups)
-  - [Client's Responsibilites] (#clients-responsibilites)
-  - [Tools] (#tools)
-  - [Timetable] (#timetable)
-  - [Reporting and Communication] (#reporting-and-communication)
-    - [Internal Reporting] (#internal-reporting)
-    - [Client Reporting] (#client-reporting)
-    - [Daily Scrum Plan] (#daily-scrum-plan)
-    - [Communication Channels] (#communication-channels)
+- [Project Plan](#project-plan)
+  - [Project Information](#project-information)
+  - [Terms and Abbreviations](#terms-and-abbreviations)
+  - [References](#references)
+  - [Project Contents](#project-contents)
+  - [Introduction](#introduction)
+  - [Project Background and Objectives](#project-Background-and-objectives]
+  - [End Products](#end-products)
+  - [Project Qualifications)(#project-qualifications)
+  - [Project Resources](#project-resources)
+  - [Project Organization](#project-organization)
+  - [Steering Group](#steering-group)
+  - [Work Groups](#work-groups)
+  - [Client's Responsibilites](#clients-responsibilites)
+  - [Tools](#tools)
+  - [Timetable](#timetable)
+  - [Reporting and Communication](#reporting-and-communication)
+    - [Internal Reporting](#internal-reporting)
+    - [Daily Scrum Plan](#daily-scrum-plan)
+    - [Communication Channels](#communication-channels)
   - [Documentation]
-  - [Documentation Templates] (#documentation-templates)
-  - [Document Control] (#document-control)
-  - [Risk Management] (#risk-management)
-  - [To Be Determined] (#to-be-determined)
+  - [Documentation Templates](#documentation-templates)
+  - [Document Control](#document-control)
+  - [Risk Management](#risk-management)
+  - [To Be Determined](#to-be-determined)
 
-## Project Information
+# Project Information
 
-### Stellar Stables
+## Stellar Stables
 
 Authors:
 Isabelle Grunewald,
@@ -51,13 +45,19 @@ Mikhail Trubnikov
 | git        | Version management system                                                                        |
 | GitHub     | Service built around making git easier to use                                                    |
 | MarkdownMD | Markdown is a lightweight markup language for creating formatted text using a plain-text editor. |
+| GDD        | Game Design Document                                                                             |
+| MVP        | Minimum Viable Product                                                                           |
+| HLTP       | High Level Test Plan                                                                             |
+| JAMK       | Jyväskylä University of Applied Sceienes / Jyväskylän Ammattikorkeakoulu                         |
+
+
 
 ### References
 
 | Reference | Material                        |
 | --------- | ------------------------------- |
-| HLTP      | \<Link to HLTP document>        |
-| GDD       | \<link to game design document> |
+| HLTP      | [Link to HLTP document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/EVb_o76c46NDumpvoMjDDxUBC46nS_1Di8F01Eb2sxy_Nw?e=rxZTeK)        |
+| GDD       | [link to game design document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/ER8_As5LvfFHqDkjONyH53wBNn1ZxOYtvB12rg6k__X0YA?e=423M97) |
 
 ## Project Contents
 
@@ -85,10 +85,7 @@ The game aims to provide a fun and engaging experience for the target audience, 
 
 ● Create replayaility by allowing horses to level up
 
-
 ### End Products
-
-\<Write here what project will produce over its lifespan. E.g.,>
 
 ● Project Plan
 
@@ -128,22 +125,9 @@ The game aims to provide a fun and engaging experience for the target audience, 
 
 ## Plan of action
 
-\<This chapter includes project tools. E.g., Scrum, OMT++, Prototyping, etc.
 The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
-### Project Start
-
-### Project Implementation
-
-### Project Testing
-
-### Project Ending
-
-## Project Resources
-
 ### Project Organization
-
-\<The people included in the project and their main responsibilities. How is the project organized and what kind of groups are created? Also find out the roles and activities of the guidance and the client as well as other participants in the project.>
 
 | Name               | Roles                                            | Contact                  |
 | --------------     | -----------------------                          | -----------------------  |
@@ -163,15 +147,7 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 | Ilari Miikkulainen | Teacher | <miikkulainen.ilari@jamk.fi>  |
 | Kalle Raijonkari   | Teacher | <raijonkari.kalle@jamk.fi>    |
 
-### Client’s Responsibilities
-
-\<If you have a client!>
-
-\<In this chapter you will describe what responsibilities the client has towards the project. List all the resources which client will provide to the project in its different phases. These can be seen as client’s responsibilities so that the project can move forward. Remember to inform the client what is needed from them to make the project succeed.>
-
 ### Tools
-
-\<List all the tools which the project needs to succeed, software and hardware. If the client offers something, it needs to be mentioned on this chapter.>
 
 • Unity 2D
 
@@ -187,9 +163,9 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
 ● Visual Studio
 
-### Timetable
+● Adobe Illustrator
 
-\<Write down a timetable on this chapter. In what way is the project carried through? You can decide what level of detail is the most appropriate for your project.>
+### Timetable
 
 | Event                  | Date        | Additional information/Participants    |
 | ---------------------- | ----------- | -------------------------------------- |
@@ -205,43 +181,50 @@ The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
 ### Internal Reporting
 
-\<Describe how the project reports to its organization and who is responsible for which type of reporting.>
-
 | Name | Role | Responsibilities |
-| ---- | ---- | ---------------- |
-
-## Client Reporting
-
-\<Describe how project reports to its client and in what timeframe. Who is the recipient of the finished reports?>
+| ------------------- | ------------ | ------------------------------- |
+| Alina Bobysheva     | Scrum Master | Scrum Reporting & Retrospective |
+| Flavio Florovits    | QA Lead      | Test Reporting                  |
 
 ## Daily Scrum Plan
 
-\<Project’s weekly meeting is held at xxx in xxx. During the meeting, all the finished work is checked, and upcoming work is planned. Meeting transcript is made from each meeting and it is contained in the project directory.>
+The project's weekly meeting is held on Mondays at 10:30 and Fridays at 14:30 in person at the office. During the meeting, all the finished work is checked, and the tasks for the upcoming week are planned and reviewed. Meeting minutes from each meeting will be posted in the team's Discord server.
+
+Team members must post a short summary of the work they did at the end of each working day, including their next plans and when they plan to do it, as well as any issues that they have been facing. This keeps all team members in the loop to what everyone did on a given day.
 
 ## Communication Channels
 
-\<Describe the communication channels project and the client have on their disposal during the project. If the business or the client has a system for conference calls for example, it needs to be mentioned here (user manual would be appreciated as well).>
+● Team Discord Server
+
+● Microsoft Teams
+
+● Email
 
 ## Documentation
 
-\<Write here how project intends to document their work. Or will there be documentation at all?>
+Team Members will have to keep track of their working hours, their daily tasks, as well as keep a learning diary of their primary roles. 
+
+The Game Design Document is the document that will have all details related to the project and should be updated accordingly.
+
+This page will aslo be kept up-to-date with changes in the project plan.
 
 ### Documentation Templates
 
-\<Describe which templates the documents use. Are the templates JAMK templates or project’s own templates or something else?>
+The documentation must use JAMK's own other reporting template, except for the Game Design Document which will be using a GDD template instead.
 
 ### Document Control
 
-\<Describe how the documents will be secured, who has the rights to handle the documents, how are backups done, which documents use version control (E.g., the document version 1.0 when the client has approved the document) and are named (whether the document name will have version number).>
+Documents are to be stored in the team's shared OneDrive folder with access restricted to team members only. This ensures that there's a verison history, changes are documented correctly, and that backups can easily be made. Read-only access may be provided to public documents on a case-by-case basis.
+
+Access management to team documents is primarily handled by Flavio Florovits. 
 
 ## Risk Management
 
-\<Describe here how project intends to manage and track the risks of the project.>
-
-| Risks                                                  | Probability | Impact | Prevention                     |
-| ------------------------------------------------------ | ----------- | ------ | ------------------------------ |
-| Employees are not motivated and do not show up to work | Small       | Big    | Coffee and pulla at workplace. |
+| Risks                                        | Probability  | Impact  | Prevention                                                         |
+| -------------------------------------------- | ------------ | ------- | ------------------------------------------------------------------ |
+| Team members fall ill and are unable to work | Medium       | High    | Support roles to fill in for absent members                        |
+| Feature creep                                | High         | High    | Focusing on MVP and running plans and ideas by PO, SM and Producer |
 
 ## To Be Determined
 
-\<Describe what things are still open in the project. What else needs client’s input?
+There are possibilities on top of the MVP to add additional gameplay elements, including horses, areas, puzzles, and minigames to provide more content in the case time allows.
