@@ -53,8 +53,8 @@ Mikhail Trubnikov
 
 | Reference | Material                        |
 | --------- | ------------------------------- |
-| HLTP      | [Link to HLTP document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/EVb_o76c46NDumpvoMjDDxUBC46nS_1Di8F01Eb2sxy_Nw?e=rxZTeK)        |
-| GDD       | [link to game design document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/ER8_As5LvfFHqDkjONyH53wBNn1ZxOYtvB12rg6k__X0YA?e=423M97) |
+| HLTP      | [Link to High Level Test Plan document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/EVb_o76c46NDumpvoMjDDxUBC46nS_1Di8F01Eb2sxy_Nw?e=rxZTeK)        |
+| GDD       | [Link to Game Design Document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/ER8_As5LvfFHqDkjONyH53wBNn1ZxOYtvB12rg6k__X0YA?e=423M97)                 |
 
 ## Project Contents
 
