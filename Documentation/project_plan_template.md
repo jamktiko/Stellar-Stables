@@ -34,9 +34,15 @@
 
 ## Project Information
 
-\<Project's name>
+### Stellar Stables
 
 Authors:
+Isabelle Grunewald,
+Alina Bobysheva,
+Anna Rosputina,
+Flavio Florovits,
+Stephen Obiri-Ibe,
+Mikhail Trubnikov
 
 ### Terms and Abbreviations
 
@@ -57,11 +63,28 @@ Authors:
 
 ### Introduction
 
-\<Short description of the project and the document.>
+Stellar Stables is a 2D point-and-click game designed for children aged 5-13. Set in a bright, quirky world, players explore various areas to collect various horses by solving puzzles and playing minigames. Each puzzle is unique and related to the environment they are found in.
+
+The main goal is to discover and care for a wide variety of horses, each with its own personality and specific needs. Players manage collected horses in the stables, having to keep them happy by providing the correct food, pen decor and placing them next to preferred horses. Some rare horses unlock special abilities to help players access new areas or find even rarer horses.
+
+The game's atmoshpere is light and whimsical, with a focus on exploration and interaction, which encourages players to engage with a lively world and the species that inhabit it.
 
 ### Project Background and Objectives
 
-\<What is done and to who? What are the projects goals?>
+The game aims to provide a fun and engaging experience for the target audience, focusing on casual gameplay, combining puzzle-solving, exploration, as well as nurturing mechanics.
+
+**Objectives:**
+
+● Create an engaging and child-friendly game
+
+● Encourage map exploration and puzzle solving
+
+● Introduce management gameplay involving horse care
+
+● Implement a scalable progression system
+
+● Create replayaility by allowing horses to level up
+
 
 ### End Products
 
@@ -71,15 +94,42 @@ Authors:
 
 ● Game Design Document
 
+● Product Backlog
+
 ● Sprint Backlog
+
+● High Level Test Plan
 
 ### Project Qualifications
 
-\<Write into this chapter what is the minimum for a passing project.>
+● 4 scenes - Ocean, Home, Stables, Map
+
+● Background music and SFX
+
+● 3 Rare horses + 2 skins
+
+● 3 Common Horses
+
+● Horse Art
+
+● Horse Animations
+
+● Horse Sounds
+
+● Unique Needs
+
+● Horse Care
+
+● 3 minigames with 3 unique difficulties
+
+● Player inventory
+
+● Menu screen
 
 ## Plan of action
 
 \<This chapter includes project tools. E.g., Scrum, OMT++, Prototyping, etc.
+The project intends to use Scrum and Agile methods, with 2 week sprints, etc.
 
 ### Project Start
 
@@ -95,26 +145,23 @@ Authors:
 
 \<The people included in the project and their main responsibilities. How is the project organized and what kind of groups are created? Also find out the roles and activities of the guidance and the client as well as other participants in the project.>
 
-| Name           | Roles                   | Contact                 |
-| -------------- | ----------------------- | ----------------------- |
-| Martti Vainaa  | Scrum Master            | <A1234@student.jamk.fi> |
-| Kalevi Kuollut | Developer, testing lead | <B1234@student.jamk.fi> |
+| Name               | Roles                                            | Contact                  |
+| --------------     | -----------------------                          | -----------------------  |
+| Alina Bobysheva    | Scrum Master, Producing and Publishing, Graphics | <AD1097@student.jamk.fi> |
+| Isabelle Grunewald | Product Owner (Art & Design), Graphics           | <AD0237@student.jamk.fi> |
+| Anna Rosputina     | Product Owner (Tech), Programmer, Graphics       | <AD2257@student.jamk.fi> |
+| Flavio Florovits   | Programmer, QA Lead                              | <AD0285@student.jamk.fi> |
+| Stephen Obiri-Ibe  | Audio, Narrative, Business                       | <AD1859@student.jamk.fi> |
+| Mikhail Trubnikov  | Design, Implementation, Business                 | <AD2089@student.jamk.fi> |
 
 ### Steering Group
 
 | Name           | Roles     | Contact                 |
 | -------------- | --------- | ----------------------- |
-| Martti Vainaa  | Teacher   | <A1234@jamk.fi>         |
-| Kalevi Kuollut | Professor | <B1234@student.jamk.fi> |
-
-### Work Groups
-
-\<if there is one>
-
-| Name           | Roles                   | Contact                 |
-| -------------- | ----------------------- | ----------------------- |
-| Martti Vainaa  | Scrum Master            | <A1234@student.jamk.fi> |
-| Kalevi Kuollut | Developer, testing lead | <B1234@student.jamk.fi> |
+| Jere Lamberg       | Teacher | <lamberg.jere@jamk.fi>        |
+| Risto Koskenkorva  | Teacher | <koskenkorva.risto@jamk.fi>   |
+| Ilari Miikkulainen | Teacher | <miikkulainen.ilari@jamk.fi>  |
+| Kalle Raijonkari   | Teacher | <raijonkari.kalle@jamk.fi>    |
 
 ### Client’s Responsibilities
 
@@ -126,23 +173,33 @@ Authors:
 
 \<List all the tools which the project needs to succeed, software and hardware. If the client offers something, it needs to be mentioned on this chapter.>
 
-• Servers?
+• Unity 2D
 
-• Cloud services?
+● GitHub
 
-• Workstations?
+● Jira
 
-• Etc.
+● Figma
+
+● Discord
+
+● O365
+
+● Visual Studio
 
 ### Timetable
 
 \<Write down a timetable on this chapter. In what way is the project carried through? You can decide what level of detail is the most appropriate for your project.>
 
-| Event                | Date      | Additional information/Participants    |
-| -------------------- | --------- | -------------------------------------- |
-| Preproduction Begins | 18.1.2021 | Online meeting space, Full work group. |
-| Initial sprint       | 1.2.2021  | Online meeting space, Full work group  |
-| Project ending       | 12.5.2021 | Unknown                                |
+| Event                  | Date        | Additional information/Participants    |
+| ---------------------- | ----------- | -------------------------------------- |
+| Preproduction Begins   | 02.09.2024  | Full work group                        |
+| Initial Sprint         | 16.09.2024  | Full work group                        |
+| Production 2 Begins    | 21.10.2024  | Full work group                        |
+| Post-production begins | 04.11.2024  | Full work group                        |
+| Release-Process        | 25.11.2024  | Full work group                        |
+| Publishing             | 09.12.2024  | Full work group                        |
+| Project ending         | 13.12.2024  | Full work group                        |
 
 ## Reporting and Communication
 
