@@ -203,7 +203,7 @@ Team members must post a short summary of the work they did at the end of each w
 
 Team Members will have to keep track of their working hours, their daily tasks, as well as keep a learning diary of their primary roles. 
 
-The Game Design Document is the document that will have all details related to the project and should be updated accordingly.
+The [Game Design Document](https://jamkstudent-my.sharepoint.com/:w:/g/personal/ad0285_student_jamk_fi/ER8_As5LvfFHqDkjONyH53wBNn1ZxOYtvB12rg6k__X0YA?e=423M97) is the document that will have all details related to the project and should be updated accordingly.
 
 This page will aslo be kept up-to-date with changes in the project plan.
 
