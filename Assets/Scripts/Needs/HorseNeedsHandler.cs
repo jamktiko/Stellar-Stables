@@ -6,7 +6,7 @@ public class HorseNeedsHandler : MonoBehaviour
 {
 
     [SerializeField] private HorseSO _horse;
-    [SerializeField] private int _overallHorseHappiness = 100;
+    [SerializeField] private int _overallHorseHappiness = 75;
     [SerializeField] private int _positiveNeighbourModifier;
     [SerializeField] private int _negativeNeighbourModifier;
     [SerializeField] private int _horseHungerSatisfcation = 10;
@@ -14,6 +14,10 @@ public class HorseNeedsHandler : MonoBehaviour
 
     private bool _isPreferredDecor;
 
+    private void Start()
+    {
+        InvokeRepeating("HungerCycle", 15f, 15f); // Increases hunger every x seconds
+    }
     public void Feed(FoodTypeSO inputFood)
     {
 
@@ -37,6 +41,20 @@ public class HorseNeedsHandler : MonoBehaviour
     private void DecreaseHunger()
     {
         _horseHunger -= _horseHungerSatisfcation;
+
+    }
+
+    private void HungerCycle()
+    {
+        _horseHunger += 1;
+        if (_horseHunger % 2 == 0)
+        {
+            _overallHorseHappiness -= 1; // Still need to work out happiness logic and account for modifiers
+        }
+        if (_horseHunger > 75)
+        {
+            Debug.Log("Horse hunger critical"); // Still need to work out logic
+        }
     }
 
     public void CheckDecor(DecorTypeSO inputDecor)
@@ -50,11 +68,16 @@ public class HorseNeedsHandler : MonoBehaviour
         {
             Debug.Log("Decor type is correct.");
             _isPreferredDecor = true;
+            _overallHorseHappiness += 25;
         }
         else
         {
             Debug.Log("Decor type " + inputDecor.GetDecorName() + " is incorrect for " + _horse.GetHorseName() + ".");
-            _isPreferredDecor = false;
+            if (_isPreferredDecor)
+            {
+                _isPreferredDecor = false;
+                _overallHorseHappiness -= 25; 
+            }
         }
     }
 
