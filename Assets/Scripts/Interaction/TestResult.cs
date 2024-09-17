@@ -11,3 +11,14 @@ public class TestResult : MonoBehaviour, IResult
         Debug.Log(message);
     }
 }
+
+//[CreateAssetMenu(menuName = "Interaction/Results/TestResult")]
+//public class TestResult : ScriptableResult
+//{
+//    public string message = "Result Executed";
+
+//    public override void Execute()
+//    {
+//        Debug.Log(message);
+//    }
+//}

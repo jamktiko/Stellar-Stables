@@ -38,7 +38,7 @@ namespace GDS {
 
 
         public static Hotbar CreateHotbar(int Size, string id = "hotbar") => new Hotbar(id, Size, CreateSlots(Size, SlotType.Consumable));
-        public static Hotbar CreateHotbar() => CreateHotbar(4);
+        public static Hotbar CreateHotbar() => CreateHotbar(3);
 
         public static Equipment CreateEquipment(params SlotType[] types) {
             var slots = types.ToDictionary(x => x, x => CreateSlot(x));

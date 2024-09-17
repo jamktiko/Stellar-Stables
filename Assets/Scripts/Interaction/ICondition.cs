@@ -5,6 +5,7 @@ using UnityEngine;
 public interface ICondition
 {
     bool IsConditionMet();
+    //void ResetCondition();
 }
 
 public interface IResult

@@ -13,11 +13,11 @@ namespace GDS.Demos.Basic {
         }
 
         private void Update() {
-            if (Input.GetKeyDown(KeyCode.Alpha1)) bus.Publish(new HotbarUseEvent(1));
-            if (Input.GetKeyDown(KeyCode.Alpha2)) bus.Publish(new HotbarUseEvent(2));
-            if (Input.GetKeyDown(KeyCode.Alpha3)) bus.Publish(new HotbarUseEvent(3));
-            if (Input.GetKeyDown(KeyCode.Alpha4)) bus.Publish(new HotbarUseEvent(4));
-            if (Input.GetKeyDown(KeyCode.Alpha5)) bus.Publish(new HotbarUseEvent(5));
+            //if (Input.GetKeyDown(KeyCode.Alpha1)) bus.Publish(new HotbarUseEvent(1));
+            //if (Input.GetKeyDown(KeyCode.Alpha2)) bus.Publish(new HotbarUseEvent(2));
+            //if (Input.GetKeyDown(KeyCode.Alpha3)) bus.Publish(new HotbarUseEvent(3));
+            //if (Input.GetKeyDown(KeyCode.Alpha4)) bus.Publish(new HotbarUseEvent(4));
+            //if (Input.GetKeyDown(KeyCode.Alpha5)) bus.Publish(new HotbarUseEvent(5));
 
             if (Input.GetKeyDown(KeyCode.I)) bus.Publish(new ToggleInventoryEvent());
             if (Input.GetKeyDown(KeyCode.Escape)) bus.Publish(new CloseInventoryEvent());

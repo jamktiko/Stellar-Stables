@@ -26,7 +26,7 @@ namespace GDS.Demos.Basic {
 
         public static readonly EventBus Bus = new();
         public static readonly Store Instance = new();
-        public readonly Inventory inventory = CreateInventory(40);
+        public readonly Inventory inventory = CreateInventory(12);
         public readonly Equipment equipment = CreateEquipment(EquipmentSlots);
         public readonly Hotbar hotbar = CreateHotbar();
         public readonly Chest chest1 = CreateChest("chest1");
