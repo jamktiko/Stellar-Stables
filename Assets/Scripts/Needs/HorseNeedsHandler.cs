@@ -49,7 +49,7 @@ public class HorseNeedsHandler : MonoBehaviour
         _horseHunger += 1;
         if (_horseHunger % 2 == 0)
         {
-            _overallHorseHappiness -= 1; // Still need to work out happiness logic and account for modifiers
+            DecreaseHappiness(1);
         }
         if (_horseHunger > 75)
         {
@@ -142,22 +142,29 @@ public class HorseNeedsHandler : MonoBehaviour
         {
             _overallHorseHappiness = 0;
         }
-        else if(_overallHorseHappiness > 100)
-        {
-            _overallHorseHappiness = 100;
-        }
+        //else if(_overallHorseHappiness > 100)
+        //{
+        //    _overallHorseHappiness = 100;
+        //}
+        UpdateHappiness();
     }
     private void IncreaseHappiness(int change)
     {
         _overallHorseHappiness += change;
-        if (_overallHorseHappiness < 100)
-        {
-            _overallHorseHappiness = 100;
-        }
-        else if (_overallHorseHappiness < 0)
+        //if (_overallHorseHappiness < 100)
+        //{
+        //    _overallHorseHappiness = 100;
+        //}
+        if (_overallHorseHappiness < 0)
         {
             _overallHorseHappiness = 0;
         }
+        UpdateHappiness();
+    }
+
+    private void UpdateHappiness()
+    {
+        // Update horse happiness stats
     }
 
 }
