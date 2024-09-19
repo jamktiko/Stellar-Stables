@@ -25,6 +25,8 @@ public class DragInventory : MonoBehaviour, IPointerDownHandler, IDragHandler
         //panelRectTransform.SetAsLastSibling();                                //the Inventory RectTransform is getting set as the last sibling
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             panelRectTransform, data.position, data.pressEventCamera, out pointerOffset);       //and the pointeroffset is getting calculated
+
+        Debug.Log("OnPointerDown in DragInventory called");
     }
 
     public void OnDrag(PointerEventData data)                               //If you start dragging now
@@ -37,5 +39,6 @@ public class DragInventory : MonoBehaviour, IPointerDownHandler, IDragHandler
         {
             panelRectTransform.localPosition = localPointerPosition - pointerOffset;
         }
+        Debug.Log("OnDrag in DragInventory called");
     }
 }
