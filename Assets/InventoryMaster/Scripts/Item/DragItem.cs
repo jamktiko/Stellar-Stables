@@ -305,10 +305,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                     Transform temp1 = secondItemGameObject.transform.parent.parent.parent;
                     Transform temp2 = oldSlot.transform.parent.parent;
 
-                    firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                    secondItemGameObject.transform.SetParent(oldSlot.transform);
-                    secondItemRectTransform.localPosition = Vector3.zero;
-                    firstItemRectTransform.localPosition = Vector3.zero;
+                    SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
 
                     if (!temp1.Equals(temp2))
                     {
@@ -330,10 +327,11 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
 
                 }
                 //if they are not from the same Itemtype the dragged one getting placed back
+                //wrong item to swap equipment item with. bread into helmet slot = this = no
                 else
                 {
-                    firstItemGameObject.transform.SetParent(oldSlot.transform);
-                    firstItemRectTransform.localPosition = Vector3.zero;
+                    ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
+                    //Debug.Log("hey this is the thing");
 
                     if (fromHot)
                         createDuplication(firstItemGameObject);
@@ -348,6 +346,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                     if (newSlot.Equals(newSlot.parent.GetChild(i)))
                     {
                         //checking if it is the right slot for the item
+                        //right item into equipment slot
                         if (itemTypeOfSlots[i] == transform.GetComponent<ItemOnObject>().item.itemType)
                         {
                             transform.SetParent(newSlot);
@@ -358,12 +357,15 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
 
                         }
                         //else it get back to the old slot
+                        //wrong item into equipment slot
                         else
                         {
-                            transform.SetParent(oldSlot.transform);
-                            rectTransform.localPosition = Vector3.zero;
+                            ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
+
                             if (fromHot)
                                 createDuplication(firstItemGameObject);
+
+                            //Debug.Log("yeah nah THIS is the thing.");
                         }
                     }
                 }
@@ -513,8 +515,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             //you cannot attach items to the resultslot of the craftsystem
             if (newSlot.transform.parent.tag == "ResultSlot" || newSlot.transform.tag == "ResultSlot" || newSlot.transform.parent.parent.tag == "ResultSlot")
             {
-                firstItemGameObject.transform.SetParent(oldSlot.transform);
-                firstItemRectTransform.localPosition = Vector3.zero;
+                ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
             }
             else
             {
@@ -558,11 +559,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                                 firstItem.itemValue = firstItem.maxStack;
                                 secondItem.itemValue = rest;
 
-                                firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                                secondItemGameObject.transform.SetParent(oldSlot.transform);
-
-                                firstItemRectTransform.localPosition = Vector3.zero;
-                                secondItemRectTransform.localPosition = Vector3.zero;
+                                SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
                             }
                         }
 
@@ -581,11 +578,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                             secondItem.itemValue = firstItem.maxStack;
                             firstItem.itemValue = rest;
 
-                            firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                            secondItemGameObject.transform.SetParent(oldSlot.transform);
-
-                            firstItemRectTransform.localPosition = Vector3.zero;
-                            secondItemRectTransform.localPosition = Vector3.zero;
+                            SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
                         }
                         //if they are different items or the stack is full, they get swapped
                         else if (!fitsIntoStack && rest == 0)
@@ -596,10 +589,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                                 newSlot.transform.parent.parent.parent.parent.GetComponent<Inventory>().UnEquipItem1(firstItem);
                                 oldSlot.transform.parent.parent.GetComponent<Inventory>().EquiptItem(secondItem);
 
-                                firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                                secondItemGameObject.transform.SetParent(oldSlot.transform);
-                                secondItemRectTransform.localPosition = Vector3.zero;
-                                firstItemRectTransform.localPosition = Vector3.zero;
+                                SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
 
                                 if (secondItemGameObject.GetComponent<ConsumeItem>().duplication != null)
                                     Destroy(secondItemGameObject.GetComponent<ConsumeItem>().duplication);
@@ -608,31 +598,27 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                             //if you are dragging an item from the equipmentsystem to the inventory and they are not from the same itemtype they do not get swapped.                                    
                             else if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() != null && firstItem.itemType != secondItem.itemType)
                             {
-                                firstItemGameObject.transform.SetParent(oldSlot.transform);
-                                firstItemRectTransform.localPosition = Vector3.zero;
+                                Debug.Log("yes the thing ran. it's here.");
+                                ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
                             }
                             //swapping for the rest of the inventorys
                             else if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() == null)
                             {
-                                firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                                secondItemGameObject.transform.SetParent(oldSlot.transform);
-                                secondItemRectTransform.localPosition = Vector3.zero;
-                                firstItemRectTransform.localPosition = Vector3.zero;
+                                SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
                             }
                         }
-
                     }
-
                 }
 
                 //empty slot
                 else
                 {
+                    //non valid slot = put item back
                     if (newSlot.tag != "Slot" && newSlot.tag != "ItemIcon")
                     {
-                        firstItemGameObject.transform.SetParent(oldSlot.transform);
-                        firstItemRectTransform.localPosition = Vector3.zero;
+                        ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
                     }
+                    //valid empty slot = put it in new slot
                     else
                     {
                         firstItemGameObject.transform.SetParent(newSlot.transform);
@@ -644,5 +630,17 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                 }
             }
         }
+    }
+    private void SwapItemsPlaces(GameObject firstItemGameObject, GameObject secondItemGameObject, RectTransform firstItemRectTransform, RectTransform secondItemRectTransform)
+    {
+        firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
+        secondItemGameObject.transform.SetParent(oldSlot.transform);
+        secondItemRectTransform.localPosition = Vector3.zero;
+        firstItemRectTransform.localPosition = Vector3.zero;
+    }
+    private void ReturnToOriginalSlot(GameObject firstItemGameObject, RectTransform firstItemRectTransform)
+    {
+        firstItemGameObject.transform.SetParent(oldSlot.transform);
+        firstItemRectTransform.localPosition = Vector3.zero;
     }
 }
