@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishPrefabs:
-  - {fileID: 7904575191512208665, guid: 561d2105e5f4805499c895b73a508187, type: 3}
-  - {fileID: 9079836456547432854, guid: 4a14cea6e972c114c8e4e2b0e1621fc0, type: 3}
-  - {fileID: 9079836456547432854, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
+  - {fileID: 6213813504991624176, guid: 94cb70a52884df545883d442e35a2919, type: 3}
+  - {fileID: 6502496771522764052, guid: 7103c6d8b63a03d40b734ae4454622af, type: 3}
+  - {fileID: 8576585379216520416, guid: 39c08e61f7a751044baf5d883beb0915, type: 3}
   spawnRateMin: 1.5
   spawnRateMax: 4
   fishSpeedMin: 2
