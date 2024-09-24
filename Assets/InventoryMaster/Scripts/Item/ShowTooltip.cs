@@ -12,7 +12,6 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public RectTransform tooltipRectTransform;                  //the tooltip RectTransform
     private Item item;
 
-
     void Start()
     {
         if (GameObject.FindGameObjectWithTag("Tooltip") != null)
@@ -23,9 +22,6 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
         canvasRectTransform = GameObject.FindGameObjectWithTag("Canvas").GetComponent<RectTransform>() as RectTransform;
     }
-
-
-
 
     public void OnPointerEnter(PointerEventData data)                               //if you hit a item in the slot
     {
@@ -44,14 +40,9 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             Vector2 localPointerPosition;
             if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, slotCorners[3], data.pressEventCamera, out localPointerPosition))   // and set the localposition of the tooltip...
             {
-                if (transform.parent.parent.parent.GetComponent<Hotbar>() == null)
-                    tooltipRectTransform.localPosition = localPointerPosition;          //at the right bottom side of the slot
-                else
-                    tooltipRectTransform.localPosition = new Vector3(localPointerPosition.x, localPointerPosition.y + tooltip.tooltipHeight);
+                tooltipRectTransform.localPosition = localPointerPosition; //at the right bottom side of the slot
             }
-
         }
-
     }
 
     public void OnPointerExit(PointerEventData data)                //if we go out of the slot with the item
@@ -59,5 +50,4 @@ public class ShowTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (tooltip != null)
             tooltip.deactivateTooltip();            //the tooltip getting deactivated
     }
-
 }

@@ -262,11 +262,6 @@ MonoBehaviour:
   slotDesignTemp: {fileID: 282605309}
   slotDesign: {fileID: 282605309}
   inventoryDesign: {fileID: 12067653}
-  showInventoryCross: 0
-  inventoryCrossImage: {fileID: 237963920}
-  inventoryCrossRectTransform: {fileID: 237963919}
-  inventoryCrossPosX: 130
-  inventoryCrossPosY: 183
   inventoryTitle: STABLES
   inventoryTitleText: {fileID: 25333057}
   inventoryTitlePosX: 0
@@ -807,7 +802,6 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   itemTypeOfSlot: 
-  duplication: {fileID: 0}
 --- !u!114 &158148258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,7 +2186,6 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   itemTypeOfSlot: 
-  duplication: {fileID: 0}
 --- !u!114 &593253422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2510,55 +2503,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &676390633
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 676390634}
-  - component: {fileID: 676390637}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &676390634
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676390633}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.7, y: 9.6, z: 36.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &676390637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676390633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db4493228a4ba442a891316e3ee246f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 1795835618}
-  characterSystem: {fileID: 12067648}
-  craftSystem: {fileID: 0}
-  HPMANACanvas: {fileID: 0}
-  currentHealth: 60
 --- !u!1 &732464996
 GameObject:
   m_ObjectHideFlags: 1
@@ -4503,6 +4447,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1642022000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642022002}
+  - component: {fileID: 1642022001}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1642022001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642022000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3c7d42b56bf8140964f6130694669e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainInventory: {fileID: 1795835621}
+  stablesInventory: {fileID: 12067652}
+  equipSystem: {fileID: 12067651}
+  craftSystem: {fileID: 0}
+  tooltip: {fileID: 520395670}
+  draggedItemBox: {fileID: 1831712313}
+--- !u!4 &1642022002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642022000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 689.58954, y: 242.12294, z: -5.1034765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642093512
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,7 +4891,6 @@ MonoBehaviour:
     - attributeName: Damage
       attributeValue: 10
   itemTypeOfSlot: 
-  duplication: {fileID: 0}
 --- !u!114 &1711938218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5283,11 +5276,6 @@ MonoBehaviour:
   slotDesignTemp: {fileID: 370913025}
   slotDesign: {fileID: 370913025}
   inventoryDesign: {fileID: 1795835622}
-  showInventoryCross: 1
-  inventoryCrossImage: {fileID: 1950383676}
-  inventoryCrossRectTransform: {fileID: 1950383675}
-  inventoryCrossPosX: 132
-  inventoryCrossPosY: 168
   inventoryTitle: 'INVENTORY '
   inventoryTitleText: {fileID: 1280180786}
   inventoryTitlePosX: 0
@@ -6235,7 +6223,6 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   itemTypeOfSlot: 
-  duplication: {fileID: 0}
 --- !u!114 &1979554795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6453,7 +6440,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 86bd66a1aad581444a3c8b4999ca67b1, type: 3}
 --- !u!4 &6248759330634031942 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8749962786295408347, guid: 86bd66a1aad581444a3c8b4999ca67b1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3415575580566477634, guid: 86bd66a1aad581444a3c8b4999ca67b1, type: 3}
   m_PrefabInstance: {fileID: 6248759330634031941}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
@@ -6502,7 +6489,7 @@ SceneRoots:
   - {fileID: 1748372755}
   - {fileID: 1779198712}
   - {fileID: 908003778}
-  - {fileID: 676390634}
+  - {fileID: 1642022002}
   - {fileID: 1792355471}
   - {fileID: 1811945161}
   - {fileID: 1821932125}
