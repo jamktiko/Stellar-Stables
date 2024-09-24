@@ -78,6 +78,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
     {
         if (data.button == PointerEventData.InputButton.Left)
         {
+            //let go of item where it's at (and make sure it's still useable afterwards)
             canvasGroup.blocksRaycasts = true;
             Transform newSlot = null;
             if (data.pointerEnter != null)
@@ -124,6 +125,9 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
 
                 //dragging into a CraftingSystem
                 DragIntoCrafting(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItem, sameItemRerferenced, secondItemStack, firstItemStack, Inventory);
+
+                DragToFeed(firstItemGameObject, firstItemRectTransform, firstItem, secondItem);
+
             }
 
             //drop item into 3d scene at player loc
@@ -240,13 +244,9 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                         if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() != null && firstItem.itemType == secondItem.itemType)
                         {
 
-                            firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                            secondItemGameObject.transform.SetParent(oldSlot.transform);
-                            secondItemRectTransform.localPosition = Vector3.zero;
-                            firstItemRectTransform.localPosition = Vector3.zero;
+                            SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
 
-                            oldSlot.transform.parent.parent.GetComponent<Inventory>().EquiptItem(secondItem);
-                            newSlot.transform.parent.parent.parent.parent.GetComponent<Inventory>().UnEquipItem1(firstItem);
+                            ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
                         }
                         //if you are dragging an item from the equipmentsystem to the inventory and they are not from the same itemtype they do not get swapped.                                    
                         else if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() != null && firstItem.itemType != secondItem.itemType)
@@ -257,10 +257,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                         //swapping for the rest of the inventorys
                         else if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() == null)
                         {
-                            firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
-                            secondItemGameObject.transform.SetParent(oldSlot.transform);
-                            secondItemRectTransform.localPosition = Vector3.zero;
-                            firstItemRectTransform.localPosition = Vector3.zero;
+                            SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
                         }
                     }
 
@@ -286,6 +283,24 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         }
     }
 
+    private void DragToFeed(GameObject firstItemGameObject, RectTransform firstItemRectTransform, Item firstItem, Item secondItem)
+    {
+        //drag from inventory to stables slot -> consume item and trigger feeding/happiness system
+        if (firstItem.itemType == ItemType.Consumable && secondItem.itemType == ItemType.Horse)
+        {
+            Debug.Log("Horse fed!");
+            inventory.OnUpdateItemList();
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            //ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
+        }
+    }
+    private void DragToAddDecor()
+    {
+        //drag from decor catalogue to stables slot -> copy item into stables slot (includes a "None/Remove Decor" decor)
+    }
     private void DragIntoEquipment(Transform newSlot, GameObject firstItemGameObject, GameObject secondItemGameObject, RectTransform firstItemRectTransform, RectTransform secondItemRectTransform, Item firstItem, Item secondItem, bool sameItemRerferenced, GameObject Inventory)
     {
         if (Inventory.GetComponent<EquipmentSystem>() != null)
@@ -586,8 +601,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                             //if you are dragging an item from equipmentsystem to the inventory and try to swap it with the same itemtype
                             if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() != null && firstItem.itemType == secondItem.itemType)
                             {
-                                newSlot.transform.parent.parent.parent.parent.GetComponent<Inventory>().UnEquipItem1(firstItem);
-                                oldSlot.transform.parent.parent.GetComponent<Inventory>().EquiptItem(secondItem);
+                                ReEquipNewItem(newSlot, firstItem, secondItem);
 
                                 SwapItemsPlaces(firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform);
 
@@ -598,7 +612,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                             //if you are dragging an item from the equipmentsystem to the inventory and they are not from the same itemtype they do not get swapped.                                    
                             else if (oldSlot.transform.parent.parent.GetComponent<EquipmentSystem>() != null && firstItem.itemType != secondItem.itemType)
                             {
-                                Debug.Log("yes the thing ran. it's here.");
+                                //Debug.Log("yes the thing ran. it's here.");
                                 ReturnToOriginalSlot(firstItemGameObject, firstItemRectTransform);
                             }
                             //swapping for the rest of the inventorys
@@ -631,6 +645,13 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             }
         }
     }
+
+    private void ReEquipNewItem(Transform newSlot, Item firstItem, Item secondItem)
+    {
+        newSlot.transform.parent.parent.parent.parent.GetComponent<Inventory>().UnEquipItem1(firstItem);
+        oldSlot.transform.parent.parent.GetComponent<Inventory>().EquiptItem(secondItem);
+    }
+
     private void SwapItemsPlaces(GameObject firstItemGameObject, GameObject secondItemGameObject, RectTransform firstItemRectTransform, RectTransform secondItemRectTransform)
     {
         firstItemGameObject.transform.SetParent(secondItemGameObject.transform.parent);
