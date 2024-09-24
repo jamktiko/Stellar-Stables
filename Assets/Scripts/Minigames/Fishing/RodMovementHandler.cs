@@ -33,14 +33,14 @@ public class RodMovementHandler : MonoBehaviour
 
         if (_isHoldingClick)
         {
-            if (transform.position.y > -1.2f)
+            if (transform.position.y > 0f)
             {
                 transform.position -= new Vector3(0, _rodSpeed * Time.deltaTime*1.5f, 0);
             }
         }
         else
         {
-            if (transform.position.y < 8f)
+            if (transform.position.y < 9.25f)
             {
                 transform.position += new Vector3(0, _rodSpeed * Time.deltaTime, 0);
             }

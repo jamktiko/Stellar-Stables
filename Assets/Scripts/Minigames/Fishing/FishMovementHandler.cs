@@ -16,7 +16,7 @@ public class FishMovementHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -63,6 +63,11 @@ public class FishMovementHandler : MonoBehaviour
             isMovingRight = true;
             spriteRenderer.flipX = false;
             targetXValue = 10f;
+        }
+        if (gameObject.name.Contains("Crab"))
+        {
+            transform.position = new Vector3(spawnXValue, -4.58f, 0f);
+            fishSpeed /= 2f;
         }
         StartMoving();
     }

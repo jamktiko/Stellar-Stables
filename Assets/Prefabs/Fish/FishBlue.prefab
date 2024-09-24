@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8493243027133744623, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9079836456547432854, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_Name
       value: FishBlue
