@@ -629,7 +629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1218565502}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 415633852}
+        m_TargetAssemblyTypeName: MinigameTimer, Assembly-CSharp
+        m_MethodName: ResetGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1218565502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,7 +1216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1359,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5699334236457159141, guid: 6ca109d88c669d0418027088f680b1f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 8.495384
       objectReference: {fileID: 0}
     - target: {fileID: 5699334236457159141, guid: 6ca109d88c669d0418027088f680b1f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

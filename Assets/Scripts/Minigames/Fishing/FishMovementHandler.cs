@@ -67,7 +67,7 @@ public class FishMovementHandler : MonoBehaviour
         if (gameObject.name.Contains("Crab"))
         {
             transform.position = new Vector3(spawnXValue, -4.58f, 0f);
-            fishSpeed /= 2f;
+            fishSpeed /= 1.5f;
         }
         StartMoving();
     }

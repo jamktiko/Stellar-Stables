@@ -21,6 +21,16 @@ public class FishScore : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        MinigameTimer.Instance.OnMinigameReset += ResetScore;
+    }
+
+    private void OnDisable()
+    {
+        MinigameTimer.Instance.OnMinigameReset -= ResetScore;
+    }
+
     public void AddScore()
     {
         score++;
@@ -30,6 +40,14 @@ public class FishScore : MonoBehaviour
     private void UpdateScoreText()
     {
         scoreText.text = "Score: " + score;
+    }
+
+    private void ResetScore()
+    {
+
+        score = 0;
+        UpdateScoreText();
+
     }
 
 }

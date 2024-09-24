@@ -3,18 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MinigameTimer : MonoBehaviour
 {
+
+    public static MinigameTimer Instance {  get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Instance = this;
+    }
+
     [SerializeField] private float gameDuration;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject coverObject;
     private float remainingTime;
     private bool isGameActive = true;
 
-
-
     public event Action OnMinigameEnd;
+    public event Action OnMinigameReset;
 
 
     private void Start()
@@ -58,6 +72,22 @@ public class MinigameTimer : MonoBehaviour
         Time.timeScale = 0;
 
         Debug.Log("Time's up! The minigame has ended.");
+    }
+
+    public void ResetGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Fishing Testing");
+        //remainingTime = gameDuration;
+        //UpdateTimerText();
+
+        //coverObject.SetActive(false);
+        //Time.timeScale = 1;
+
+        //isGameActive = true;
+        OnMinigameReset?.Invoke();
+
+        //Debug.Log("Mingame reset.");
     }
 
 }
