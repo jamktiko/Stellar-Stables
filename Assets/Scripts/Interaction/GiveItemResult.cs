@@ -7,12 +7,11 @@ using UnityEditor;
 
 public class GiveItemResult : MonoBehaviour, IResult
 {
-    [SerializeField] private Inventory inv;
-    [SerializeField] private int itemID;
-    [SerializeField] private int itemValue;
+    [HideInInspector] [SerializeField] private int itemID;
+    [HideInInspector] [SerializeField] private int itemValue;
     public void Execute()
     {
-        inv.addItemToInventory(itemID, itemValue);
+        InventoryManager.instance.mainInventory.addItemToInventory(itemID, itemValue);
     }
 
     public void SetVariablesThroughEditor(int item, int value)

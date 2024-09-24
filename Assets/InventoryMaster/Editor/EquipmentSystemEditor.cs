@@ -33,5 +33,4 @@ public class EquipmentSystemEditor : Editor
         serializedObject.ApplyModifiedProperties();
         GUILayout.EndVertical();
     }
-
 }
