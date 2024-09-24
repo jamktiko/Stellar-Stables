@@ -89,15 +89,12 @@ public class Inventory : MonoBehaviour
     public static event ItemDelegate ItemEquip;
     public static event ItemDelegate UnEquipItem;
 
-    public delegate void InventoryOpened();
-    public static event InventoryOpened InventoryOpen;
-    public static event InventoryOpened AllInventoriesClosed;
+    //public delegate void InventoryOpened();
+    //public static event InventoryOpened InventoryOpen;
+    //public static event InventoryOpened AllInventoriesClosed;
 
     void Start()
     {
-        if (transform.GetComponent<Hotbar>() == null)
-            this.gameObject.SetActive(false);
-
         updateItemList();
 
         inputManagerDatabase = (InputManager)Resources.Load("InputManager");
@@ -132,7 +129,6 @@ public class Inventory : MonoBehaviour
         updateItemIndex();
     }
 
-
     public void setAsMain()
     {
         if (mainInventory)
@@ -145,47 +141,6 @@ public class Inventory : MonoBehaviour
     {
         updateItemList();
     }
-
-    public void closeInventory()
-    {
-        this.gameObject.SetActive(false);
-        checkIfAllInventoryClosed();
-    }
-
-    public void openInventory()
-    {
-        this.gameObject.SetActive(true);
-        if (InventoryOpen != null)
-            InventoryOpen();
-    }
-
-    public void checkIfAllInventoryClosed()
-    {
-        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
-
-        for (int i = 0; i < canvas.transform.childCount; i++)
-        {
-            GameObject child = canvas.transform.GetChild(i).gameObject;
-            if (!child.activeSelf && (child.tag == "EquipmentSystem" || child.tag == "Panel" || child.tag == "MainInventory" || child.tag == "CraftSystem"))
-            {
-                if (AllInventoriesClosed != null && i == canvas.transform.childCount - 1)
-                    AllInventoriesClosed();
-            }
-            else if (child.activeSelf && (child.tag == "EquipmentSystem" || child.tag == "Panel" || child.tag == "MainInventory" || child.tag == "CraftSystem"))
-                break;
-
-            else if (i == canvas.transform.childCount - 1)
-            {
-                if (AllInventoriesClosed != null)
-                    AllInventoriesClosed();
-            }
-
-
-        }
-    }
-
-
-
 
     public void ConsumeItem(Item item)
     {
@@ -300,7 +255,7 @@ public class Inventory : MonoBehaviour
 
     public void setDefaultSettings()
     {
-        if (GetComponent<EquipmentSystem>() == null && GetComponent<Hotbar>() == null && GetComponent<CraftSystem>() == null)
+        if (GetComponent<EquipmentSystem>() == null && GetComponent<CraftSystem>() == null)
         {
             height = 5;
             width = 5;
@@ -311,21 +266,6 @@ public class Inventory : MonoBehaviour
             paddingBetweenX = 5;
             paddingBetweenY = 5;
             paddingTop = 35;
-            paddingBottom = 10;
-            paddingLeft = 10;
-            paddingRight = 10;
-        }
-        else if (GetComponent<Hotbar>() != null)
-        {
-            height = 1;
-            width = 9;
-
-            slotSize = 50;
-            iconSize = 45;
-
-            paddingBetweenX = 5;
-            paddingBetweenY = 5;
-            paddingTop = 10;
             paddingBottom = 10;
             paddingLeft = 10;
             paddingRight = 10;
@@ -572,8 +512,6 @@ public class Inventory : MonoBehaviour
                 {
                     ItemsInInventory[i].itemValue = stack;
                     GameObject temp = getItemGameObject(ItemsInInventory[i]);
-                    if (temp != null && temp.GetComponent<ConsumeItem>().duplication != null)
-                        temp.GetComponent<ConsumeItem>().duplication.GetComponent<ItemOnObject>().item.itemValue = stack;
                     return true;
                 }
             }

@@ -16,16 +16,6 @@ public class InventoryDesign : MonoBehaviour
     [SerializeField]
     public Image inventoryDesign;
     [SerializeField]
-    public bool showInventoryCross;
-    [SerializeField]
-    public Image inventoryCrossImage;
-    [SerializeField]
-    public RectTransform inventoryCrossRectTransform;
-    [SerializeField]
-    public int inventoryCrossPosX;
-    [SerializeField]
-    public int inventoryCrossPosY;
-    [SerializeField]
     public string inventoryTitle;
     [SerializeField]
     public Text inventoryTitleText;
@@ -46,11 +36,6 @@ public class InventoryDesign : MonoBehaviour
         panelSizeY = (int)GetComponent<RectTransform>().sizeDelta.y;
         inventoryTitle = transform.GetChild(0).GetComponent<Text>().text;
         inventoryTitleText = transform.GetChild(0).GetComponent<Text>();
-        if (GetComponent<Hotbar>() == null)
-        {
-            inventoryCrossRectTransform = transform.GetChild(2).GetComponent<RectTransform>();
-            inventoryCrossImage = transform.GetChild(2).GetComponent<Image>();
-        }
         inventoryDesign = GetComponent<Image>();
         slotDesign = transform.GetChild(1).GetChild(0).GetComponent<Image>();
         slotDesignTemp = slotDesign;
@@ -65,21 +50,6 @@ public class InventoryDesign : MonoBehaviour
     {
         transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(inventoryTitlePosX, inventoryTitlePosY, 0);
         transform.GetChild(0).GetComponent<Text>().text = inventoryTitle;
-    }
-
-    public void changeCrossSettings()
-    {
-        GameObject cross = transform.GetChild(2).gameObject;
-        if (showInventoryCross)
-        {
-            cross.SetActive(showInventoryCross);
-            inventoryCrossRectTransform.localPosition = new Vector3(inventoryCrossPosX, inventoryCrossPosY, 0);
-
-        }
-        else
-        {
-            cross.SetActive(showInventoryCross);
-        }
     }
 
     public void updateAllSlots()

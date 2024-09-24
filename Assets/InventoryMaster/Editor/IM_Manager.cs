@@ -601,35 +601,10 @@ public class IM_Manager : EditorWindow
         EditorGUI.BeginChangeCheck();
         if (inputManagerDatabase == null)
             inputManagerDatabase = (InputManager)Resources.Load("InputManager");
-
-        //inputManagerDatabase.UFPS = EditorGUILayout.ToggleLeft("UFPS On/Off", inputManagerDatabase.UFPS);
-        //if (EditorGUI.EndChangeCheck())
-        //    setUFPSSettings();
-
     }
 
     GameObject itemPrefab;
     GameObject hotbarPrefab;
-
-    //void setUFPSSettings()
-    //{
-    //    itemPrefab = Resources.Load("Prefabs/Item") as GameObject;
-    //    hotbarPrefab = Resources.Load("Prefabs/Panel - Hotbar") as GameObject;
-
-    //    if(!inputManagerDatabase.UFPS)
-    //    {
-    //        if (itemPrefab.GetComponent<UFPS_ConsumeItem>() != null)
-    //            DestroyImmediate(itemPrefab.GetComponent<UFPS_ConsumeItem>(), true);
-    //        if (hotbarPrefab.GetComponent<UFPS_Hotbar>())
-    //            DestroyImmediate(hotbarPrefab.GetComponent<UFPS_Hotbar>(), true);           
-    //    }
-    //    else
-    //    {
-    //        itemPrefab.AddComponent<UFPS_ConsumeItem>();
-    //        hotbarPrefab.AddComponent<UFPS_Hotbar>();            
-    //    }
-
-    //}
 
     void addItem()                                          //add new item to the itemdatabase
     {
@@ -657,5 +632,4 @@ public class IM_Manager : EditorWindow
         bluePrintDatabase.blueprints.Add(newBlueprint);     //and add this to the itemdatabase        
         EditorUtility.SetDirty(bluePrintDatabase);          //message scriptable object that you added something
     }
-
 }

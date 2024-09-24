@@ -11,6 +11,8 @@ public class ClickAndDragCondition : MonoBehaviour, ICondition
 
     void Drag()
     {
-        //drag object then if success = consume, if fail = go back to inventory
+        //drag object then if success = consume, if fail = go back to inventory (dragtofeed type shit)
+        //AND
+        //drag object then if success = stays there, if fail = go back to inventory (equipment system usage)
     }
 }
