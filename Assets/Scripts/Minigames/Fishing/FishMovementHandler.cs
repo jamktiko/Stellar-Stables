@@ -66,13 +66,13 @@ public class FishMovementHandler : MonoBehaviour
         if (spawnXValue == 10f) 
         {
             isMovingRight = false;
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
             targetXValue = -10f;
         }
         else
         {
             isMovingRight = true;
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
             targetXValue = 10f;
         }
         StartMoving();
