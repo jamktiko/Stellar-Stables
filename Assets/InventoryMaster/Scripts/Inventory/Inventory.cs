@@ -89,10 +89,6 @@ public class Inventory : MonoBehaviour
     public static event ItemDelegate ItemEquip;
     public static event ItemDelegate UnEquipItem;
 
-    //public delegate void InventoryOpened();
-    //public static event InventoryOpened InventoryOpen;
-    //public static event InventoryOpened AllInventoriesClosed;
-
     void Start()
     {
         updateItemList();
