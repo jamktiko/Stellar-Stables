@@ -17,7 +17,10 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
         {
             if (itemID == itemsInInventory[i].itemID && itemValue >= itemsInInventory[i].itemValue)
             {
-                //InventoryManager.instance.mainInventory.ConsumeItem(itemsInInventory[i]);
+                if (isItemConsumed)
+                {
+                    InventoryManager.instance.mainInventory.deleteItemFromInventoryWithGameObject(itemsInInventory[i]);
+                }
                 return true;
             }
         }
