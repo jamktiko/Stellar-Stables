@@ -8,6 +8,7 @@ public class Deadzone : MonoBehaviour
     {
         if (collision.name == "Note")
         {
+            MinigameLives.Instance.UseLife();
             Destroy(collision.gameObject);
         }
     }

@@ -43,7 +43,7 @@ public class Fish : MonoBehaviour, ICatchable
     public void Catch()
     {
         Debug.Log("Fish caught.");
-        FishScore.Instance.AddScore();
+        MinigameScore.Instance.AddScore();
         Destroy(gameObject);
     }
 

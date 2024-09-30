@@ -11,8 +11,8 @@ public class NoteCollector : MonoBehaviour
 
     private void CollectNote()
     {
+        MinigameScore.Instance.AddScore();
         Debug.Log("Note collected");
-
         Destroy(gameObject);
     }
 

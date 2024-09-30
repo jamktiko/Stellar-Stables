@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FishScore : MonoBehaviour
+public class MinigameScore : MonoBehaviour
 {
-    public static FishScore Instance { get; private set; }
+    public static MinigameScore Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI scoreText;
     private int score = 0;

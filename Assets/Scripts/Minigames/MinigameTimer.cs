@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class MinigameTimer : MonoBehaviour
 {
 
-    public static MinigameTimer Instance {  get; private set; }
+    public static MinigameTimer Instance { get; private set; }
 
     private void Awake()
     {
@@ -53,6 +53,11 @@ public class MinigameTimer : MonoBehaviour
         }
     }
 
+    public void TimerZero()
+    {
+        remainingTime = 0;
+    }
+
     private void UpdateTimerText()
     {
         int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -77,7 +82,8 @@ public class MinigameTimer : MonoBehaviour
     public void ResetGame()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Fishing Testing");
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //remainingTime = gameDuration;
         //UpdateTimerText();
 
