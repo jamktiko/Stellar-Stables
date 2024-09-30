@@ -189,58 +189,13 @@ public class IM_Manager : EditorWindow
                     inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemDesc = EditorGUILayout.TextArea(inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemDesc, GUILayout.Width(position.width - 180), GUILayout.Height(70));     //Text area for the itemDesc
                     GUILayout.EndHorizontal();
                     inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemIcon = (Sprite)EditorGUILayout.ObjectField("Item Icon", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemIcon, typeof(Sprite), false, GUILayout.Width(position.width - 33));         //objectfield for the itemicon for your new item
-                    inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemModel = (GameObject)EditorGUILayout.ObjectField("Item Model", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemModel, typeof(GameObject), false, GUILayout.Width(position.width - 33));      //objectfield for the itemmodel for your new item
+                    //inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemModel = (GameObject)EditorGUILayout.ObjectField("Item Model", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemModel, typeof(GameObject), false, GUILayout.Width(position.width - 33));      //objectfield for the itemmodel for your new item
 
                     inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemType = (ItemType)EditorGUILayout.EnumPopup("Item Type", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemType, GUILayout.Width(position.width - 33));                                      //the itemtype which you want to have can be selected with the enumpopup
                     inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].maxStack = EditorGUILayout.IntField("Max Stack", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].maxStack, GUILayout.Width(position.width - 33));
-                    inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].rarity = EditorGUILayout.IntSlider("Rarity", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].rarity, 0, 100);
+                    //inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].rarity = EditorGUILayout.IntSlider("Rarity", inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].rarity, 0, 100);
                     GUILayout.BeginVertical("Box", GUILayout.Width(position.width - 33));
-                    showItemAttributes = EditorGUILayout.Foldout(showItemAttributes, "Item attributes");
-                    if (showItemAttributes)
-                    {
-                        GUILayout.BeginHorizontal();
-                        addAttributeName = EditorGUILayout.TextField("Name", addAttributeName);
-                        GUI.color = Color.green;
-                        if (GUILayout.Button("Add"))
-                            addAttribute();
-                        GUILayout.EndHorizontal();
-                        GUILayout.Space(10);
-                        GUI.color = Color.white;
-                        EditorGUI.BeginChangeCheck();
-                        attributeAmount = EditorGUILayout.IntSlider("Amount", attributeAmount, 0, 50);
-                        if (EditorGUI.EndChangeCheck())
-                        {
-                            attributeName = new int[attributeAmount];
-                            attributeValue = new int[attributeAmount];
-                        }
-
-                        string[] attributes = new string[itemAttributeList.itemAttributeList.Count];
-                        for (int i = 1; i < attributes.Length; i++)
-                        {
-                            attributes[i] = itemAttributeList.itemAttributeList[i].attributeName;
-                        }
-
-
-                        for (int k = 0; k < attributeAmount; k++)
-                        {
-                            EditorGUILayout.BeginHorizontal();
-                            attributeName[k] = EditorGUILayout.Popup("Attribute " + (k + 1), attributeName[k], attributes, EditorStyles.popup);
-                            attributeValue[k] = EditorGUILayout.IntField("Value", attributeValue[k]);
-                            EditorGUILayout.EndHorizontal();
-                        }
-                        if (GUILayout.Button("Save"))
-                        {
-                            List<ItemAttribute> iA = new List<ItemAttribute>();
-                            for (int i = 0; i < attributeAmount; i++)
-                            {
-                                iA.Add(new ItemAttribute(attributes[attributeName[i]], attributeValue[i]));
-                            }
-                            inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].itemAttributes = iA;
-                            showItem = false;
-
-                        }
-
-                    }
+                    
                     GUILayout.EndVertical();
                     inventoryItemList.itemList[inventoryItemList.itemList.Count - 1].indexItemInList = 999;
 
@@ -295,84 +250,13 @@ public class IM_Manager : EditorWindow
                             inventoryItemList.itemList[i].itemDesc = EditorGUILayout.TextArea(inventoryItemList.itemList[i].itemDesc, GUILayout.Width(position.width - 195), GUILayout.Height(70));     //Text area for the itemDesc
                             GUILayout.EndHorizontal();
                             inventoryItemList.itemList[i].itemIcon = (Sprite)EditorGUILayout.ObjectField("Item Icon", inventoryItemList.itemList[i].itemIcon, typeof(Sprite), false, GUILayout.Width(position.width - 45));         //objectfield for the itemicon for your new item
-                            inventoryItemList.itemList[i].itemModel = (GameObject)EditorGUILayout.ObjectField("Item Model", inventoryItemList.itemList[i].itemModel, typeof(GameObject), false, GUILayout.Width(position.width - 45));      //objectfield for the itemmodel for your new item
+                            //inventoryItemList.itemList[i].itemModel = (GameObject)EditorGUILayout.ObjectField("Item Model", inventoryItemList.itemList[i].itemModel, typeof(GameObject), false, GUILayout.Width(position.width - 45));      //objectfield for the itemmodel for your new item
                             inventoryItemList.itemList[i].itemType = (ItemType)EditorGUILayout.EnumPopup("Item Type", inventoryItemList.itemList[i].itemType, GUILayout.Width(position.width - 45));                                      //the itemtype which you want to have can be selected with the enumpopup
                             inventoryItemList.itemList[i].maxStack = EditorGUILayout.IntField("Max Stack", inventoryItemList.itemList[i].maxStack, GUILayout.Width(position.width - 45));
-                            inventoryItemList.itemList[i].rarity = EditorGUILayout.IntSlider("Rarity", inventoryItemList.itemList[i].rarity, 0, 100);
+                            //inventoryItemList.itemList[i].rarity = EditorGUILayout.IntSlider("Rarity", inventoryItemList.itemList[i].rarity, 0, 100);
                             GUILayout.BeginVertical("Box", GUILayout.Width(position.width - 45));
-                            showItemAttributes = EditorGUILayout.Foldout(showItemAttributes, "Item attributes");
-                            if (showItemAttributes)
-                            {
-
-                                string[] attributes = new string[itemAttributeList.itemAttributeList.Count];
-                                for (int t = 1; t < attributes.Length; t++)
-                                {
-                                    attributes[t] = itemAttributeList.itemAttributeList[t].attributeName;
-                                }
-
-
-                                if (inventoryItemList.itemList[i].itemAttributes.Count != 0)
-                                {
-                                    for (int t = 0; t < inventoryItemList.itemList[i].itemAttributes.Count; t++)
-                                    {
-                                        for (int z = 1; z < attributes.Length; z++)
-                                        {
-                                            if (inventoryItemList.itemList[i].itemAttributes[t].attributeName == attributes[z])
-                                            {
-                                                attributeNamesManage[t] = z;
-                                                attributeValueManage[t] = inventoryItemList.itemList[i].itemAttributes[t].attributeValue;
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                for (int z = 0; z < inventoryItemList.itemList[i].itemAttributes.Count; z++)
-                                {
-                                    EditorGUILayout.BeginHorizontal();
-                                    GUI.color = Color.red;
-                                    if (GUILayout.Button("-"))
-                                        inventoryItemList.itemList[i].itemAttributes.RemoveAt(z);
-                                    GUI.color = Color.white;
-                                    attributeNamesManage[z] = EditorGUILayout.Popup(attributeNamesManage[z], attributes, EditorStyles.popup);
-                                    inventoryItemList.itemList[i].itemAttributes[z].attributeValue = EditorGUILayout.IntField("Value", inventoryItemList.itemList[i].itemAttributes[z].attributeValue);
-                                    EditorGUILayout.EndHorizontal();
-                                }
-                                GUI.color = Color.green;
-                                if (GUILayout.Button("+"))
-                                    inventoryItemList.itemList[i].itemAttributes.Add(new ItemAttribute());
-
-
-
-
-                                GUI.color = Color.white;
-                                if (GUILayout.Button("Save"))
-                                {
-                                    List<ItemAttribute> iA = new List<ItemAttribute>();
-                                    for (int k = 0; k < inventoryItemList.itemList[i].itemAttributes.Count; k++)
-                                    {
-                                        iA.Add(new ItemAttribute(attributes[attributeNamesManage[k]], attributeValueManage[k]));
-                                    }
-                                    inventoryItemList.itemList[i].itemAttributes = iA;
-
-                                    GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-                                    for (int z = 0; z < items.Length; z++)
-                                    {
-                                        ItemOnObject item = items[z].GetComponent<ItemOnObject>();
-                                        if (item.item.itemID == inventoryItemList.itemList[i].itemID)
-                                        {
-                                            int value = item.item.itemValue;
-                                            item.item = inventoryItemList.itemList[i];
-                                            item.item.itemValue = value;
-                                        }
-                                    }
-
-                                    manageItem[i] = false;
-                                }
-
-
-
-                            }
+                    
+                            
                             GUILayout.EndVertical();
 
                             EditorUtility.SetDirty(inventoryItemList);                                                                                              //message scriptable object that you have changed something

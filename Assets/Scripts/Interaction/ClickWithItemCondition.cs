@@ -26,9 +26,4 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
         }
         return false;
     }
-    public void SetVariablesThroughEditor(int item, int value)
-    {
-        itemID = item;
-        itemValue = value;
-    }
 }

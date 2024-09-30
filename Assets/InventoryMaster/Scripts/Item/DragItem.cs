@@ -47,7 +47,10 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         if (data.button == PointerEventData.InputButton.Left)
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, data.position, data.pressEventCamera, out pointerOffset);
-            oldSlot = transform.parent.gameObject;
+            if (transform.parent.gameObject.CompareTag("Slot"))
+            {
+                oldSlot = transform.parent.gameObject;
+            }
         }
         if (updateInventoryList != null)
             updateInventoryList();
@@ -77,7 +80,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
 
                 //get some informations about the two items
                 bool sameItem = firstItem.itemName == secondItem.itemName;
-                bool sameItemRerferenced = firstItem.Equals(secondItem);
+                bool sameItemReferenced = firstItem.Equals(secondItem);
                 bool secondItemStack = false;
                 bool firstItemStack = false;
                 if (sameItem)
@@ -94,13 +97,13 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
                     Inventory = Inventory.transform.parent.parent.gameObject;
 
                 //dragging in an Inventory      
-                DragItemInInventory(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItem, sameItemRerferenced, secondItemStack, firstItemStack, Inventory);
+                //DragItemInInventory(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItem, sameItemReferenced, secondItemStack, firstItemStack, Inventory);
 
                 //dragging into an Equipmentsystem
-                DragIntoEquipment(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItemRerferenced, Inventory);
+                DragIntoEquipment(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItemReferenced, Inventory);
 
                 //dragging into a CraftingSystem
-                DragIntoCrafting(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItem, sameItemRerferenced, secondItemStack, firstItemStack, Inventory);
+                //DragIntoCrafting(newSlot, firstItemGameObject, secondItemGameObject, firstItemRectTransform, secondItemRectTransform, firstItem, secondItem, sameItem, sameItemRerferenced, secondItemStack, firstItemStack, Inventory);
 
                 DragToFeed(firstItemGameObject, firstItemRectTransform, firstItem, secondItem);
             }
@@ -453,6 +456,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
     }
     private void ReturnToOriginalSlot(GameObject firstItemGameObject, RectTransform firstItemRectTransform)
     {
+        Debug.Log("Invalid slot, item returned to previous slot.");
         firstItemGameObject.transform.SetParent(oldSlot.transform);
         firstItemRectTransform.localPosition = Vector3.zero;
     }

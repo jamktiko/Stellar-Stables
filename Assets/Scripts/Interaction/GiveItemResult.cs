@@ -13,10 +13,4 @@ public class GiveItemResult : MonoBehaviour, IResult
     {
         InventoryManager.instance.mainInventory.addItemToInventory(itemID, itemValue);
     }
-
-    public void SetVariablesThroughEditor(int item, int value)
-    {
-        itemID = item;
-        itemValue = value;
-    }
 }
