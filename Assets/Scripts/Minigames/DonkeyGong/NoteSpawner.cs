@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NoteSpawner : MonoBehaviour
+{
+
+    [SerializeField] private GameObject[] notePrefabs;
+    [SerializeField] private float spawnRateMin;
+    [SerializeField] private float spawnRateMax;
+    [SerializeField] private int numberOfSpawnPoints;
+    [SerializeField] private float radius;
+
+    private List<Vector2> spawnPoints = new List<Vector2>();
+    private bool winCondition = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        GenerateSpawnPoints();
+        StartCoroutine(SpawnNotes());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void GenerateSpawnPoints()
+    {
+        float angleStep = 360f / numberOfSpawnPoints;
+        for (int i = 0; i < numberOfSpawnPoints; i++)
+        {
+            float angle = i * angleStep * Mathf.Deg2Rad;
+            Vector2 spawnPoint = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+            spawnPoints.Add(spawnPoint);
+        }
+    }
+
+    private IEnumerator SpawnNotes()
+    {
+        while (!winCondition)
+        {
+            SpawnNote();
+            yield return new WaitForSeconds(Random.Range(spawnRateMin, spawnRateMax));
+        }
+    }
+
+    private void SpawnNote()
+    {
+        int randomIndex = Random.Range(0, spawnPoints.Count);
+        Vector2 spawnPosition = spawnPoints[randomIndex];
+        Instantiate(notePrefabs[Random.Range(0,notePrefabs.Length)], spawnPosition, Quaternion.identity).name = "Note";
+    }
+
+}
