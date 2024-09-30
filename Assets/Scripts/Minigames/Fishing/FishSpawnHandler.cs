@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FishSpawnHandler : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] fishPrefabs;
+    [SerializeField] private GameObject shorsePrefab;
+    [SerializeField] private float shorseSpawnChance;
     [SerializeField] private float spawnRateMin;
     [SerializeField] private float spawnRateMax;
     [SerializeField] private float fishSpeedMin;
@@ -16,6 +19,7 @@ public class FishSpawnHandler : MonoBehaviour
     private float spawnYValue;
 
     private bool winCondition = false;
+    private bool shorseSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +45,15 @@ public class FishSpawnHandler : MonoBehaviour
 
             Vector3 randomSpawnPosition = new Vector3(spawnXValue, spawnYValue, 0);
 
-            if (spawnXValue == 10f)
+
+            if (Random.Range(0f, 100f) < shorseSpawnChance && !shorseSpawned)
+            {
+                Debug.Log("Shorse spawned.");
+                shorseSpawned = true;
+                GameObject spawnedShorse = Instantiate(shorsePrefab, randomSpawnPosition, Quaternion.identity);
+                spawnedShorse.GetComponent<FishMovementHandler>().Spawned(spawnXValue, Random.Range(fishSpeedMin*2, fishSpeedMax*2));
+            }
+            else if (spawnXValue == 10f)
             {
                 Debug.Log("Fish spawned on right.");
                 GameObject spawnedFish = Instantiate(fishPrefabs[Random.Range(0,fishPrefabs.Length)], randomSpawnPosition, Quaternion.identity);
