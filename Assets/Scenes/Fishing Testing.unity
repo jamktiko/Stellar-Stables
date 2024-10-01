@@ -158,8 +158,10 @@ MonoBehaviour:
   - {fileID: 8576585379216520416, guid: 39c08e61f7a751044baf5d883beb0915, type: 3}
   - {fileID: 6571442378318062158, guid: 26d5ecf79eeee0849892345abbe8c17f, type: 3}
   - {fileID: 2638058685377296011, guid: 71bd1095330e1664b826ac646225a40e, type: 3}
+  shorsePrefab: {fileID: 7636413064336040308, guid: 8bc7bccd49ecebd409b00e0db01f3ebe, type: 3}
+  shorseSpawnChance: 5
   spawnRateMin: 0.5
-  spawnRateMax: 2.75
+  spawnRateMax: 1
   fishSpeedMin: 2
   fishSpeedMax: 7
 --- !u!4 &328209389
@@ -207,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288fd78006217c746a7b00bf3a58d9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 15
+  gameDuration: 60
   timerText: {fileID: 1480888304}
   coverObject: {fileID: 1818990017}
 --- !u!4 &415633853

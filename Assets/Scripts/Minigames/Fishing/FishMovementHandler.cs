@@ -8,10 +8,15 @@ public class FishMovementHandler : MonoBehaviour
 {
 
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private float fishSpeed;
+    [SerializeField] protected float fishSpeed;
     private float targetXValue;
     private bool isMoving = false;
     private bool isMovingRight = false;
+
+    protected float bobbingAmplitude;
+    protected float bobbingFrequency;
+    protected float originalYPosition;
+    protected float bobbingOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -46,28 +51,29 @@ public class FishMovementHandler : MonoBehaviour
                     Despawn();
                 }
             }
+
+            float newY = originalYPosition + Mathf.Sin((Time.time + bobbingOffset) * bobbingFrequency) * bobbingAmplitude;
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
     }
 
-    public void Spawned(float spawnXValue, float newFishSpeed)
+    virtual public void Spawned(float spawnXValue, float newFishSpeed)
     {
         fishSpeed = newFishSpeed;
+        originalYPosition = transform.position.y;
+        SetRandomBobbing();
+
         if (spawnXValue == 10f) 
         {
             isMovingRight = false;
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
             targetXValue = -10f;
         }
         else
         {
             isMovingRight = true;
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
             targetXValue = 10f;
-        }
-        if (gameObject.name.Contains("Crab"))
-        {
-            transform.position = new Vector3(spawnXValue, -4.58f, 0f);
-            fishSpeed /= 1.5f;
         }
         StartMoving();
     }
@@ -90,6 +96,13 @@ public class FishMovementHandler : MonoBehaviour
     {
         Debug.Log("Fish despawned after reaching target.");
         Destroy(gameObject);
+    }
+
+    private void SetRandomBobbing()
+    {
+        bobbingAmplitude = Random.Range(0.2f, 0.4f);
+        bobbingFrequency = Random.Range(0.7f, 3.3f);
+        bobbingOffset = Random.Range(0f, Mathf.PI * 2);
     }
 
 }
