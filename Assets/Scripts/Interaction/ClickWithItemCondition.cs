@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class ClickWithItemCondition : MonoBehaviour, ICondition
 {
+    public UserInterface userInterface;
     [SerializeField] private bool isItemConsumed;
-    [HideInInspector][SerializeField] private int itemID;
-    [HideInInspector] [SerializeField] private int itemValue;
+    [SerializeField] private ItemObject itemSO;
+    [SerializeField] private int itemValue;
+    private Item item;
 
     public bool IsConditionMet()
     {
-        InventoryManager.instance.mainInventory.updateItemList();
-        List<Item> itemsInInventory = new List<Item>(InventoryManager.instance.mainInventory.ItemsInInventory);
-
-        for (int i = 0; i < itemsInInventory.Count; i++)
+        item = item ?? itemSO.CreateItem();
+        
+        for (int i = 0; i < userInterface.inventory.Container.Items.Length; i++)
         {
-            if (itemID == itemsInInventory[i].itemID && itemValue >= itemsInInventory[i].itemValue)
+            if (userInterface.inventory.Container.Items[i].item.Id == item.Id)
             {
-                if (isItemConsumed)
-                {
-                    InventoryManager.instance.mainInventory.deleteItemFromInventoryWithGameObject(itemsInInventory[i]);
+                if (isItemConsumed) 
+                { 
+                    userInterface.inventory.Container.Items[i].RemoveItem(); 
                 }
                 return true;
             }
