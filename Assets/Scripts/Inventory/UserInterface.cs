@@ -110,15 +110,8 @@ public abstract class UserInterface : MonoBehaviour
         if (MouseData.tempItemBeingDragged != null)
             MouseData.tempItemBeingDragged.GetComponent<RectTransform>().position = Input.mousePosition;
     }
-
-
 }
-public static class MouseData
-{
-    public static UserInterface interfaceMouseIsOver;
-    public static GameObject tempItemBeingDragged;
-    public static GameObject slotHoveredOver;
-}
+
 
 
 public static class ExtensionMethods
