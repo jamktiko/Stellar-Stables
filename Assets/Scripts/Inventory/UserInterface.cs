@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using UnityEngine.Events;
 
-public abstract class UserInterface : MonoBehaviour
+public abstract class UserInterface : DraggingHandler
 {
 
     public InventoryObject inventory;
-    public Dictionary<GameObject, InventorySlot> slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
     void Start()
     {
         SetInventoryParent();
         CreateSlots();
-        AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
-        AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
     }
 
-    // Update is called once per frame
     void Update()
     {
         RunUpdateSlotDisplay();
@@ -39,80 +33,26 @@ public abstract class UserInterface : MonoBehaviour
     }
     public abstract void CreateSlots();
 
-    protected void AddEvent(GameObject obj, EventTriggerType type, UnityAction<BaseEventData> action)
-    {
-        EventTrigger trigger = obj.GetComponent<EventTrigger>();
-        var eventTrigger = new EventTrigger.Entry();
-        eventTrigger.eventID = type;
-        eventTrigger.callback.AddListener(action);
-        trigger.triggers.Add(eventTrigger);
-    }
-
-    public void OnEnter(GameObject obj)
-    {
-        MouseData.slotHoveredOver = obj;
-    }
-    public void OnExit(GameObject obj)
-    {
-        MouseData.slotHoveredOver = null;
-    }
-    public void OnEnterInterface(GameObject obj)
-    {
-        MouseData.interfaceMouseIsOver = obj.GetComponent<UserInterface>();
-    }
-    public void OnExitInterface(GameObject obj)
-    {
-        MouseData.interfaceMouseIsOver = null;
-    }
-    public void OnDragStart(GameObject obj)
-    {
-        MouseData.tempItemBeingDragged = CreateTempItem(obj);
-    }
-    public GameObject CreateTempItem(GameObject obj)
-    {
-        GameObject tempItem = null;
-        if(slotsOnInterface[obj].item.Id >= 0)
-        {
-            tempItem = new GameObject();
-            var rt = tempItem.AddComponent<RectTransform>();
-            rt.sizeDelta = new Vector2(50, 50);
-            tempItem.transform.SetParent(transform.parent);
-            var img = tempItem.AddComponent<Image>();
-            img.sprite = slotsOnInterface[obj].ItemObject.uiDisplay;
-            img.raycastTarget = false;
-        }
-        return tempItem;
-    }
-    public void OnDragEnd(GameObject obj)
+    public override void OnDragEnd(GameObject obj)
     {
         //obj = last slot the item was in
-        Destroy(MouseData.tempItemBeingDragged);
+        base.OnDragEnd(obj);
         if (MouseData.interfaceMouseIsOver == null)
         {
             //when dragged into nothing = delete
             //commenting this out makes it act the same as 2nd part. aka it returns to where it was (cus tempt was deleted)
-            //Debug.Log("1st part of OnDragEnd");
             //slotsOnInterface[obj].RemoveItem();
-            //obj.transform.GetChild(0).GetComponent<RectTransform>().position = Input.mousePosition;
             return;
         }
         if (MouseData.slotHoveredOver)
         {
             //when dragged into a slot = move it there
-            //Debug.Log("2nd part of OnDragEnd");
             InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
             //slotHoveredOver = slot the mouse was over. aka the new slot
             inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
         }
     }
-    public void OnDrag(GameObject obj)
-    {
-        if (MouseData.tempItemBeingDragged != null)
-            MouseData.tempItemBeingDragged.GetComponent<RectTransform>().position = Input.mousePosition;
-    }
 }
-
-
 
 public static class ExtensionMethods
 {

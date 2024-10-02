@@ -5,10 +5,12 @@ using UnityEngine;
 public class TestResult : MonoBehaviour, IResult
 {
     public string message = "Result Executed";
+    public GameObject obj;
 
     public void Execute()
     {
         Debug.Log(message);
+        obj.SetActive(true);
     }
 }
 
