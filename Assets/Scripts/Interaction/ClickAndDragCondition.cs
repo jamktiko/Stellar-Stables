@@ -7,6 +7,7 @@ public class ClickAndDragCondition : DraggingHandler, ICondition
 {
     public UserInterface userInterface;
     [SerializeField] private bool isItemConsumed;
+    [SerializeField] private GameObject objectToDragOnto;
     [SerializeField] private ItemObject itemSO;
     [SerializeField] private int itemValue;
     private Item item;
@@ -23,18 +24,18 @@ public class ClickAndDragCondition : DraggingHandler, ICondition
         //if this OBJECT is dragged AWAY (start?) from correct object(s) = success
         //if this ITEM is dragged ONTO (end) correct object = success, item consumed (optional)/item stays in new world slot (optional), if wrong object/none = failure, return item to inventory
 
-        for (int i = 0; i < userInterface.inventory.Container.Items.Length; i++)
-        {
-            if (userInterface.inventory.Container.Items[i].item.Id == item.Id)
-            {
-                if (isItemConsumed)
-                {
-                    userInterface.inventory.Container.Items[i].RemoveItem();
-                }
-                return true;
-            }
-        }
-        return false;
+        //for (int i = 0; i < userInterface.inventory.Container.Items.Length; i++)
+        //{
+        //    if (userInterface.inventory.Container.Items[i].item.Id == item.Id)
+        //    {
+        //        if (isItemConsumed)
+        //        {
+        //            userInterface.inventory.Container.Items[i].RemoveItem();
+        //        }
+        //        return true;
+        //    }
+        //}
+        //return false;
 
         return isConditionMet;
     }
@@ -62,8 +63,13 @@ public class ClickAndDragCondition : DraggingHandler, ICondition
 
         if (MouseData.slotHoveredOver)
         {
-            InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
-            if (mouseHoverSlotData.item.Id == item.Id)
+            //InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
+            //if (mouseHoverSlotData.item.Id == item.Id)
+            //{
+            //    isConditionMet = true;
+            //    GetComponent<InteractableObject>().OnClick();
+            //}
+            if (MouseData.slotHoveredOver.gameObject == objectToDragOnto.gameObject)
             {
                 isConditionMet = true;
                 GetComponent<InteractableObject>().OnClick();

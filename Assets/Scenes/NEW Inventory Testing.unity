@@ -1250,10 +1250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToDragOnto:
-    Name: 
-    Id: -1
-    buffs: []
+  userInterface: {fileID: 0}
+  isItemConsumed: 0
+  itemSO: {fileID: 0}
+  itemValue: 0
 --- !u!1 &673370292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,10 +2746,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToDragOnto:
-    Name: 
-    Id: 15
-    buffs: []
+  userInterface: {fileID: 3303974}
+  isItemConsumed: 0
+  itemSO: {fileID: 11400000, guid: a85ad3075434e2d4e9da5e6de12547d0, type: 2}
+  itemValue: 0
 --- !u!224 &1281689434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4242,10 +4242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToDragOnto:
-    Name: 
-    Id: -1
-    buffs: []
+  userInterface: {fileID: 0}
+  isItemConsumed: 0
+  itemSO: {fileID: 0}
+  itemValue: 0
 --- !u!1 &2135705981
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Assign a Condition & Result script and this script will use them.")]
     [Space(5)]
     [SerializeField] private bool hasBeenCompleted = false;
+    [SerializeField] private bool isRepeatable = false;
     public ICondition condition;
     public IResult result;
 
@@ -39,6 +40,9 @@ public class InteractableObject : MonoBehaviour
     private void ConditionCompleted()
     {
         result.Execute();
-        hasBeenCompleted = true;
+        if (!isRepeatable)
+        {
+            hasBeenCompleted = true;
+        }
     }
 }
