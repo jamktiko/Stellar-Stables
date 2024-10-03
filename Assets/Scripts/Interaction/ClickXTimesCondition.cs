@@ -9,7 +9,14 @@ public class ClickXTimesCondition : MonoBehaviour, ICondition
     public bool IsConditionMet()
     {
         currentClicks++;
-        return currentClicks >= requiredClicks;
+
+        if (currentClicks >= requiredClicks)
+        {
+            ResetCondition();
+            return true;
+        }
+
+        return false;
     }
     public void ResetCondition()
     {
