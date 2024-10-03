@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fishing Testing.unity
     guid: 748d174742c088647a6f94550db69536
+  - enabled: 1
+    path: Assets/Scenes/Area1.unity
+    guid: 49dcf647c26a4974c9eab817e6e83dab
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: f1f50fc224c9675499ae9d8d5ac65eed
+  - enabled: 1
+    path: Assets/Scenes/Stables.unity
+    guid: 5758a4d18ecbffb49bf11bc0522e1b9e
   m_configObjects: {}
