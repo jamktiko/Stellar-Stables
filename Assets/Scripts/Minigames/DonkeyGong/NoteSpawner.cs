@@ -5,7 +5,9 @@ using UnityEngine;
 public class NoteSpawner : MonoBehaviour
 {
 
-    [SerializeField] private GameObject[] notePrefabs;
+    [SerializeField] private GameObject notePrefab;
+    [SerializeField] private Sprite[] noteVariations;
+    [SerializeField] private Sprite[] colourVariations;
     [SerializeField] private float spawnRateMin;
     [SerializeField] private float spawnRateMax;
     [SerializeField] private int numberOfSpawnPoints;
@@ -51,7 +53,9 @@ public class NoteSpawner : MonoBehaviour
     {
         int randomIndex = Random.Range(0, spawnPoints.Count);
         Vector2 spawnPosition = spawnPoints[randomIndex];
-        Instantiate(notePrefabs[Random.Range(0,notePrefabs.Length)], spawnPosition, Quaternion.identity).name = "Note";
+        GameObject newNote = Instantiate(notePrefab, spawnPosition, Quaternion.identity);
+        newNote.name = "Note";
+        newNote.GetComponent<NoteRandomizer>().SetNoteSprites(noteVariations[Random.Range(0, noteVariations.Length)], colourVariations[Random.Range(0,colourVariations.Length)]);
     }
 
 }
