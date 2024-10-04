@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Fishing Testing.unity
     guid: 748d174742c088647a6f94550db69536
   - enabled: 1
-    path: Assets/Scenes/Area1.unity
+    path: Assets/Scenes/Area1_Ocean.unity
     guid: 49dcf647c26a4974c9eab817e6e83dab
+  - enabled: 1
+    path: Assets/Scenes/Area2_Desert.unity
+    guid: 14bb289864a7b5d4e80387b7c4c0687f
+  - enabled: 1
+    path: Assets/Scenes/Area3_Forest.unity
+    guid: b804576d2377dd741af01ca3304d9095
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: f1f50fc224c9675499ae9d8d5ac65eed
