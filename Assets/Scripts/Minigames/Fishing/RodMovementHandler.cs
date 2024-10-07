@@ -73,7 +73,7 @@ public class RodMovementHandler : MonoBehaviour
         
     }
 
-    private void Punish()
+    public void Punish()
     {
         _isHoldingClick = false;
         _isReset = true;

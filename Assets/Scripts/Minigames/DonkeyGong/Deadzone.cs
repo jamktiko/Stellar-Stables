@@ -5,12 +5,17 @@ using DG.Tweening;
 
 public class Deadzone : MonoBehaviour
 {
+    [SerializeField] private float minimumDeadzoneSize;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "Note")
         {
             MinigameLives.Instance.UseLife();
-            transform.DOScale(transform.localScale - new Vector3(0.02f, 0.02f, 0.02f), 0.5f);
+            if (transform.localScale.x > minimumDeadzoneSize)
+            {
+                transform.DOScale(transform.localScale - new Vector3(0.02f, 0.02f, 0.02f), 0.5f);
+            }
             Destroy(collision.gameObject);
         }
     }

@@ -7,12 +7,16 @@ public class FishSpawnHandler : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] fishPrefabs;
-    [SerializeField] private GameObject shorsePrefab;
+    [SerializeField] private GameObject[] obstaclePrefabs;
+    [SerializeField] private GameObject[] shorsePrefabs;
     [SerializeField] private float shorseSpawnChance;
+    [SerializeField] private float obstacleSpawnChance;
     [SerializeField] private float spawnRateMin;
     [SerializeField] private float spawnRateMax;
     [SerializeField] private float fishSpeedMin;
     [SerializeField] private float fishSpeedMax;
+
+    [SerializeField] private int minigameLevel;
 
     private float[] spawnSide = new float[2] { -10f, 10f };
     private float spawnXValue;
@@ -50,8 +54,14 @@ public class FishSpawnHandler : MonoBehaviour
             {
                 Debug.Log("Shorse spawned.");
                 shorseSpawned = true;
-                GameObject spawnedShorse = Instantiate(shorsePrefab, randomSpawnPosition, Quaternion.identity);
+                GameObject spawnedShorse = Instantiate(shorsePrefabs[minigameLevel-1], randomSpawnPosition, Quaternion.identity);
                 spawnedShorse.GetComponent<FishMovementHandler>().Spawned(spawnXValue, Random.Range(fishSpeedMin*2, fishSpeedMax*2));
+            }
+            else if (Random.Range(0f, 100f) < obstacleSpawnChance * minigameLevel / 2f && minigameLevel > 1)
+            {
+                Debug.Log("Obstacle spawned");
+                GameObject spawnedObstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)], randomSpawnPosition, Quaternion.identity);
+                spawnedObstacle.GetComponent<FishMovementHandler>().Spawned(spawnXValue, Random.Range(fishSpeedMin, fishSpeedMax));
             }
             else if (spawnXValue == 10f)
             {

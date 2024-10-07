@@ -5,21 +5,21 @@ using UnityEngine;
 public class Fish : MonoBehaviour, ICatchable
 {
 
-    private bool _isRodReset = false;
+    protected bool _isRodReset = false;
 
     private void OnEnable()
     {
-        RodMovementHandler.Instance.OnRodReset += ToggleReset;
-        RodMovementHandler.Instance.OnRodEnable += ToggleReset;
+        RodMovementHandler.Instance.OnRodReset += ToggleResetOn;
+        RodMovementHandler.Instance.OnRodEnable += ToggleResetOff;
     }
 
     private void OnDisable()
     {
-        RodMovementHandler.Instance.OnRodReset -= ToggleReset;
-        RodMovementHandler.Instance.OnRodEnable -= ToggleReset;
+        RodMovementHandler.Instance.OnRodReset -= ToggleResetOn;
+        RodMovementHandler.Instance.OnRodEnable -= ToggleResetOff;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    virtual protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "fishing_rod" && !_isRodReset)
         {
@@ -40,17 +40,23 @@ public class Fish : MonoBehaviour, ICatchable
         
     }
 
-    public void Catch()
+    virtual public void Catch()
     {
         Debug.Log("Fish caught.");
         MinigameScore.Instance.AddScore();
         Destroy(gameObject);
     }
 
-    private void ToggleReset()
+    private void ToggleResetOn()
     {
+        _isRodReset = true;
         Debug.Log("Log reset set to: " + _isRodReset);
-        _isRodReset = !_isRodReset;
+    }
+
+    private void ToggleResetOff()
+    {
+        _isRodReset = false;
+        Debug.Log("Log reset set to: " + _isRodReset);
     }
 
 }
