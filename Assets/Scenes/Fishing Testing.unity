@@ -162,15 +162,15 @@ MonoBehaviour:
   - {fileID: 4798416465508442687, guid: 7a6c6fd744a034f4dbf17b6ef0af1692, type: 3}
   shorsePrefabs:
   - {fileID: 7636413064336040308, guid: 8bc7bccd49ecebd409b00e0db01f3ebe, type: 3}
-  - {fileID: 7636413064336040308, guid: 8bc7bccd49ecebd409b00e0db01f3ebe, type: 3}
-  - {fileID: 7636413064336040308, guid: 8bc7bccd49ecebd409b00e0db01f3ebe, type: 3}
+  - {fileID: 7636413064336040308, guid: 588c0fa9ed0b58744b9bbf48379a83cd, type: 3}
+  - {fileID: 7636413064336040308, guid: 97edba5c43f62064bba15fd20fd64f29, type: 3}
   shorseSpawnChance: 2
   obstacleSpawnChance: 15
   spawnRateMin: 0.5
   spawnRateMax: 1
   fishSpeedMin: 2
   fishSpeedMax: 7
-  minigameLevel: 3
+  minigameLevel: 1
 --- !u!4 &328209389
 Transform:
   m_ObjectHideFlags: 0

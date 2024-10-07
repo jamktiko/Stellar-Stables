@@ -55,7 +55,7 @@ public class FishSpawnHandler : MonoBehaviour
                 Debug.Log("Shorse spawned.");
                 shorseSpawned = true;
                 GameObject spawnedShorse = Instantiate(shorsePrefabs[minigameLevel-1], randomSpawnPosition, Quaternion.identity);
-                spawnedShorse.GetComponent<FishMovementHandler>().Spawned(spawnXValue, Random.Range(fishSpeedMin*2, fishSpeedMax*2));
+                spawnedShorse.GetComponent<FishMovementHandler>().Spawned(spawnXValue, Random.Range(fishSpeedMin*2.5f, fishSpeedMax*3.5f));
             }
             else if (Random.Range(0f, 100f) < obstacleSpawnChance * minigameLevel / 2f && minigameLevel > 1)
             {
