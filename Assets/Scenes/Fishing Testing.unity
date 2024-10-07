@@ -170,7 +170,7 @@ MonoBehaviour:
   spawnRateMax: 1
   fishSpeedMin: 2
   fishSpeedMax: 7
-  minigameLevel: 1
+  minigameLevel: 2
 --- !u!4 &328209389
 Transform:
   m_ObjectHideFlags: 0

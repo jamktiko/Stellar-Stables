@@ -11,26 +11,26 @@ PrefabInstance:
     - target: {fileID: 4590897719469068623, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca986810b5a267f47b643c967fc18de2, type: 3}
+      objectReference: {fileID: 21300000, guid: 9d791034ea31ece48a080794e972e021, type: 3}
     - target: {fileID: 8257494276290865947, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.15
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8257494276290865947, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8257494276290865947, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8257494276290865947, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.482964
+      value: -3.5302627
       objectReference: {fileID: 0}
     - target: {fileID: 8257494276290865947, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.840137
+      value: -2.309653
       objectReference: {fileID: 0}
     - target: {fileID: 8257494276290865947, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9079836456547432854, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
       propertyPath: m_Name
-      value: Bucket
+      value: Shoe
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5669665332017164647, guid: a3376268eb9c43b4e995ca63d39410e2, type: 3}
@@ -121,14 +121,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.64, y: 6.58}
+    oldSize: {x: 7.94, y: 3.81}
     newSize: {x: 5.95, y: 2.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.64, y: 6.58}
+  m_Size: {x: 7.94, y: 3.81}
   m_EdgeRadius: 0
 --- !u!114 &281566069461882976
 MonoBehaviour:
