@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+
+
 
 [CustomEditor(typeof(UserInterface), true)]
 public class InterfaceEditor : Editor
@@ -22,3 +25,4 @@ public class InterfaceEditor : Editor
         }
     }
 }
+#endif

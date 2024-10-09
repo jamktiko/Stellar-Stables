@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(GiveItemResult))]
@@ -43,4 +44,5 @@ public class GiveItemEditor : Editor
 
     //    EditorGUILayout.EndHorizontal();                                                                                    //end the horizontal gui layout
     //}
-}
+} 
+#endif

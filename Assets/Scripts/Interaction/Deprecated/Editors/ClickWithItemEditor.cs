@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+
 
 [CustomEditor(typeof(ClickWithItemCondition))]
 public class ClickWithItemEditor : Editor
@@ -42,3 +44,4 @@ public class ClickWithItemEditor : Editor
     //    EditorGUILayout.EndHorizontal();                                                                                    //end the horizontal gui layout
     //}
 }
+#endif
