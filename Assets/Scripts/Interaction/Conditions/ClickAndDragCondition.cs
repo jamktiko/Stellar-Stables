@@ -75,7 +75,7 @@ public class ClickAndDragCondition : DraggingHandler, ICondition
                 GetComponent<InteractableObject>().OnClick();
                 if (isItemConsumed)
                 {
-                    Destroy(this);
+                    Destroy(this.gameObject);
                 }
             }
         }
