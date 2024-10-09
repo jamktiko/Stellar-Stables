@@ -1497,6 +1497,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 621b759bb7e4dfb4bbbeb8c6a155ff77, type: 3}
   - {fileID: 21300000, guid: 0438e8186800aca4b9435883a7b4b8c7, type: 3}
   - {fileID: 21300000, guid: c8b061dab8473fa4c9b789271ae77472, type: 3}
+  badNoteVariations:
+  - {fileID: 21300000, guid: f5113204b8c59464fb81a1301bc817e6, type: 3}
+  - {fileID: 21300000, guid: 422b225de29e20b44b809cbcb3206422, type: 3}
+  - {fileID: 21300000, guid: 35a5a4ce25b680e4087eb62dc539863b, type: 3}
+  - {fileID: 21300000, guid: fcac9c515426e2c41a19168ba294ff38, type: 3}
+  - {fileID: 21300000, guid: cb80f46b62f28244c81c88a24ccfccc1, type: 3}
   colourVariations:
   - {fileID: 21300000, guid: 527d87dea1422e24981c3527f1cecfe1, type: 3}
   - {fileID: 21300000, guid: 7988557ef41115f40af11c990b004e0e, type: 3}
@@ -1506,10 +1512,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3b8e0ff3f6ae9594db452092dfb3a2e0, type: 3}
   - {fileID: 21300000, guid: e1ce77dab4fdb1542a1cce5005a8e80a, type: 3}
   - {fileID: 21300000, guid: 98af7fd13dd3c70459d9323dc25a48bb, type: 3}
+  badNoteSpawnChance: 15
   spawnRateMin: 0.4
   spawnRateMax: 1.5
   numberOfSpawnPoints: 30
   radius: 5
+  minigameLevel: 2
 --- !u!1 &1487128872
 GameObject:
   m_ObjectHideFlags: 0

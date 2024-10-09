@@ -164,7 +164,7 @@ MonoBehaviour:
   - {fileID: 7636413064336040308, guid: 8bc7bccd49ecebd409b00e0db01f3ebe, type: 3}
   - {fileID: 7636413064336040308, guid: 588c0fa9ed0b58744b9bbf48379a83cd, type: 3}
   - {fileID: 7636413064336040308, guid: 97edba5c43f62064bba15fd20fd64f29, type: 3}
-  shorseSpawnChance: 2
+  shorseSpawnChance: 27.32
   obstacleSpawnChance: 15
   spawnRateMin: 0.5
   spawnRateMax: 1
