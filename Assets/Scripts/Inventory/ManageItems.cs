@@ -5,7 +5,8 @@ using UnityEngine;
 public class ManageItems : MonoBehaviour
 {
     public UserInterface userInterface;
-    public InventorySlot slot;
+    public GameObject slotObject;
+    private InventorySlot slot;
     public ItemObject itemSO;
     private Item item;
     public int value;
@@ -19,7 +20,8 @@ public class ManageItems : MonoBehaviour
     public void RemoveItemFromInventory()
     {
         //needs to know the slot
-        slot.RemoveItem();
+
+        userInterface.slotsOnInterface[slotObject].RemoveItem();
         userInterface.RunUpdateSlotDisplay();
     }
 }

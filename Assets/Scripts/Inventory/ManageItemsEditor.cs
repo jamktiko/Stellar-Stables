@@ -22,7 +22,7 @@ public class ManageItemsEditor : Editor
 
         if (GUILayout.Button("Remove Item from Inventory (Takes time to load)"))
         {
-            manageItems.AddItemToInventory();
+            manageItems.RemoveItemFromInventory();
         }
     }
 }
