@@ -622,11 +622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 696029698}
   isItemConsumed: 0
   objectToDragOnto: {fileID: 650512672}
-  itemSO: {fileID: 11400000, guid: d667f8156f7fe8b40b55007d780094fd, type: 2}
-  itemValue: 0
 --- !u!114 &284644435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d544bf19ebc973045830eceebc47d4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 696029698}
+  interface: {fileID: 0}
   isItemConsumed: 0
   itemSO: {fileID: 11400000, guid: 1a1c305c54285b34fbfc531d72a81cbc, type: 2}
   itemValue: 1
@@ -1310,11 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 696029698}
   isItemConsumed: 0
   objectToDragOnto: {fileID: 0}
-  itemSO: {fileID: 11400000, guid: a85ad3075434e2d4e9da5e6de12547d0, type: 2}
-  itemValue: 0
 --- !u!1 &655999913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,7 +2525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efd696ab08c06cd4098e222c71ee430d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bad43ce036309fd43b5dd4e3dae2dd8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3187,11 +3181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 696029698}
   isItemConsumed: 0
   objectToDragOnto: {fileID: 0}
-  itemSO: {fileID: 11400000, guid: a85ad3075434e2d4e9da5e6de12547d0, type: 2}
-  itemValue: 0
 --- !u!1 &2047377648
 GameObject:
   m_ObjectHideFlags: 0

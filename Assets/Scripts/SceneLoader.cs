@@ -14,7 +14,10 @@ public class SceneLoader : MonoBehaviour
         Area2_Desert,
         Area3_Forest,
         Home,
-        Stables
+        Stables,
+        Minigame_Fishing,
+        Minigame_Music,
+        Minigame_Workout
     }
     public void LoadScene()
     {

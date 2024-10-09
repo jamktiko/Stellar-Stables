@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public abstract class UserInterface : DraggingHandler
 {
-
     public InventoryObject inventory;
     void Start()
     {
