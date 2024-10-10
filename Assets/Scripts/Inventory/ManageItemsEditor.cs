@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(ManageItems))]
@@ -25,4 +26,5 @@ public class ManageItemsEditor : Editor
             manageItems.RemoveItemFromInventory();
         }
     }
-}
+} 
+#endif
