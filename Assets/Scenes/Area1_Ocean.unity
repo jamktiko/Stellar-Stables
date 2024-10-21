@@ -1756,7 +1756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d544bf19ebc973045830eceebc47d4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
+  userInterface: {fileID: 696029698}
   isItemConsumed: 0
   itemSO: {fileID: 11400000, guid: b586bc56b37ceba4db7b0f19066fa622, type: 2}
   itemValue: 0
