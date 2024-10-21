@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InteractableObject))]
 public class ClickWithItemCondition : MonoBehaviour, ICondition
 {
     public UserInterface userInterface;

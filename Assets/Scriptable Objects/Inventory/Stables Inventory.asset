@@ -18,31 +18,37 @@ MonoBehaviour:
     Items:
     - AllowedItems: 
       item:
-        Name: 
-        Id: -1
+        Name: TestHorse
+        Id: 3
         buffs: []
       amount: 1
     - AllowedItems: 
       item:
-        Name: 
-        Id: -1
+        Name: TestHorse
+        Id: 3
         buffs: []
-      amount: 0
+      amount: 1
     - AllowedItems: 
       item:
-        Name: 
-        Id: -1
+        Name: TestHorse
+        Id: 3
         buffs: []
-      amount: 0
+      amount: 1
     - AllowedItems: 
       item:
-        Name: 
-        Id: -1
+        Name: TestHorse
+        Id: 3
         buffs: []
-      amount: 0
+      amount: 1
     - AllowedItems: 
       item:
-        Name: 
-        Id: -1
+        Name: TestHorse
+        Id: 3
         buffs: []
-      amount: 0
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: TestHorse
+        Id: 3
+        buffs: []
+      amount: 1

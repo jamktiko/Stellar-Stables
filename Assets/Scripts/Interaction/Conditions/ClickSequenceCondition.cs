@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InteractableObject))]
 public class ClickSequenceCondition : MonoBehaviour, ICondition
 {
     //public static ClickSequenceCondition instance;

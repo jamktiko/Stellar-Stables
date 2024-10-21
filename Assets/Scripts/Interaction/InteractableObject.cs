@@ -10,10 +10,6 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool isRepeatable = false;
     public ICondition condition;
     public IResult result;
-
-    //public ScriptableCondition condition;
-    //public ScriptableResult result;
-
     private void Start()
     {
         condition = GetComponent<ICondition>();
@@ -21,16 +17,9 @@ public class InteractableObject : MonoBehaviour
     }
     public void OnClick()
     {
-        //if (!hasBeenClicked) //reset the SO if this is a new click
-        //{
-        //    condition.ResetCondition();
-        //    hasBeenClicked = true;
-        //}
-
         if (condition != null && condition.IsConditionMet() && !hasBeenCompleted)
         {
             ConditionCompleted();
-            //condition.ResetCondition();
         }
         else if (condition == null && !hasBeenCompleted) //for no conditions -> click once
         {

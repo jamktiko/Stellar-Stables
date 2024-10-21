@@ -11,6 +11,7 @@ public abstract class UserInterface : DraggingHandler
     {
         SetInventoryParent();
         CreateSlots();
+        ClearInventory();
     }
 
     void Update()
@@ -50,6 +51,15 @@ public abstract class UserInterface : DraggingHandler
             //slotHoveredOver = slot the mouse was over. aka the new slot
             inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
         }
+    }
+
+    private void ClearInventory()
+    {
+        foreach (var slot in slotsOnInterface.Values)
+        {
+            slot.RemoveItem();
+        }
+        RunUpdateSlotDisplay();
     }
 }
 

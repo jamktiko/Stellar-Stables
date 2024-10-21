@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 43290088664392244}
   - component: {fileID: 1326946369206070730}
   - component: {fileID: 8228717900901595237}
+  - component: {fileID: 3761895291241817234}
+  - component: {fileID: 4844145616123296124}
+  - component: {fileID: 5913917751649079416}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -27,7 +30,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6311367849035453156}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4.268276}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
@@ -51,11 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
-  isItemConsumed: 0
+  isObjectConsumable: 0
   objectToDragOnto: {fileID: 0}
-  itemSO: {fileID: 11400000, guid: a85ad3075434e2d4e9da5e6de12547d0, type: 2}
-  itemValue: 0
 --- !u!114 &43290088664392244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,3 +107,44 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3761895291241817234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311367849035453156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cfaa0e55422594b9403ff85e548232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4844145616123296124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311367849035453156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBeenCompleted: 0
+  isRepeatable: 0
+--- !u!114 &5913917751649079416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311367849035453156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0337155b4d3384045bcbec4082585358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Result Executed
+  textbox: {fileID: 0}
+  obj: {fileID: 0}
