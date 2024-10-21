@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[RequireComponent(typeof(InteractableObject))]
 public class TestResult : MonoBehaviour, IResult
 {
     public string message = "Result Executed";

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
+[RequireComponent(typeof(InteractableObject))]
 public class GiveItemResult : MonoBehaviour, IResult
 {
     public UserInterface userInterface;
