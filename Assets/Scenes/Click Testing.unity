@@ -660,9 +660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8016fb3ffb38e418085e3b3ed35581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 1299732407}
-  itemSO: {fileID: 11400000, guid: b586bc56b37ceba4db7b0f19066fa622, type: 2}
-  value: 1
 --- !u!4 &154999356
 Transform:
   m_ObjectHideFlags: 0
@@ -971,7 +968,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6219650889731722643, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
+      propertyPath: isRepeatable
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6886491883192854016, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1336,6 +1338,10 @@ PrefabInstance:
       value: Leaf
       objectReference: {fileID: 0}
     - target: {fileID: 5524559455033518535, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524559455033518535, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: targetObjectTag
       value: Fire
       objectReference: {fileID: 0}
@@ -1435,7 +1441,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6219650889731722643, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
+      propertyPath: isRepeatable
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6886491883192854016, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1822,7 +1833,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6219650889731722643, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
+      propertyPath: isRepeatable
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6886491883192854016, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
