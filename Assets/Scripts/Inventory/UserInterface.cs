@@ -44,10 +44,10 @@ public abstract class UserInterface : DraggingHandler
             //slotsOnInterface[obj].RemoveItem();
             return;
         }
-        if (MouseData.slotHoveredOver)
+        if (MouseData.objectHoveredOver)
         {
             //when dragged into a slot = move it there
-            InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];
+            InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.objectHoveredOver];
             //slotHoveredOver = slot the mouse was over. aka the new slot
             inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
         }

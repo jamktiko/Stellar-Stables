@@ -11,6 +11,19 @@ public class DynamicInterface : UserInterface
     public int NUMBER_OF_COLUMN;
     public int Y_SPACE_BETWEEN_ITEMS;
 
+    public static DynamicInterface instance;
+    public void OnEnable()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);
+            Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
+        }
+    }
     public override void CreateSlots()
     {
         slotsOnInterface = new Dictionary<GameObject, InventorySlot>();

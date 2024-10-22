@@ -8,18 +8,19 @@ using UnityEditor;
 [RequireComponent(typeof(InteractableObject))]
 public class GiveItemResult : MonoBehaviour, IResult
 {
-    public UserInterface userInterface;
+    //public UserInterface userInterface;
+    [Header("This gives an item directly to the Player's inventory. Does not work with Stables inventory")]
     [SerializeField] private ItemObject itemSO;
     [SerializeField] private int itemValue;
     private Item item;
 
-    private void Start()
-    {
-        userInterface = GameObject.FindWithTag("MainInventory").GetComponent<UserInterface>();
-    }
+    //private void Start()
+    //{
+    //    userInterface = GameObject.FindWithTag("MainInventory").GetComponent<UserInterface>();
+    //}
     public void Execute()
     {
         item = item ?? itemSO.CreateItem();
-        userInterface.inventory.AddItem(item, itemValue);
+        StaticInterface.instance.inventory.AddItem(item, itemValue);
     }
 }

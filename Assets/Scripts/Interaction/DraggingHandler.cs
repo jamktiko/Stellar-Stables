@@ -54,33 +54,33 @@ public class DraggingHandler : MonoBehaviour
     public virtual void OnEnter(GameObject draggedObject)
     {
         Debug.Log("Entered object!");
-        MouseData.slotHoveredOver = draggedObject;
+        MouseData.objectHoveredOver = draggedObject;
     }
     public virtual void OnExit(GameObject draggedObject)
     {
         Debug.Log("Exited object.");
-        MouseData.slotHoveredOver = null;
+        MouseData.objectHoveredOver = null;
     }
     public virtual void OnDragStart(GameObject draggedObject, Dictionary<GameObject, InventorySlot> slotsOnInterface = null)
     {
         if (slotsOnInterface != null)
         {
-            MouseData.tempItemBeingDragged = CreateTempItem(draggedObject, slotsOnInterface);
+            MouseData.tempObjectBeingDragged = CreateTempItem(draggedObject, slotsOnInterface);
         }
         else
         {
-            MouseData.tempItemBeingDragged = CreateTempItem(draggedObject);
+            MouseData.tempObjectBeingDragged = CreateTempItem(draggedObject);
         }
     }
 
     public virtual void OnDragEnd(GameObject draggedObject)
     {
-        Destroy(MouseData.tempItemBeingDragged);
+        Destroy(MouseData.tempObjectBeingDragged);
     }
     public virtual void OnDrag(GameObject draggedObject)
     {
-        if (MouseData.tempItemBeingDragged != null)
-            MouseData.tempItemBeingDragged.GetComponent<RectTransform>().position = Input.mousePosition;
+        if (MouseData.tempObjectBeingDragged != null)
+            MouseData.tempObjectBeingDragged.GetComponent<RectTransform>().position = Input.mousePosition;
     }
     public GameObject CreateTempItem(GameObject draggedObject, Dictionary<GameObject, InventorySlot> slotsOnInterface)
     {

@@ -5,6 +5,20 @@ using UnityEngine;
 public class StaticInterface : UserInterface
 {
     public GameObject[] slots;
+    public static StaticInterface instance;
+
+    public void OnEnable()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);
+            Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
+        }
+    }
 
     public override void CreateSlots()
     {

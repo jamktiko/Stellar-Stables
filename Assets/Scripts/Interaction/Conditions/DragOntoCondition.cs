@@ -22,7 +22,7 @@ public class DragOntoCondition : DraggingHandler, ICondition
     }
     public bool IsConditionMet()
     {
-        if (MouseData.slotHoveredOver != null && MouseData.slotHoveredOver.gameObject == objectToDragOnto.gameObject)
+        if (MouseData.objectHoveredOver != null && MouseData.objectHoveredOver.gameObject == objectToDragOnto.gameObject)
         {
             if (isThisObjectConsumable)
             {
@@ -31,7 +31,7 @@ public class DragOntoCondition : DraggingHandler, ICondition
 
             if (isTargetObjectConsumable)
             {
-                Destroy(MouseData.slotHoveredOver.gameObject);
+                Destroy(MouseData.objectHoveredOver.gameObject);
             }
             return true;
         }
