@@ -20,6 +20,7 @@ TagManager:
   - DraggingItem
   - Timer
   - Stables
+  - Fire
   layers:
   - Default
   - TransparentFX

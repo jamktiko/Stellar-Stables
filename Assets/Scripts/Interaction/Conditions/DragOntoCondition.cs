@@ -5,24 +5,47 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(InteractableObject))]
-[RequireComponent(typeof(Draggable))]
 public class DragOntoCondition : DraggingHandler, ICondition
 {
     //public UserInterface userInterface;
+    [Header("Pick either a Tag or a specific GameObject as the target.")]
+    [Header("You can leave the other variable blank.")]
+    [Space(20)]
     [SerializeField] private bool isThisObjectConsumable;
     [SerializeField] private bool isTargetObjectConsumable;
+    [Header("Target is ANY object with this tag (Multi)")]
+    [SerializeField] private string targetObjectTag;
+    [Header("Target is ONLY this object.")]
     [SerializeField] private GameObject objectToDragOnto;
     //[SerializeField] private ItemObject itemSO;
     //[SerializeField] private int itemValue;
     //private Item item;
     public void Start()
     {
-        InitializeEvents(gameObject, gameObject);
+        SetupPointerLogic();
         //item = item ?? itemSO.CreateItem();
+    }
+    private void SetupPointerLogic()
+    {
+        InitializeEvents(gameObject, gameObject);
+
+        if (targetObjectTag != "")
+        {
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(targetObjectTag);
+            foreach (GameObject obj in taggedObjects)
+            {
+                InitializeEvents(obj);
+            }
+        }
+
+        if (objectToDragOnto != null)
+        {
+            InitializeEvents(objectToDragOnto);
+        }
     }
     public bool IsConditionMet()
     {
-        if (MouseData.objectHoveredOver != null && MouseData.objectHoveredOver.gameObject == objectToDragOnto.gameObject)
+        if (MouseData.objectHoveredOver != null && (MouseData.objectHoveredOver.gameObject.CompareTag(targetObjectTag) || (objectToDragOnto != null && MouseData.objectHoveredOver.gameObject == objectToDragOnto.gameObject)))
         {
             if (isThisObjectConsumable)
             {
@@ -59,6 +82,8 @@ public class DragOntoCondition : DraggingHandler, ICondition
 
     public override void OnDragEnd(GameObject obj)
     {
+        base.OnDragEnd(obj);
+        GetComponent<RectTransform>().position = Input.mousePosition;
         GetComponent<InteractableObject>().OnClick();
 
             //InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.slotHoveredOver];

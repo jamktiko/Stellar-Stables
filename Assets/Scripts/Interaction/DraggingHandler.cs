@@ -63,6 +63,10 @@ public class DraggingHandler : MonoBehaviour
     }
     public virtual void OnDragStart(GameObject draggedObject, Dictionary<GameObject, InventorySlot> slotsOnInterface = null)
     {
+        //Debug.Log($"OnDragStart in {GetType().Name} ran on object {gameObject.name}");
+        //it detects objects it hovers over
+        //inteface stays null, slot is just object (only works w those with the pointer events added. aka draggable shit)
+        //it can detect itself, exclude it
         if (slotsOnInterface != null)
         {
             MouseData.tempObjectBeingDragged = CreateTempItem(draggedObject, slotsOnInterface);
