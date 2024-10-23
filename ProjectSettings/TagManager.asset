@@ -22,6 +22,7 @@ TagManager:
   - Stables
   - Fire
   - Leafs for Duck puzzle
+  - StablesInventory
   layers:
   - Default
   - TransparentFX

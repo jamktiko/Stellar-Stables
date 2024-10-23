@@ -15,26 +15,32 @@ public class DebugInventoryEditor : Editor
 
         // Get reference to the target script
         DebugInventory manageItems = (DebugInventory)target;
-        int slotsCount = manageItems.userInterface.slotsOnInterface.Count;
 
-        // Add an integer slider for selecting the slot index (0-4)
-        selectedSlotIndex = EditorGUILayout.IntSlider("Slot Index", selectedSlotIndex, 0, slotsCount - 1);
-
-        // Add a button to the Inspector
-        if (GUILayout.Button("Add Item to Inventory"))
+        if (manageItems.userInterface != null)
         {
-            manageItems.AddItemToInventory();
-        }
+            int slotsCount = manageItems.userInterface.slotsOnInterface.Count;
 
-        // Button for removing an item at the selected slot index
-        if (GUILayout.Button("Remove Item from Inventory at Slot[" + (selectedSlotIndex + 1) + "]"))
-        {
-            manageItems.RemoveItemFromInventory(selectedSlotIndex);
-        }
+            manageItems.FindInterface();
 
-        if (GUILayout.Button("Clear ALL items from Inventory"))
-        {
-            manageItems.ClearInventory();
+            // Add an integer slider for selecting the slot index (0-4)
+            selectedSlotIndex = EditorGUILayout.IntSlider("Slot Index", selectedSlotIndex, 0, slotsCount - 1);
+
+            // Add a button to the Inspector
+            if (GUILayout.Button("Add Item to Inventory"))
+            {
+                manageItems.AddItemToInventory();
+            }
+
+            // Button for removing an item at the selected slot index
+            if (GUILayout.Button("Remove Item from Inventory at Slot[" + (selectedSlotIndex + 1) + "]"))
+            {
+                manageItems.RemoveItemFromInventory(selectedSlotIndex);
+            }
+
+            if (GUILayout.Button("Clear ALL items from Inventory"))
+            {
+                manageItems.ClearInventory();
+            }
         }
     }
 } 

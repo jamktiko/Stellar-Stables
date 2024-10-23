@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiDisplay: {fileID: 21300000, guid: b5e5124ab0e14f54aa74642e9e90f886, type: 3}
   stackable: 0
-  type: 1
+  type: 3
   description: 
   data:
     Name: 
-    Id: -1
+    Id: 3
     buffs: []

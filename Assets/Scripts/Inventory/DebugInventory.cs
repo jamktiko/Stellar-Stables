@@ -5,16 +5,43 @@ using System.Linq;
 
 public class DebugInventory : MonoBehaviour
 {
-    public UserInterface userInterface;
-    //public GameObject slotObject;
-    private InventorySlot slot;
+    [SerializeField] private InventoryObject inventorySO;
+    [HideInInspector] public UserInterface userInterface;
     public ItemObject itemSO;
     private Item item;
     public int value;
+
+    private void Start()
+    {
+        FindInterface();
+    }
+    public void FindInterface()
+    {
+        GameObject foundInventory = null;
+
+        if (inventorySO.name == "Player Inventory")
+        {
+            foundInventory = GameObject.FindGameObjectWithTag("MainInventory");
+        }
+        else if (inventorySO.name == "Stables Inventory")
+        {
+            foundInventory = GameObject.FindGameObjectWithTag("StablesInventory");
+        }
+
+
+        if (foundInventory != null)
+        {
+            userInterface = foundInventory.GetComponent<UserInterface>();
+        }
+        else
+        {
+            Debug.LogWarning("DebugInventory couldn't find an interface. Assign an Inventory Scriptable Object or check if that inventory (tagged) is in the scene.");
+        }
+    }
     public void AddItemToInventory()
     {
-        item = item ?? itemSO.CreateItem();
-        userInterface.inventory.AddItem(item, value);
+        item = itemSO.CreateItem();
+        inventorySO.AddItem(item, value);
         userInterface.RunUpdateSlotDisplay();
     }
 
