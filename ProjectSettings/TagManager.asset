@@ -21,6 +21,7 @@ TagManager:
   - Timer
   - Stables
   - Fire
+  - Leafs for Duck puzzle
   layers:
   - Default
   - TransparentFX
