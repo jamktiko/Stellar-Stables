@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 43835e75255697f44b8c11400e3fd98a, type: 2}
-  enabledOnScenes: 0200000003000000040000000500000006000000
   slots:
   - {fileID: 4598262949914206551}
   - {fileID: 3581554122308880257}
@@ -141,7 +140,6 @@ GameObject:
   - component: {fileID: 1506875900777748983}
   - component: {fileID: 7696164605334213626}
   - component: {fileID: 7397733260619497975}
-  - component: {fileID: 6207998207314125117}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -244,20 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8873ec3b1a4ffeb4c9b78f737c1968c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6207998207314125117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533141660905947921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 280e241253de8ae4bba388beaf02d890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerCleared: 1
-  isStablesCleared: 1
 --- !u!1001 &775691825193676833
 PrefabInstance:
   m_ObjectHideFlags: 0

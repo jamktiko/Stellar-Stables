@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public abstract class UserInterface : DraggingHandler
 {
     public InventoryObject inventory;
+    [SerializeField] private bool ClearItemsOnStart = true;
+    private bool hasBeenCleared = false;
 
     void Start()
     {
@@ -60,11 +62,16 @@ public abstract class UserInterface : DraggingHandler
 
     public void ClearInventory()
     {
-        foreach (var slot in slotsOnInterface.Values)
+        if (ClearItemsOnStart && !hasBeenCleared)
         {
-            slot.RemoveItem();
+            hasBeenCleared = true;
+            Debug.Log($"{gameObject.transform.parent.name} cleared");
+            foreach (var slot in slotsOnInterface.Values)
+            {
+                slot.RemoveItem();
+            }
+            RunUpdateSlotDisplay();
         }
-        RunUpdateSlotDisplay();
     }
 }
 

@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: ba391aef18194db419840aa8245becc2, type: 2}
-  enabledOnScenes: 
+  ClearItemsOnStart: 1
   slots:
   - {fileID: 3156783974925186000}
   - {fileID: 671383748}
@@ -1947,6 +1947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebugInventory Tool (Player)
       objectReference: {fileID: 0}
+    - target: {fileID: 6257921584826474208, guid: e6cf569df0079884e89dfa42efa646bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2061,6 +2065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebugInventory Tool (Horses)
       objectReference: {fileID: 0}
+    - target: {fileID: 3354221028924073993, guid: fcbdf8ae47962d548b7350e5231b9d1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4098555331842728750, guid: fcbdf8ae47962d548b7350e5231b9d1d, type: 3}
       propertyPath: inventorySO
       value: 
@@ -2129,7 +2137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1257302361185358885, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
       propertyPath: Y_START
-      value: 600
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 4450002057311216462, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
       propertyPath: m_Delegates.Array.size

@@ -17,21 +17,13 @@ public class DebugInventory : MonoBehaviour
     }
     public void FindInterface()
     {
-        GameObject foundInventory = null;
-
         if (inventorySO.name == "Player Inventory")
         {
-            foundInventory = GameObject.FindGameObjectWithTag("PlayerInventory");
+            userInterface = StaticInterface.instance;
         }
         else if (inventorySO.name == "Stables Inventory")
         {
-            foundInventory = GameObject.FindGameObjectWithTag("StablesInventory");
-        }
-
-
-        if (foundInventory != null)
-        {
-            userInterface = foundInventory.GetComponent<UserInterface>();
+            userInterface = DynamicInterface.instance;
         }
         else
         {

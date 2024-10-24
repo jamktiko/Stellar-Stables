@@ -1149,10 +1149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 9b3a5fb62e0034eb2a962dc49690ea9a, type: 2}
-  enabledOnScenes: 06000000
+  ClearItemsOnStart: 1
   inventoryPrefab: {fileID: 7195125655950208887, guid: 1e81261a2280c70408f0f97c4ba9046c, type: 3}
   X_START: -280
-  Y_START: 600
+  Y_START: 175
   X_SPACE_BETWEEN_ITEM: 560
   NUMBER_OF_COLUMN: 2
   Y_SPACE_BETWEEN_ITEMS: 140

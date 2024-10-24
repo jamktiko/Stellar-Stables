@@ -12,6 +12,7 @@ public class StaticInterface : UserInterface
         if (instance == null)
         {
             instance = this;
+            //Debug.Log($"StaticInterface is: {StaticInterface.instance.gameObject.name}");
         }
         else if (instance != this)
         {
