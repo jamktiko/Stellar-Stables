@@ -12,7 +12,7 @@ public class DynamicInterface : UserInterface
     public int Y_SPACE_BETWEEN_ITEMS;
 
     public static DynamicInterface instance;
-    public void OnEnable()
+    public void Awake()
     {
         if (instance == null)
         {
@@ -20,7 +20,7 @@ public class DynamicInterface : UserInterface
         }
         else if (instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject.transform.parent.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }

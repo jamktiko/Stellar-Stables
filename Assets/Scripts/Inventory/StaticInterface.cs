@@ -7,7 +7,7 @@ public class StaticInterface : UserInterface
     public GameObject[] slots;
     public static StaticInterface instance;
 
-    public void OnEnable()
+    public void Awake()
     {
         if (instance == null)
         {
@@ -15,7 +15,7 @@ public class StaticInterface : UserInterface
         }
         else if (instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject.transform.parent.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }

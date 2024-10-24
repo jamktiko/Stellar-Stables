@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(InteractableObject))]
 public class GetHorseResult : MonoBehaviour, IResult
 {
-    [Header("This gives an item directly to the Stables' inventory. \nClicking + Minigames")]
+    [Header("This gives an item directly to the Stables' inventory.")]
     [SerializeField] private ItemObject horseSO;
     private InventoryObject inventorySO;
     private Item item;

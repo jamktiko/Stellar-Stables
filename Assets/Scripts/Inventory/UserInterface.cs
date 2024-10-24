@@ -4,9 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+
 public abstract class UserInterface : DraggingHandler
 {
     public InventoryObject inventory;
+
     void Start()
     {
         SetInventoryParent();
@@ -17,7 +19,10 @@ public abstract class UserInterface : DraggingHandler
     void Update()
     {
         RunUpdateSlotDisplay();
+        //ToggleInventory();
     }
+
+
 
     public void SetInventoryParent()
     {

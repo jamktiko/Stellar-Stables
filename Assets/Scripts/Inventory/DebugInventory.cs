@@ -21,7 +21,7 @@ public class DebugInventory : MonoBehaviour
 
         if (inventorySO.name == "Player Inventory")
         {
-            foundInventory = GameObject.FindGameObjectWithTag("MainInventory");
+            foundInventory = GameObject.FindGameObjectWithTag("PlayerInventory");
         }
         else if (inventorySO.name == "Stables Inventory")
         {

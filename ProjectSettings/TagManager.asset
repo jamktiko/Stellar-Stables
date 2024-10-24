@@ -4,25 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EquipmentSystem
-  - Slot
-  - Item
-  - Slots
   - ItemIcon
-  - Hotbar
-  - Tooltip
-  - Panel
-  - ResultSlot
-  - CraftSystem
   - Canvas
   - EventSystem
-  - MainInventory
   - DraggingItem
   - Timer
   - Stables
   - Fire
   - Leafs for Duck puzzle
   - StablesInventory
+  - PlayerInventory
   layers:
   - Default
   - TransparentFX

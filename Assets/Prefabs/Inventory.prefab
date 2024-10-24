@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7595940097693868695}
   m_Layer: 5
   m_Name: Interface
-  m_TagString: MainInventory
+  m_TagString: PlayerInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 43835e75255697f44b8c11400e3fd98a, type: 2}
+  enabledOnScenes: 0200000003000000040000000500000006000000
   slots:
   - {fileID: 4598262949914206551}
   - {fileID: 3581554122308880257}
@@ -189,7 +190,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &1506875900777748983
 MonoBehaviour:
