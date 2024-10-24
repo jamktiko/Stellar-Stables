@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36c92f6916f51c84180ccd6986ebd922, type: 3}
-  m_Name: Shorse
+  m_Name: Dorse
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: b5e5124ab0e14f54aa74642e9e90f886, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 61b88bdd96b7b77499821da1268e1185, type: 3}
   stackable: 0
   type: 3
   description: 

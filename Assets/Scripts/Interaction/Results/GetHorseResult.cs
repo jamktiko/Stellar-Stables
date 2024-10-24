@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(InteractableObject))]
 
+[RequireComponent(typeof(InteractableObject))]
 public class GetHorseResult : MonoBehaviour, IResult
 {
-    [Header("This gives an item directly to the Stables' inventory.")]
+    [Header("This gives an item directly to the Stables' inventory. \nClicking + Minigames")]
     [SerializeField] private ItemObject horseSO;
     private InventoryObject inventorySO;
     private Item item;
@@ -13,11 +13,18 @@ public class GetHorseResult : MonoBehaviour, IResult
     private void Start()
     {
         inventorySO = Resources.Load<InventoryObject>("Inventory/Stables Inventory");
+        Debug.Log($"inventorySO is {inventorySO}");
+
+        if (MinigameTimer.Instance != null)
+        {
+            //MinigameTimer.Instance.OnMinigameReset += Execute;
+        }
     }
     public void Execute()
     {
-        item = item ?? horseSO.CreateItem();
+        item = horseSO.CreateItem();
         inventorySO.AddItem(item, 1);
+        Debug.Log("Horse granted!");
 
         //anything else fancy
     }

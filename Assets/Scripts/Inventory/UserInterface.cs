@@ -11,7 +11,7 @@ public abstract class UserInterface : DraggingHandler
     {
         SetInventoryParent();
         CreateSlots();
-        ClearInventory();
+        //ClearInventory();
     }
 
     void Update()
@@ -53,7 +53,7 @@ public abstract class UserInterface : DraggingHandler
         }
     }
 
-    private void ClearInventory()
+    public void ClearInventory()
     {
         foreach (var slot in slotsOnInterface.Values)
         {

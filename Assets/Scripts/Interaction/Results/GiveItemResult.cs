@@ -8,14 +8,14 @@ using UnityEditor;
 [RequireComponent(typeof(InteractableObject))]
 public class GiveItemResult : MonoBehaviour, IResult
 {
-    [Header("This gives an item directly to the Player's inventory. Does not work with Stables inventory")]
+    [Header("This gives an item directly to the Player's inventory. \nDoes not work with Stables inventory")]
     [SerializeField] private ItemObject itemSO;
     [SerializeField] private int itemValue;
     private Item item;
 
     public void Execute()
     {
-        item = item ?? itemSO.CreateItem();
+        item = itemSO.CreateItem();
         StaticInterface.instance.inventory.AddItem(item, itemValue);
     }
 }

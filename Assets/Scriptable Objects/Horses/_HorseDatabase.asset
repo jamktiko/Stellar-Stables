@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528b587c9ac0ca84199461489d117448, type: 3}
+  m_Name: _HorseDatabase
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 11400000, guid: 5c97eed6056265044b3a310e0e9e4b4b, type: 2}
+  - {fileID: 11400000, guid: f475e72f09e43ad4a9742c91ba7e549c, type: 2}
+  - {fileID: 11400000, guid: d879051f9b30c444b8e9615c7d89d91c, type: 2}
+  - {fileID: 11400000, guid: 8556128571f5e3844bbaa1755bd5a357, type: 2}
+  - {fileID: 11400000, guid: 8aeafc1e118b5e64fa9fc8ad1062fda9, type: 2}
+  - {fileID: 11400000, guid: a148c4ef32c5ff84a9094d846fdf14c9, type: 2}
+  - {fileID: 11400000, guid: 2db71f878aa1b13428a3be2d94544568, type: 2}
+  - {fileID: 11400000, guid: 8de75b78d0c2e5a4dadddbf1e1564286, type: 2}
+  - {fileID: 11400000, guid: 1afd0eaf92892cc42a677bc81d3b161d, type: 2}
+  - {fileID: 11400000, guid: a7f2356d4f0913449b6e6d26066f1e0e, type: 2}
+  - {fileID: 11400000, guid: baa3a6ef3ca22214cb4bae923121dde9, type: 2}

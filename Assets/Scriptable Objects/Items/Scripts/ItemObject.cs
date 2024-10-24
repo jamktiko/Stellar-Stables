@@ -11,13 +11,13 @@ public enum ItemType
     Default
 }
 
-public enum Attributes
-{
-    Agility,
-    Intellect,
-    Stamina,
-    Strength
-}
+//public enum Attributes
+//{
+//    Agility,
+//    Intellect,
+//    Stamina,
+//    Strength
+//}
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory System/Items/item")]
 public class ItemObject : ScriptableObject
 {
@@ -41,7 +41,7 @@ public class Item
 {
     public string Name;
     public int Id = -1;
-    public ItemBuff[] buffs;
+    //public ItemBuff[] buffs;
     public Item()
     {
         Name = "";
@@ -51,32 +51,32 @@ public class Item
     {
         Name = item.name;
         Id = item.data.Id;
-        buffs = new ItemBuff[item.data.buffs.Length];
-        for (int i = 0; i < buffs.Length; i++)
-        {
-            buffs[i] = new ItemBuff(item.data.buffs[i].min, item.data.buffs[i].max)
-            {
-                attribute = item.data.buffs[i].attribute
-            };
-        }
+        //buffs = new ItemBuff[item.data.buffs.Length];
+        //for (int i = 0; i < buffs.Length; i++)
+        //{
+        //    buffs[i] = new ItemBuff(item.data.buffs[i].min, item.data.buffs[i].max)
+        //    {
+        //        attribute = item.data.buffs[i].attribute
+        //    };
+        //}
     }
 }
 
-[System.Serializable]
-public class ItemBuff
-{
-    public Attributes attribute;
-    public int value;
-    public int min;
-    public int max;
-    public ItemBuff(int _min, int _max)
-    {
-        min = _min;
-        max = _max;
-        GenerateValue();
-    }
-    public void GenerateValue()
-    {
-        value = UnityEngine.Random.Range(min, max);
-    }
-}
+//[System.Serializable]
+//public class ItemBuff
+//{
+//    public Attributes attribute;
+//    public int value;
+//    public int min;
+//    public int max;
+//    public ItemBuff(int _min, int _max)
+//    {
+//        min = _min;
+//        max = _max;
+//        GenerateValue();
+//    }
+//    public void GenerateValue()
+//    {
+//        value = UnityEngine.Random.Range(min, max);
+//    }
+//}

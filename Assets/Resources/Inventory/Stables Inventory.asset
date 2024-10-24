@@ -13,42 +13,66 @@ MonoBehaviour:
   m_Name: Stables Inventory
   m_EditorClassIdentifier: 
   savePath: /stables.Save
-  database: {fileID: 11400000, guid: 12cdf3138109dd946b96d9d82a9ddda2, type: 2}
+  database: {fileID: 11400000, guid: 8b9e2f157b51b4f4982785ba7e7f88c0, type: 2}
   Container:
     Items:
     - AllowedItems: 03000000
       item:
-        Name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: TestHorse
-        Id: 3
-        buffs: []
+        Name: Shorse
+        Id: 5
       amount: 1
     - AllowedItems: 03000000
       item:
         Name: 
         Id: -1
-        buffs: []
       amount: 0
     - AllowedItems: 03000000
       item:
         Name: 
         Id: -1
-        buffs: []
       amount: 0
     - AllowedItems: 03000000
       item:
         Name: 
         Id: -1
-        buffs: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
       amount: 0

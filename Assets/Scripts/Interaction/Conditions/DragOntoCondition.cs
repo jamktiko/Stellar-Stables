@@ -8,8 +8,7 @@ using UnityEngine.Events;
 public class DragOntoCondition : DraggingHandler, ICondition
 {
     //public UserInterface userInterface;
-    [Header("Pick either a Tag or a specific GameObject as the target.")]
-    [Header("You can leave the other variable blank.")]
+    [Header("Pick either a Tag or a specific GameObject as the target. \nYou can leave the other variable blank.")]
     [Space(20)]
     [SerializeField] private bool isThisObjectConsumable;
     [SerializeField] private bool isTargetObjectConsumable;
