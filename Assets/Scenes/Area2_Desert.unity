@@ -498,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
+  targetObjectTag: 
   objectToDragOnto: {fileID: 650512672}
 --- !u!114 &284644435
 MonoBehaviour:
@@ -511,7 +512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50220850b76628540a1830421b79094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
   itemSO: {fileID: 11400000, guid: 89d362338999eb741a4aad8922ecaf4e, type: 2}
   itemValue: 1
 --- !u!114 &284644436
@@ -984,7 +984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50220850b76628540a1830421b79094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
   itemSO: {fileID: 11400000, guid: a85ad3075434e2d4e9da5e6de12547d0, type: 2}
   itemValue: 1
 --- !u!114 &611767078
@@ -1201,6 +1200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
+  targetObjectTag: 
   objectToDragOnto: {fileID: 0}
 --- !u!114 &650512679
 MonoBehaviour:
@@ -1527,7 +1527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50220850b76628540a1830421b79094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
   itemSO: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
   itemValue: 1
 --- !u!114 &854373496
@@ -2174,7 +2173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50220850b76628540a1830421b79094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
   itemSO: {fileID: 11400000, guid: f020674a9fa9d4fb6ad57fc04af04809, type: 2}
   itemValue: 1
 --- !u!114 &1198183324
@@ -2314,6 +2312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c9fcbe67fa93e4fab37bb2bbf71dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventorySO: {fileID: 0}
   userInterface: {fileID: 825951411}
   itemSO: {fileID: 11400000, guid: a85ad3075434e2d4e9da5e6de12547d0, type: 2}
   value: 1
@@ -2733,7 +2732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50220850b76628540a1830421b79094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
   itemSO: {fileID: 11400000, guid: 1a1c305c54285b34fbfc531d72a81cbc, type: 2}
   itemValue: 1
 --- !u!114 &1566122727
@@ -2817,7 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d544bf19ebc973045830eceebc47d4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
+  userInterface: {fileID: 825951411}
   isItemConsumed: 0
   itemSO: {fileID: 11400000, guid: f020674a9fa9d4fb6ad57fc04af04809, type: 2}
   itemValue: 0
@@ -3337,6 +3335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
+  targetObjectTag: 
   objectToDragOnto: {fileID: 0}
 --- !u!114 &2015106852
 MonoBehaviour:
