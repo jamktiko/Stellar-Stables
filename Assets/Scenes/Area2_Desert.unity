@@ -528,6 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 0
 --- !u!114 &284644437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +1001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 0
 --- !u!114 &611767079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,6 +1230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 0
 --- !u!1 &655999913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 0
 --- !u!114 &854373497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,6 +2193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 1
 --- !u!114 &1198183325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,6 +2343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 0
 --- !u!114 &1367539774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,6 +2584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 1
+  isButtonDeleted: 0
 --- !u!114 &1566122723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,6 +2792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 1
+  isButtonDeleted: 0
 --- !u!114 &1629216822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3284,6 +3292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 0
 --- !u!1 &2047377648
 GameObject:
   m_ObjectHideFlags: 0

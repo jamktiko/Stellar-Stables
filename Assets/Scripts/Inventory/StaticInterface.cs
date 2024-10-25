@@ -19,6 +19,11 @@ public class StaticInterface : UserInterface
             Destroy(this.gameObject.transform.parent.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
+
+        SetInventoryParent();
+        CreateSlots();
+        ClearInventory();
+        //ClearInventory();
     }
 
     public override void CreateSlots()
