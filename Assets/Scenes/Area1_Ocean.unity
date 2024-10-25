@@ -585,6 +585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 1
+  isButtonDeleted: 0
 --- !u!114 &186388723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,6 +1400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 1
+  isButtonDeleted: 0
 --- !u!114 &611767079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,6 +1898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 1
+  isButtonDeleted: 0
 --- !u!114 &713245582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 1
+  isButtonDeleted: 0
 --- !u!114 &854373497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,7 +2215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6693950950dd9344c9146e7c851cba57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToToggle: {fileID: 0}
+  objectToToggle: {fileID: 713245578}
 --- !u!1 &953269968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,6 +2859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
   isRepeatable: 0
+  isButtonDeleted: 1
 --- !u!114 &1367539774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3054,7 +3059,7 @@ GameObject:
   - component: {fileID: 1566122722}
   - component: {fileID: 1566122728}
   m_Layer: 0
-  m_Name: Click 3 times
+  m_Name: Get axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3093,7 +3098,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenCompleted: 0
-  isRepeatable: 1
+  isRepeatable: 0
+  isButtonDeleted: 1
 --- !u!114 &1566122723
 MonoBehaviour:
   m_ObjectHideFlags: 0
