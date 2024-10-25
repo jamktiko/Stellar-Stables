@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public abstract class UserInterface : DraggingHandler
 {
     public InventoryObject inventory;
-    [SerializeField] private bool ClearItemsOnStart = true;
+    [SerializeField] private bool clearItemsOnStart = true;
     private bool hasBeenCleared = false;
 
     void Start()
@@ -62,7 +62,7 @@ public abstract class UserInterface : DraggingHandler
 
     public void ClearInventory()
     {
-        if (ClearItemsOnStart && !hasBeenCleared)
+        if (clearItemsOnStart && !hasBeenCleared)
         {
             hasBeenCleared = true;
             Debug.Log($"{gameObject.transform.parent.name} cleared");

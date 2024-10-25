@@ -20,7 +20,7 @@ public class SceneInventoryManager : MonoBehaviour
     {
         StaticInterface.instance.ClearInventory();
         DynamicInterface.instance.ClearInventory();
-        Invoke("TogglePlayerInventory", 0.25f);
+        TogglePlayerInventory();
         ToggleStablesInventory();
     }
 
