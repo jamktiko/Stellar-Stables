@@ -10,12 +10,13 @@ public abstract class UserInterface : DraggingHandler
     public InventoryObject inventory;
     [SerializeField] private bool clearItemsOnStart = true;
     private bool hasBeenCleared = false;
-
+    private void Awake()
+    {
+        //ClearInventory();
+    }
     void Start()
     {
-        SetInventoryParent();
-        CreateSlots();
-        //ClearInventory();
+
     }
 
     void Update()
@@ -69,6 +70,7 @@ public abstract class UserInterface : DraggingHandler
             foreach (var slot in slotsOnInterface.Values)
             {
                 slot.RemoveItem();
+                Debug.Log($"Slot is: { slot}, interface is {slotsOnInterface}");
             }
             RunUpdateSlotDisplay();
         }

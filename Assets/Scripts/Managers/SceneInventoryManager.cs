@@ -11,11 +11,6 @@ public class SceneInventoryManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StaticInterface.instance.ClearInventory();
