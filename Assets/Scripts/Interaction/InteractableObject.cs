@@ -8,6 +8,7 @@ public class InteractableObject : MonoBehaviour
     [Space(5)]
     public bool hasBeenCompleted = false;
     [SerializeField] private bool isRepeatable = false;
+    [SerializeField] private bool isButtonDeleted = false;
     public ICondition condition;
     public IResult result;
     private void Start()
@@ -32,6 +33,10 @@ public class InteractableObject : MonoBehaviour
         if (!isRepeatable)
         {
             hasBeenCompleted = true;
+        }
+        if (isButtonDeleted)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
