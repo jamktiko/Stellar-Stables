@@ -45,7 +45,7 @@ public class FishSpawnHandler : MonoBehaviour
             yield return new WaitForSeconds(spawnDelay);
 
             spawnXValue = spawnSide[Random.Range(0, 2)];
-            spawnYValue = Random.Range(-4.25f, 4.25f);
+            spawnYValue = Random.Range(-4.25f, 1.9f);
 
             Vector3 randomSpawnPosition = new Vector3(spawnXValue, spawnYValue, 0);
 

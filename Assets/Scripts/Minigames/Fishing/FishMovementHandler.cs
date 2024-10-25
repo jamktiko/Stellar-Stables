@@ -75,6 +75,7 @@ public class FishMovementHandler : MonoBehaviour
             spriteRenderer.flipX = true;
             targetXValue = 10f;
         }
+        spriteRenderer.sortingOrder = Random.Range(1, 3);
         StartMoving();
     }
 
