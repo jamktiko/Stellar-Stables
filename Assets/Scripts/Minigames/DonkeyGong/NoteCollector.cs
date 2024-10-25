@@ -13,6 +13,10 @@ public class NoteCollector : MonoBehaviour
     {
         MinigameScore.Instance.AddScore();
         Debug.Log("Note collected");
+        if (FoodInventoryManager.Instance != null)
+        {
+            FoodInventoryManager.Instance.NoteAmount++;
+        }
         Destroy(gameObject);
     }
 
