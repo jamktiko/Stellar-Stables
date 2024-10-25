@@ -70,7 +70,7 @@ public abstract class UserInterface : DraggingHandler
             foreach (var slot in slotsOnInterface.Values)
             {
                 slot.RemoveItem();
-                Debug.Log($"Slot is: { slot}, interface is {slotsOnInterface}");
+                //Debug.Log($"Slot is: { slot}, interface is {slotsOnInterface}");
             }
             RunUpdateSlotDisplay();
         }
