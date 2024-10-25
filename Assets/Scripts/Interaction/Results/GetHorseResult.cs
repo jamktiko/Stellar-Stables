@@ -24,6 +24,7 @@ public class GetHorseResult : MonoBehaviour, IResult
     {
         item = horseSO.CreateItem();
         inventorySO.AddItem(item, 1);
+        StartCoroutine(HorseObtained.instance.TogglePopup(horseSO.uiDisplay));
         Debug.Log("Horse granted!");
 
         //anything else fancy

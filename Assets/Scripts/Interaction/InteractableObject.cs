@@ -11,6 +11,9 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool isButtonDeleted = false;
     public ICondition condition;
     public IResult result;
+
+    //public List<ICondition> conditions = new List<ICondition>();
+    //public List<IResult> results = new List<IResult>();
     private void Start()
     {
         condition = GetComponent<ICondition>();
@@ -39,4 +42,38 @@ public class InteractableObject : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    //private void Start()
+    //{
+    //    conditions.AddRange(GetComponents<ICondition>());
+    //    results.AddRange(GetComponents<IResult>());
+    //}
+
+    //public void OnClick()
+    //{
+    //    bool allConditionsMet = conditions.Count == 0 || conditions.TrueForAll(condition => condition.IsConditionMet());
+
+    //    if (allConditionsMet && !hasBeenCompleted)
+    //    {
+    //        ConditionCompleted();
+    //    }
+    //}
+
+    //private void ConditionCompleted()
+    //{
+    //    // Execute all results
+    //    foreach (var result in results)
+    //    {
+    //        result.Execute();
+    //    }
+
+    //    if (!isRepeatable)
+    //    {
+    //        hasBeenCompleted = true;
+    //    }
+
+    //    if (isButtonDeleted)
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+//}
 }
