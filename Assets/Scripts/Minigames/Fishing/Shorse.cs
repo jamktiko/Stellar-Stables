@@ -8,11 +8,24 @@ public class Shorse : Fish
     [SerializeField] private ItemObject horseSO;
     private InventoryObject inventorySO;
     private Item item;
+
+    private void Start()
+    {
+        inventorySO = Resources.Load<InventoryObject>("Inventory/Stables Inventory");
+        Debug.Log($"inventorySO is {inventorySO}");
+    }
     override public void Catch()
     {
         Debug.Log("Shorse caught!");
         item = horseSO.CreateItem();
-        inventorySO.AddItem(item, 1);
+        if (inventorySO == null)
+        {
+            Debug.LogError("InventorySO is null;");
+        }
+        else
+        {
+            inventorySO.AddItem(item, 1);
+        }
         Destroy(gameObject);
     }
 }
