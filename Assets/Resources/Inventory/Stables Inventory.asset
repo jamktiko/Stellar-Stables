@@ -18,49 +18,19 @@ MonoBehaviour:
     Items:
     - AllowedItems: 03000000
       item:
-        Name: Shorse
-        Id: 5
+        Name: DonkeyGong
+        Id: 1
       amount: 1
     - AllowedItems: 03000000
       item:
-        Name: 
-        Id: -1
-      amount: 0
+        Name: DonkeyGong
+        Id: 1
+      amount: 1
     - AllowedItems: 03000000
       item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
+        Name: DonkeyGong
+        Id: 1
+      amount: 1
     - AllowedItems: 03000000
       item:
         Name: 

@@ -328,7 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2981482224726800644}
-  textBox: {fileID: 3341685139898017063}
+  textObject: {fileID: 3341685139898017063}
+  textBox: {fileID: 3413652653823879323}
   waitTime: 2
 --- !u!114 &3717552757221946830
 MonoBehaviour:
