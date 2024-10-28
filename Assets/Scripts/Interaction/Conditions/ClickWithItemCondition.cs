@@ -13,7 +13,7 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
 
     public bool IsConditionMet()
     {
-        item = item ?? itemSO.CreateItem();
+        item = itemSO.CreateItem();
         
         for (int i = 0; i < userInterface.inventory.Container.Items.Length; i++)
         {
