@@ -10,6 +10,10 @@ public class MinigameScore : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     private int score = 0;
 
+    [SerializeField] private bool getHorseAtScore;
+    [SerializeField] private int scoreToReach;
+    private bool horseGotten;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -34,6 +38,14 @@ public class MinigameScore : MonoBehaviour
     public void AddScore()
     {
         score++;
+        if (score >= scoreToReach && getHorseAtScore && !horseGotten)
+        {
+            if (TryGetComponent(out GetHorseResult getHorse))
+            {
+                getHorse.Execute();
+                horseGotten = true;
+            }
+        }
         UpdateScoreText();
     }
 
@@ -49,5 +61,4 @@ public class MinigameScore : MonoBehaviour
         UpdateScoreText();
 
     }
-
 }
