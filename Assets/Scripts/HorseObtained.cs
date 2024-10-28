@@ -24,6 +24,10 @@ public class HorseObtained : MonoBehaviour
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }
+    public void StartPopup(ItemObject item)
+    {
+        StartCoroutine(TogglePopup(item.uiDisplay));
+    }
 
     public IEnumerator TogglePopup(Sprite horseSprite)
     {

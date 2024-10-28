@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class InteractableObject : MonoBehaviour
 {
     [Header("Assign a Condition & Result script and this script will use them.")]
@@ -40,6 +40,10 @@ public class InteractableObject : MonoBehaviour
         if (isButtonDeleted)
         {
             Destroy(this.gameObject);
+            //this.gameObject.SetActive(false);
+
+            //Image image = GetComponent<Image>();
+            //image.enabled = false;
         }
     }
     //private void Start()

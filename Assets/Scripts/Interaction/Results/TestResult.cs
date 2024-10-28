@@ -13,7 +13,10 @@ public class TestResult : MonoBehaviour, IResult
     public void Execute()
     {
         Debug.Log(message);
-        textbox.text = message;
+        if (textbox != null)
+        {
+            textbox.text = message;
+        }
         if (obj != null)
         {
             obj.SetActive(true);

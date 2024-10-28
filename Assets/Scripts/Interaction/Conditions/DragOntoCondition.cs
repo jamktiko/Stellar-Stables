@@ -44,7 +44,7 @@ public class DragOntoCondition : DraggingHandler, ICondition
     }
     public bool IsConditionMet()
     {
-        if (MouseData.objectHoveredOver != null && (MouseData.objectHoveredOver.gameObject.CompareTag(targetObjectTag) || (objectToDragOnto != null && MouseData.objectHoveredOver.gameObject == objectToDragOnto.gameObject)))
+        if (MouseData.objectHoveredOver != null && (!string.IsNullOrEmpty(targetObjectTag) && MouseData.objectHoveredOver.gameObject.CompareTag(targetObjectTag) || (objectToDragOnto != null && MouseData.objectHoveredOver.gameObject == objectToDragOnto.gameObject)))
         {
             if (isThisObjectConsumable)
             {
