@@ -958,6 +958,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5625046072513283722, guid: de9c49c76f697e7479b6cb65ffc7bea0, type: 3}
+      propertyPath: waitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5842697365541757020, guid: de9c49c76f697e7479b6cb65ffc7bea0, type: 3}
       propertyPath: m_Name
       value: HorseObtained
