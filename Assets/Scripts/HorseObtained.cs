@@ -7,9 +7,10 @@ using TMPro;
 public class HorseObtained : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private GameObject textObject;
     [SerializeField] private GameObject textBox;
-    public static HorseObtained instance;
     [SerializeField] private float waitTime;
+    public static HorseObtained instance;
 
     private void Awake()
     {
@@ -27,12 +28,14 @@ public class HorseObtained : MonoBehaviour
     public IEnumerator TogglePopup(Sprite horseSprite)
     {
         image.gameObject.SetActive(true);
+        textObject.SetActive(true);
         textBox.SetActive(true);
         image.sprite = horseSprite;
 
         yield return new WaitForSeconds(waitTime);
 
         image.gameObject.SetActive(false);
+        textObject.SetActive(false);
         textBox.SetActive(false);
     }
 }
