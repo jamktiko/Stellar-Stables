@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -29,6 +30,7 @@ public class FishSpawnHandler : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnFish());
+        minigameLevel = MinigameLevelManager.Instance.FishLevelIndex;
     }
 
     // Update is called once per frame
@@ -50,7 +52,7 @@ public class FishSpawnHandler : MonoBehaviour
             Vector3 randomSpawnPosition = new Vector3(spawnXValue, spawnYValue, 0);
 
 
-            if (Random.Range(0f, 100f) < shorseSpawnChance && !shorseSpawned)
+            if (minigameLevel < 4 && (Random.Range(0f, 100f) < shorseSpawnChance && !shorseSpawned))
             {
                 Debug.Log("Shorse spawned.");
                 shorseSpawned = true;

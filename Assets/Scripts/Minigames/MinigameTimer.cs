@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class MinigameTimer : MonoBehaviour
 {
-
     public static MinigameTimer Instance { get; private set; }
 
     private void Awake()
@@ -30,6 +29,15 @@ public class MinigameTimer : MonoBehaviour
     public event Action OnMinigameEnd;
     public event Action OnMinigameReset;
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += ResetTimeScale;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= ResetTimeScale;
+    }
 
     private void Start()
     {
@@ -81,8 +89,7 @@ public class MinigameTimer : MonoBehaviour
 
     public void ResetGame()
     {
-        Time.timeScale = 1;
-        
+        ResetTimeScale();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //remainingTime = gameDuration;
         //UpdateTimerText();
@@ -94,6 +101,15 @@ public class MinigameTimer : MonoBehaviour
         OnMinigameReset?.Invoke();
 
         //Debug.Log("Mingame reset.");
+    }
+
+    public void ResetTimeScale(Scene scene, LoadSceneMode mode)
+    {
+        Time.timeScale = 1;
+    }
+    public void ResetTimeScale()
+    {
+        Time.timeScale = 1;
     }
 
 }
