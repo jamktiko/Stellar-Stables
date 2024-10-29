@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &51714105 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7372491985661541769, guid: 5ab15be36e376de47971071f5f17da1f, type: 3}
-  m_PrefabInstance: {fileID: 812894467}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd495e8f4c77789438f1b22e76a189d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &136508154
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa3aa2eff1cc614f9a6cecb1b2336ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horseSO: {fileID: 11400000, guid: 1afd0eaf92892cc42a677bc81d3b161d, type: 2}
+  horseSO: {fileID: 11400000, guid: d7ea4b95631e67a47b849c0e1a5b1482, type: 2}
 --- !u!1 &689305414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,7 +2162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d544bf19ebc973045830eceebc47d4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 51714105}
   isItemConsumed: 1
   itemSO: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
   itemValue: 1
