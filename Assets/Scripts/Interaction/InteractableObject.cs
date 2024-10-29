@@ -39,8 +39,8 @@ public class InteractableObject : MonoBehaviour
         }
         if (isButtonDeleted)
         {
-            Destroy(this.gameObject);
-            //this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
 
             //Image image = GetComponent<Image>();
             //image.enabled = false;
