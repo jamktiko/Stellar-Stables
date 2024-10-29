@@ -43,22 +43,22 @@ public class DraggingHandler : MonoBehaviour
     }
     public virtual void OnEnterInterface(GameObject inventoryObject)
     {
-        Debug.Log("Entered interface!");
+        //Debug.Log("Entered interface!");
         MouseData.interfaceMouseIsOver = inventoryObject.GetComponent<UserInterface>();
     }
     public virtual void OnExitInterface(GameObject inventoryObject)
     {
-        Debug.Log("Exited interface.");
+        //Debug.Log("Exited interface.");
         MouseData.interfaceMouseIsOver = null;
     }
     public virtual void OnEnter(GameObject draggedObject)
     {
-        Debug.Log("Entered object!");
+        //Debug.Log("Entered object!");
         MouseData.objectHoveredOver = draggedObject;
     }
     public virtual void OnExit(GameObject draggedObject)
     {
-        Debug.Log("Exited object.");
+        //Debug.Log("Exited object.");
         MouseData.objectHoveredOver = null;
     }
     public virtual void OnDragStart(GameObject draggedObject, Dictionary<GameObject, InventorySlot> slotsOnInterface = null)

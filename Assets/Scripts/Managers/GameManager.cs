@@ -6,20 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    //private List<TrackableObject> trackedObjects = new List<TrackableObject>();
-
-
-    //when scene is changed, find and save info on all objects in the previous scene before changing
-    //store guid, position, active/inactive state, puzzle completed state (if any)
-    //when new scene is loaded, check if there's info stored on that scene
-    //if not, find all objects via guid and load their info
-
-    //game manager finds all objects
-    //how?
-    //1) each one has a script and they tell the game manager to register them?
-    //no, cus objs reset, they will register again
-
+    private List<GameObject> interactables = new List<GameObject>();
 
     private void Awake()
     {
@@ -32,20 +19,79 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
+
+        interactables = new List<GameObject>();
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        FindCanvases();
+        ApplyDDOL();
+        ToggleCanvases();
+    }
+    private void ApplyDDOL()
+    {
+        foreach (GameObject canvas in interactables)
+        {
+            if (canvas != null && canvas.GetComponent<DontDestroyOnLoad>() == null)
+            {
+                canvas.AddComponent<DontDestroyOnLoad>();
+                Debug.Log($"Added DDOL to interactables: {canvas}");
+            }
+        }
     }
 
-    //public void RegisterObject(TrackableObject obj)
-    //{
-    //    if (!trackedObjects.Contains(obj))
-    //        trackedObjects.Add(obj);
-    //}
-}
+    private void FindCanvases()
+    {
+        GameObject[] allCanvas = GameObject.FindGameObjectsWithTag("Canvas");
 
-//[System.Serializable]
-//public class ObjectData
-//{
-//    public string objectName;
-//    public Vector2 position;
-//    public bool isDeleted;
-//    public bool isObjectCompleted;
-//}
+        foreach (GameObject canvasFound in allCanvas)
+        {
+           Debug.Log($"canvasFound is: {canvasFound}");
+
+            if (!ContainsObjectWithName(canvasFound.name))
+            {
+                interactables.Add(canvasFound);
+                Debug.Log($"canvasFound ADDED: {canvasFound}");
+            }
+            else
+            {
+                canvasFound.SetActive(false);
+            }
+        }
+    }
+    private bool ContainsObjectWithName(string name)
+    {
+        foreach (GameObject go in interactables)
+        {
+            if (go.name == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    private void ToggleCanvases()
+    {
+        foreach (GameObject canvas in interactables)
+        {
+            canvas.SetActive(false);
+
+            SceneName rootSceneOfCanvas = canvas.GetComponent<SceneIdentifier>().rootScene;
+
+            if (IsActiveScene(rootSceneOfCanvas))
+            {
+                canvas.SetActive(true);
+            }
+        }
+    }
+    public bool IsActiveScene(SceneName sceneEnum)
+    {
+        string activeSceneName = SceneManager.GetActiveScene().name;
+
+        return activeSceneName == sceneEnum.ToString();
+    }
+}

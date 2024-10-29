@@ -13,7 +13,7 @@ public class GetHorseResult : MonoBehaviour, IResult
     private void Start()
     {
         inventorySO = Resources.Load<InventoryObject>("Inventory/Stables Inventory");
-        Debug.Log($"inventorySO is {inventorySO}");
+        //Debug.Log($"inventorySO is {inventorySO}");
     }
     public void Execute()
     {

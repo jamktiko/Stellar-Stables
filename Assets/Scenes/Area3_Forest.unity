@@ -681,9 +681,10 @@ GameObject:
   - component: {fileID: 561905352}
   - component: {fileID: 561905351}
   - component: {fileID: 561905350}
+  - component: {fileID: 561905354}
   m_Layer: 5
-  m_Name: Clickable
-  m_TagString: Untagged
+  m_Name: Forest_Interactables
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,8 +766,6 @@ RectTransform:
   m_Children:
   - {fileID: 1066238912}
   - {fileID: 2047377649}
-  - {fileID: 1952564203}
-  - {fileID: 1625890375}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -774,6 +773,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &561905354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561905349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9945f8210c989b0458e4e43227c338f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootScene: 0
 --- !u!1 &611767074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1564,8 @@ RectTransform:
   m_Children:
   - {fileID: 1457081521}
   - {fileID: 1505004584}
+  - {fileID: 1952564203}
+  - {fileID: 1625890375}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1569,7 +1583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066238912}
   m_Layer: 5
-  m_Name: Interactables
+  m_Name: Clickables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2157,7 +2171,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 561905353}
+    m_TransformParent: {fileID: 1031369950}
     m_Modifications:
     - target: {fileID: 3733853816187867010, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_Name
@@ -2213,11 +2227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211400176073484497, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4211400176073484497, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4211400176073484497, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2631,7 +2645,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 561905353}
+    m_TransformParent: {fileID: 1031369950}
     m_Modifications:
     - target: {fileID: 5886836318476794724, guid: 65ed4f8f6bda42948b231185717cbf90, type: 3}
       propertyPath: m_Name

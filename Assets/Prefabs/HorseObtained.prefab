@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 4951395452496606596}
   - component: {fileID: 6133965840271933533}
   - component: {fileID: 5625046072513283722}
-  - component: {fileID: 3717552757221946830}
   m_Layer: 5
   m_Name: HorseObtained
   m_TagString: Untagged
@@ -331,18 +330,6 @@ MonoBehaviour:
   textObject: {fileID: 3341685139898017063}
   textBox: {fileID: 3413652653823879323}
   waitTime: 2
---- !u!114 &3717552757221946830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5842697365541757020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8873ec3b1a4ffeb4c9b78f737c1968c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8170638060162571935
 GameObject:
   m_ObjectHideFlags: 0
