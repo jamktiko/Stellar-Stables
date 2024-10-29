@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa3aa2eff1cc614f9a6cecb1b2336ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horseSO: {fileID: 11400000, guid: 1afd0eaf92892cc42a677bc81d3b161d, type: 2}
+  horseSO: {fileID: 11400000, guid: d7ea4b95631e67a47b849c0e1a5b1482, type: 2}
 --- !u!1 &689305414
 GameObject:
   m_ObjectHideFlags: 0
