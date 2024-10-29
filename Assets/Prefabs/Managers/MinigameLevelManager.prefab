@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7532852872829394274
+--- !u!1 &4051212078337013426
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3682523565208857748}
-  - component: {fileID: 5619181560693407435}
+  - component: {fileID: 2256358200988209913}
+  - component: {fileID: 4749293746463667926}
   m_Layer: 0
-  m_Name: FoodInventoryManager
+  m_Name: MinigameLevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3682523565208857748
+--- !u!4 &2256358200988209913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7532852872829394274}
+  m_GameObject: {fileID: 4051212078337013426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,18 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5619181560693407435
+--- !u!114 &4749293746463667926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7532852872829394274}
+  m_GameObject: {fileID: 4051212078337013426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b0f210dfbddc8e41850272b640a1144, type: 3}
+  m_Script: {fileID: 11500000, guid: e027af37129401c458f335a5a25a2539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishAmount: 0
-  levelIncreaseRequirement: 20
-  noteAmount: 0
+  fishLevelIndex: 1
+  musicLevelIndex: 1
+  twonyLevelIndex: 1
