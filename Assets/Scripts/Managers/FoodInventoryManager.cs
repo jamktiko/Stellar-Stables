@@ -47,7 +47,7 @@ public class FoodInventoryManager : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+
     }
 
     private void UpdateFoodInventoryStats()
