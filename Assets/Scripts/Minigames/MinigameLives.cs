@@ -42,7 +42,7 @@ public class MinigameLives : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        livesText.text = "Remaining Lives: " + remainingLives;
+        livesText.text = "" + remainingLives;
     }
 
     public void UseLife()
