@@ -11,6 +11,7 @@ public class HorseObtained : MonoBehaviour
     [SerializeField] private GameObject textBox;
     [SerializeField] private float waitTime;
     public static HorseObtained instance;
+    private bool isActive;
 
     private void Awake()
     {
@@ -26,11 +27,15 @@ public class HorseObtained : MonoBehaviour
     }
     public void StartPopup(ItemObject item)
     {
-        StartCoroutine(TogglePopup(item.uiDisplay));
+        if (!isActive)
+        {
+            StartCoroutine(TogglePopup(item.uiDisplay));
+        }
     }
 
     public IEnumerator TogglePopup(Sprite horseSprite)
     {
+        isActive = true;
         image.gameObject.SetActive(true);
         textObject.SetActive(true);
         textBox.SetActive(true);
@@ -41,5 +46,6 @@ public class HorseObtained : MonoBehaviour
         image.gameObject.SetActive(false);
         textObject.SetActive(false);
         textBox.SetActive(false);
+        isActive = false;
     }
 }
