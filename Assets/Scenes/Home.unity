@@ -191,9 +191,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs:
+  - conditions:
+    - {fileID: 136508158}
+    results:
+    - {fileID: 136508156}
+    isRepeatable: 0
+    deleteButtonOnCompletion: 1
+    hasBeenCompleted: 0
 --- !u!114 &136508158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,6 +737,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horseSO: {fileID: 11400000, guid: d7ea4b95631e67a47b849c0e1a5b1482, type: 2}
+--- !u!114 &632636456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2531174620663512090, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+  m_PrefabInstance: {fileID: 1566636113}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632636448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &632636457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632636448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isThisObjectConsumable: 0
+  isTargetObjectConsumable: 1
+  targetObjectTag: 
+  objectToDragOnto: {fileID: 1509749644}
 --- !u!1 &689305414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2036,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].isRepeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].hasBeenCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].results.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[1].results.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].conditions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].results.Array.data[0]
+      value: 
+      objectReference: {fileID: 632636450}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[1].conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[1].results.Array.data[0]
+      value: 
+      objectReference: {fileID: 632636457}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].conditions.Array.data[0]
+      value: 
+      objectReference: {fileID: 632636456}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].conditions.Array.data[1]
+      value: 
+      objectReference: {fileID: 632636457}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[1].conditions.Array.data[0]
+      value: 
+      objectReference: {fileID: 632636456}
     - target: {fileID: 6311367849035453156, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: m_Name
       value: Bone
@@ -2024,6 +2104,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6311367849035453156, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 632636450}
+    - targetCorrespondingSourceObject: {fileID: 6311367849035453156, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 632636457}
   m_SourcePrefab: {fileID: 100100000, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
 --- !u!1 &1831506017
 GameObject:
@@ -2094,9 +2177,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs:
+  - conditions:
+    - {fileID: 1831506019}
+    results:
+    - {fileID: 1831506025}
+    isRepeatable: 0
+    deleteButtonOnCompletion: 1
+    hasBeenCompleted: 0
 --- !u!114 &1831506022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,9 +2358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &2135788012
 MonoBehaviour:
   m_ObjectHideFlags: 0

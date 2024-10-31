@@ -205,9 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &15631723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,9 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 0
+  conditionResultPairs: []
 --- !u!114 &607290800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1861,9 +1857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 0
+  conditionResultPairs: []
 --- !u!114 &854373497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2385,9 +2379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &1075279360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,9 +2695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &1171369001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3015,9 +3005,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs:
+  - conditions: []
+    results:
+    - {fileID: 1198183323}
+    isRepeatable: 0
+    deleteButtonOnCompletion: 1
+    hasBeenCompleted: 0
 --- !u!114 &1198183325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3375,9 +3369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &1367539774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3629,9 +3621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &1566122723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3914,9 +3904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 0
+  conditionResultPairs: []
 --- !u!1 &1623060464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,9 +3959,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs:
+  - conditions:
+    - {fileID: 1623060468}
+    results:
+    - {fileID: 1623060472}
+    isRepeatable: 0
+    deleteButtonOnCompletion: 1
+    hasBeenCompleted: 0
 --- !u!114 &1623060468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4178,9 +4171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 1
-  isButtonDeleted: 0
+  conditionResultPairs: []
 --- !u!114 &1629216822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4743,9 +4734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 0
+  conditionResultPairs: []
 --- !u!114 &1785699143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5477,9 +5466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 1
+  conditionResultPairs: []
 --- !u!114 &2027069082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5626,9 +5613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenCompleted: 0
-  isRepeatable: 0
-  isButtonDeleted: 0
+  conditionResultPairs: []
 --- !u!114 &2095433334
 MonoBehaviour:
   m_ObjectHideFlags: 0
