@@ -16,6 +16,8 @@ public class InventoryObject : ScriptableObject
 
     public bool AddItem(Item _item, int _amount)
     {
+        database.UpdateID();
+
         if (EmptySlotCount <= 0)
             return false;
         InventorySlot slot = FindItemOnInventory(_item);

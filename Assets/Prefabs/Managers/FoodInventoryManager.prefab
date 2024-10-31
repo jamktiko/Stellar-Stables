@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishAmount: 0
+  levelIncreaseRequirement: 20
   noteAmount: 0

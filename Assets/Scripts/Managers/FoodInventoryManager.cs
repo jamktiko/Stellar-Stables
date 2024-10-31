@@ -7,6 +7,7 @@ public class FoodInventoryManager : MonoBehaviour
     public static FoodInventoryManager Instance { get; private set; }
 
     [SerializeField] private int fishAmount = 0;
+    [SerializeField] private int levelIncreaseRequirement;
     public int FishAmount { 
         get 
         {
@@ -46,12 +47,24 @@ public class FoodInventoryManager : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+
     }
 
     private void UpdateFoodInventoryStats()
     {
+        CheckForDifficultyIncrease();
+    }
 
+    private void CheckForDifficultyIncrease()
+    {
+        //if (fishAmount >= MinigameLevelManager.Instance.FishLevelIndex*levelIncreaseRequirement)
+        //{
+        //    MinigameLevelManager.Instance.FishLevelIndex++;
+        //}
+        if (noteAmount >= MinigameLevelManager.Instance.MusicLevelIndex*levelIncreaseRequirement)
+        {
+            MinigameLevelManager.Instance.MusicLevelIndex++;
+        }
     }
 
 }

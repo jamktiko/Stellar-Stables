@@ -66,7 +66,7 @@ public abstract class UserInterface : DraggingHandler
         if (clearItemsOnStart && !hasBeenCleared)
         {
             hasBeenCleared = true;
-            Debug.Log($"{gameObject.transform.parent.name} cleared");
+            //Debug.Log($"{gameObject.transform.parent.name} cleared");
             foreach (var slot in slotsOnInterface.Values)
             {
                 slot.RemoveItem();
