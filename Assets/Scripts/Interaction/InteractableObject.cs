@@ -19,9 +19,11 @@ public class InteractableObject : MonoBehaviour
             {
                 pair.TryExecute();
             }
-            else if (pair.hasBeenCompleted && pair.deleteButtonOnCompletion)
+
+            if (pair.AreAllConditionsMet() && pair.deleteButtonOnCompletion)
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
         }
     }
