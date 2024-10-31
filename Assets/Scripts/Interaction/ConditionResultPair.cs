@@ -17,26 +17,23 @@ public class ConditionResultPair
 
     public bool AreAllConditionsMet()
     {
-        //return conditions.Count == 0 || conditions.TrueForAll(condition => condition.IsConditionMet());
         return conditions.Count == 0 || conditions.All(o => ((o as ICondition)?.IsConditionMet() ?? true) == true);
     }
 
-    public void TryExecute()
+    public bool TryExecute()
     {
         if (AreAllConditionsMet() && (!hasBeenCompleted || isRepeatable))
         {
-            //foreach (var result in results)
-            //{
-            //    result.Execute();
-            //}
-
             results.ForEach(c => (c as IResult)?.Execute());
 
             if (!isRepeatable)
             {
                 hasBeenCompleted = true;
             }
+
+            return deleteButtonOnCompletion;
         }
+        return false;
     }
 }
 

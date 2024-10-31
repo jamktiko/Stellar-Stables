@@ -42,6 +42,7 @@ public class Draggable : DraggingHandler
                 foreach (GameObject obj in taggedObjects)
                 {
                     InitializeEvents(obj);
+                    Debug.Log($"initialized object: {obj}");
                 }
             }
         }

@@ -19,7 +19,7 @@ public class GetHorseResult : MonoBehaviour, IResult
     {
         item = horseSO.CreateItem();
         inventorySO.AddItem(item, 1);
-        HorseObtained.instance.StartPopup(horseSO);
+        HorseFoundScreen.instance.StartPopup(horseSO);
         Debug.Log("Horse granted!");
     }
 }

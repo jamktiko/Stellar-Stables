@@ -17,14 +17,12 @@ public class InteractableObject : MonoBehaviour
         {
             if (!pair.hasBeenCompleted || pair.isRepeatable)
             {
-                pair.TryExecute();
+                if (pair.TryExecute())
+                {
+                    this.gameObject.SetActive(false);
+                }
             }
 
-            if (pair.AreAllConditionsMet() && pair.deleteButtonOnCompletion)
-            {
-                //Destroy(this.gameObject);
-                this.gameObject.SetActive(false);
-            }
         }
     }
 }

@@ -647,9 +647,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3413652653823879323, guid: de9c49c76f697e7479b6cb65ffc7bea0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5842697365541757020, guid: de9c49c76f697e7479b6cb65ffc7bea0, type: 3}
       propertyPath: m_Name
       value: HorseObtained
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842697365541757020, guid: de9c49c76f697e7479b6cb65ffc7bea0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6963301028036124603, guid: de9c49c76f697e7479b6cb65ffc7bea0, type: 3}
       propertyPath: m_Pivot.x
@@ -755,6 +763,7 @@ GameObject:
   - component: {fileID: 158688161}
   - component: {fileID: 158688160}
   - component: {fileID: 158688159}
+  - component: {fileID: 158688165}
   m_Layer: 0
   m_Name: Click 3 times
   m_TagString: Untagged
@@ -807,7 +816,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd9b192eb06f8d4fa4409c676f2a2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionResultPairs: []
+  conditionResultPairs:
+  - conditions:
+    - {fileID: 158688161}
+    results:
+    - {fileID: 158688159}
+    - {fileID: 158688165}
+    isRepeatable: 0
+    deleteButtonOnCompletion: 1
+    hasBeenCompleted: 0
 --- !u!114 &158688161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,6 +933,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158688157}
   m_CullTransparentMesh: 1
+--- !u!114 &158688165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158688157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa3aa2eff1cc614f9a6cecb1b2336ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horseSO: {fileID: 11400000, guid: 5c97eed6056265044b3a310e0e9e4b4b, type: 2}
 --- !u!1001 &202891776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5318,6 +5348,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950696114695481236, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506292933935982374, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697174520085905024, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016085770041048808, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214141216827357526, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867985594884060081, guid: 2aa68093b426d76428d856c6612f908f, type: 3}

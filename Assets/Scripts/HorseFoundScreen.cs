@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HorseObtained : MonoBehaviour
+public class HorseFoundScreen : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private GameObject textObject;
     [SerializeField] private GameObject textBox;
     [SerializeField] private float waitTime;
-    public static HorseObtained instance;
+    public static HorseFoundScreen instance;
     private bool isActive;
 
     private void Awake()
