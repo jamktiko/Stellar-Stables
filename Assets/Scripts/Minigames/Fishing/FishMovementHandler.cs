@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.UIElements;
 
 public class FishMovementHandler : MonoBehaviour
 {
@@ -62,6 +63,8 @@ public class FishMovementHandler : MonoBehaviour
         fishSpeed = newFishSpeed;
         originalYPosition = transform.position.y;
         SetRandomBobbing();
+
+        transform.localScale = transform.localScale * Random.Range(0.7f, 1.1f);
 
         if (spawnXValue == 10f) 
         {
