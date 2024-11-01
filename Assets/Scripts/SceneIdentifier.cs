@@ -22,12 +22,12 @@ public class SceneIdentifier : MonoBehaviour
 
         if (Enum.TryParse(currentSceneName, out currentSceneEnum))
         {
-            Debug.Log("Current scene as enum is: " + currentSceneEnum);
+            //Debug.Log("Current scene as enum is: " + currentSceneEnum);
             return currentSceneEnum;
         }
         else
         {
-            Debug.LogWarning("Current scene name does not match any SceneName enum.");
+            //Debug.LogWarning("Current scene name does not match any SceneName enum.");
             return SceneName.None;
         }
     }

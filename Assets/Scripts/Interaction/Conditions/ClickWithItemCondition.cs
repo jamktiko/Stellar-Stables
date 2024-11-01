@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(InteractableObject))]
 public class ClickWithItemCondition : MonoBehaviour, ICondition
 {
+    //public UserInterface userInterface;
     [SerializeField] private bool isItemConsumed;
     [SerializeField] private ItemObject itemSO;
     [SerializeField] private int itemValue;
@@ -12,7 +13,7 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
 
     public bool IsConditionMet()
     {
-        item = itemSO.CreateItem();
+        item = item ?? itemSO.CreateItem();
         
         for (int i = 0; i < StaticInterface.instance.inventory.Container.Items.Length; i++)
         {

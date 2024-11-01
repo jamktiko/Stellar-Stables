@@ -6,9 +6,12 @@ public class PuzzleCompletedCondition : MonoBehaviour, ICondition
 {
     [Header("The interactable that needs to be completed before this one can be completed")]
     [SerializeField] private InteractableObject interactableObject;
-
     public bool IsConditionMet()
     {
-        return interactableObject.hasBeenCompleted;
+        bool allConditionsDone = false;
+
+        allConditionsDone = interactableObject.conditionResultPairs.TrueForAll(condition => condition.hasBeenCompleted);
+        
+        return allConditionsDone;
     }
 }

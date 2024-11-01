@@ -51,7 +51,7 @@ public class MinigameScore : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "" +score;
     }
 
     private void ResetScore()
