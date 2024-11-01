@@ -15,6 +15,7 @@ public class InteractableObject : MonoBehaviour
     {
         foreach (var pair in conditionResultPairs)
         {
+            Debug.Log("CheckConditions ran");
             if (!pair.hasBeenCompleted || pair.isRepeatable)
             {
                 if (pair.TryExecute())

@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 9b3a5fb62e0034eb2a962dc49690ea9a, type: 2}
-  ClearItemsOnStart: 1
+  clearItemsOnStart: 1
   inventoryPrefab: {fileID: 7195125655950208887, guid: 1e81261a2280c70408f0f97c4ba9046c, type: 3}
   X_START: -280
   Y_START: 175
