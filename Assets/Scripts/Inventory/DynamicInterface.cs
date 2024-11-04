@@ -11,6 +11,8 @@ public class DynamicInterface : UserInterface
     public int NUMBER_OF_COLUMN;
     public int Y_SPACE_BETWEEN_ITEMS;
 
+    [SerializeField] private SlotData slotDataScript;
+
     public static DynamicInterface instance;
     public void Awake()
     {
@@ -45,5 +47,11 @@ public class DynamicInterface : UserInterface
     private Vector3 GetPosition(int i)
     {
         return new Vector3(X_START + (X_SPACE_BETWEEN_ITEM * (i % NUMBER_OF_COLUMN)), Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i / NUMBER_OF_COLUMN)), 0f);
+    }
+
+    public override void OnDragEnd(GameObject obj)
+    {
+        base.OnDragEnd(obj);
+        slotDataScript.UpdateSlotData();
     }
 }

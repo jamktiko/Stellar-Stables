@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4450002057311216462}
   - component: {fileID: 6553482517086234437}
   - component: {fileID: 1257302361185358885}
+  - component: {fileID: 6365092372359187377}
   m_Layer: 5
   m_Name: Interface
   m_TagString: StablesInventory
@@ -1156,6 +1157,36 @@ MonoBehaviour:
   X_SPACE_BETWEEN_ITEM: 513
   NUMBER_OF_COLUMN: 2
   Y_SPACE_BETWEEN_ITEMS: 270
+  slotDataScript: {fileID: 6365092372359187377}
+--- !u!114 &6365092372359187377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164352933766152891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba71c8c8e8198346b976c923b67989e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horseDatabase: {fileID: 11400000, guid: 8b9e2f157b51b4f4982785ba7e7f88c0, type: 2}
+  stablesInventory: {fileID: 11400000, guid: 9b3a5fb62e0034eb2a962dc49690ea9a, type: 2}
+  stableSlotItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8983898560869531262
 GameObject:
   m_ObjectHideFlags: 0
