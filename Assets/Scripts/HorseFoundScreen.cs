@@ -35,13 +35,14 @@ public class HorseFoundScreen : MonoBehaviour
 
     public IEnumerator TogglePopup(Sprite horseSprite)
     {
+        if (isActive) yield break;
         isActive = true;
         image.gameObject.SetActive(true);
         textObject.SetActive(true);
         textBox.SetActive(true);
         image.sprite = horseSprite;
 
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSecondsRealtime(waitTime);
 
         image.gameObject.SetActive(false);
         textObject.SetActive(false);

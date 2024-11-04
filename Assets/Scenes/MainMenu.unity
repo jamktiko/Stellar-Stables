@@ -1126,6 +1126,10 @@ PrefabInstance:
       propertyPath: itemSO
       value: 
       objectReference: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
+    - target: {fileID: 2595251657429662557, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: enabledOnScenes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5867985594884060081, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: m_Name
       value: Managers

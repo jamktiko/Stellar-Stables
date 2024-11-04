@@ -1152,10 +1152,10 @@ MonoBehaviour:
   clearItemsOnStart: 1
   inventoryPrefab: {fileID: 7195125655950208887, guid: 1e81261a2280c70408f0f97c4ba9046c, type: 3}
   X_START: -256
-  Y_START: 148
+  Y_START: 150
   X_SPACE_BETWEEN_ITEM: 513
   NUMBER_OF_COLUMN: 2
-  Y_SPACE_BETWEEN_ITEMS: 270
+  Y_SPACE_BETWEEN_ITEMS: 265
 --- !u!1 &8983898560869531262
 GameObject:
   m_ObjectHideFlags: 0

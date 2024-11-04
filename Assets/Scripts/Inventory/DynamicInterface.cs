@@ -27,7 +27,6 @@ public class DynamicInterface : UserInterface
         SetInventoryParent();
         CreateSlots();
         ClearInventory();
-        // ClearInventory();
     }
     public override void CreateSlots()
     {
@@ -36,6 +35,17 @@ public class DynamicInterface : UserInterface
         {
             var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
+
+            if (i % 2 == 1)
+            {
+                obj.transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+                Transform foodDisplay = obj.transform.Find("FoodDisplay");
+                if (foodDisplay != null)
+                {
+                    foodDisplay.localRotation = Quaternion.Euler(0, 180, 0);
+                }
+            }
 
             InitializeEvents(gameObject, obj, slotsOnInterface);
 
