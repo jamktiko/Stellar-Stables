@@ -13,6 +13,7 @@ public class NoteMovement : MonoBehaviour
     void Start()
     {
         speed = Random.Range(speedMin, speedMax);
+        transform.localScale = transform.localScale * Random.Range(0.65f, 1.1f);
     }
 
     // Update is called once per frame
