@@ -8,6 +8,7 @@ public class FoodTypeSO : ScriptableObject
 {
     [SerializeField] private GameObject _foodPrefab;
     [SerializeField] private string _foodName;
+    public Sprite foodSprite;
     
     public string GetFoodName() {  return _foodName; }
     public GameObject GetFoodPrefab() { return _foodPrefab; }
