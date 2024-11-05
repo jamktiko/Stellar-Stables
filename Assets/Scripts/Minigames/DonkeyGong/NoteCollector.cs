@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NoteCollector : MonoBehaviour
 {
+    [SerializeField] private FoodTypeSO foodSO;
+
     private void OnMouseDown()
     {
         CollectNote();
@@ -15,7 +17,7 @@ public class NoteCollector : MonoBehaviour
         Debug.Log("Note collected");
         if (FoodInventoryManager.Instance != null)
         {
-            FoodInventoryManager.Instance.NoteAmount++;
+            FoodInventoryManager.Instance.AddFood(foodSO, 1);
         }
         Destroy(gameObject);
     }
