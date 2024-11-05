@@ -47,7 +47,7 @@ public class Fish : MonoBehaviour, ICatchable
         MinigameScore.Instance.AddScore();
         if (FoodInventoryManager.Instance != null)
         {
-            FoodInventoryManager.Instance.AddFood(foodSO, 1)
+            FoodInventoryManager.Instance.AddFood(foodSO, 1);
         }
         Destroy(gameObject);
     }
