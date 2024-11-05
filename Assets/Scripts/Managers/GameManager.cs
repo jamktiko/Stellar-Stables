@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             if (canvas != null && canvas.GetComponent<DontDestroyOnLoad>() == null)
             {
                 canvas.AddComponent<DontDestroyOnLoad>();
-                Debug.Log($"Added DDOL to interactables: {canvas}");
+                //Debug.Log($"Added DDOL to interactables: {canvas}");
             }
         }
     }
@@ -50,12 +50,12 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject canvasFound in allCanvas)
         {
-           Debug.Log($"canvasFound is: {canvasFound}");
+           //Debug.Log($"canvasFound is: {canvasFound}");
 
             if (!ContainsObjectWithName(canvasFound.name))
             {
                 interactables.Add(canvasFound);
-                Debug.Log($"canvasFound ADDED: {canvasFound}");
+                //Debug.Log($"canvasFound ADDED: {canvasFound}");
             }
             else
             {

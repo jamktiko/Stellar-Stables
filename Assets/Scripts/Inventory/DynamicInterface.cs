@@ -11,6 +11,8 @@ public class DynamicInterface : UserInterface
     public int NUMBER_OF_COLUMN;
     public int Y_SPACE_BETWEEN_ITEMS;
 
+    [SerializeField] private SlotData slotDataScript;
+
     public static DynamicInterface instance;
     public void Awake()
     {
@@ -27,7 +29,6 @@ public class DynamicInterface : UserInterface
         SetInventoryParent();
         CreateSlots();
         ClearInventory();
-        // ClearInventory();
     }
     public override void CreateSlots()
     {
@@ -37,6 +38,17 @@ public class DynamicInterface : UserInterface
             var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
 
+            if (i % 2 == 1)
+            {
+                obj.transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+                Transform foodDisplay = obj.transform.Find("FoodDisplay");
+                if (foodDisplay != null)
+                {
+                    foodDisplay.localRotation = Quaternion.Euler(0, 180, 0);
+                }
+            }
+
             InitializeEvents(gameObject, obj, slotsOnInterface);
 
             slotsOnInterface.Add(obj, inventory.Container.Items[i]);
@@ -45,5 +57,11 @@ public class DynamicInterface : UserInterface
     private Vector3 GetPosition(int i)
     {
         return new Vector3(X_START + (X_SPACE_BETWEEN_ITEM * (i % NUMBER_OF_COLUMN)), Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i / NUMBER_OF_COLUMN)), 0f);
+    }
+
+    public override void OnDragEnd(GameObject obj)
+    {
+        base.OnDragEnd(obj);
+        slotDataScript.UpdateSlotData();
     }
 }

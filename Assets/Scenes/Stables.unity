@@ -375,11 +375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633072117396813653, guid: aa4e00849ca27c644a69dbedfd1772f0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -921
+      value: -904
       objectReference: {fileID: 0}
     - target: {fileID: 633072117396813653, guid: aa4e00849ca27c644a69dbedfd1772f0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 633072117396813653, guid: aa4e00849ca27c644a69dbedfd1772f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1045,6 +1045,10 @@ PrefabInstance:
     - target: {fileID: 3686467927130700308, guid: c86077855dc1294419232044cdef0449, type: 3}
       propertyPath: m_Name
       value: StablesScroller
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661154790663308093, guid: c86077855dc1294419232044cdef0449, type: 3}
+      propertyPath: maxY
+      value: 2740
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
