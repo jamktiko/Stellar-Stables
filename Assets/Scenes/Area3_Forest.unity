@@ -123,6 +123,134 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &40409349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40409350}
+  - component: {fileID: 40409351}
+  m_Layer: 0
+  m_Name: AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &40409350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40409349}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -264.87415, y: 321.40668, z: -4.098332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 561905353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &40409351
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40409349}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ab4203b71de54417e8b729394c6e5714, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &284644429
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +415,7 @@ GameObject:
   - component: {fileID: 387768957}
   - component: {fileID: 387768956}
   - component: {fileID: 387768955}
+  - component: {fileID: 387768961}
   m_Layer: 0
   m_Name: Catch batterfly (4)
   m_TagString: Untagged
@@ -418,6 +547,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387768961}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayThisSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &387768959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +597,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387768953}
   m_CullTransparentMesh: 1
+--- !u!114 &387768961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387768953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba089f87a5e84572bbd283414a83ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 40409351}
 --- !u!1 &409085309
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +752,7 @@ RectTransform:
   m_Children:
   - {fileID: 1066238912}
   - {fileID: 2047377649}
+  - {fileID: 40409350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -633,6 +788,7 @@ GameObject:
   - component: {fileID: 625663333}
   - component: {fileID: 625663332}
   - component: {fileID: 625663331}
+  - component: {fileID: 625663337}
   m_Layer: 0
   m_Name: Catch batterfly (3)
   m_TagString: Untagged
@@ -764,6 +920,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387768961}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayThisSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &625663335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +970,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625663329}
   m_CullTransparentMesh: 1
+--- !u!114 &625663337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625663329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba089f87a5e84572bbd283414a83ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 40409351}
 --- !u!1 &636935718
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +998,7 @@ GameObject:
   - component: {fileID: 636935722}
   - component: {fileID: 636935721}
   - component: {fileID: 636935720}
+  - component: {fileID: 636935726}
   m_Layer: 0
   m_Name: Catch batterfly
   m_TagString: Untagged
@@ -948,6 +1130,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387768961}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayThisSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636935724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,6 +1180,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636935718}
   m_CullTransparentMesh: 1
+--- !u!114 &636935726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636935718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba089f87a5e84572bbd283414a83ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 40409351}
 --- !u!1 &650512672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1342,7 @@ GameObject:
   - component: {fileID: 710704575}
   - component: {fileID: 710704573}
   - component: {fileID: 710704579}
+  - component: {fileID: 710704580}
   m_Layer: 0
   m_Name: Feed the plant with butterflies
   m_TagString: Untagged
@@ -1253,6 +1461,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387768961}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayThisSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &710704577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,6 +1524,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horseSO: {fileID: 11400000, guid: e7e9e9e89e1cb5e4e96e5e9119607620, type: 2}
+--- !u!114 &710704580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710704571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba089f87a5e84572bbd283414a83ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 40409351}
 --- !u!1 &727561991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1686,7 @@ GameObject:
   - component: {fileID: 748569856}
   - component: {fileID: 748569855}
   - component: {fileID: 748569854}
+  - component: {fileID: 748569860}
   m_Layer: 0
   m_Name: Catch batterfly (1)
   m_TagString: Untagged
@@ -1584,6 +1818,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387768961}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayThisSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &748569858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1868,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748569852}
   m_CullTransparentMesh: 1
+--- !u!114 &748569860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748569852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba089f87a5e84572bbd283414a83ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 40409351}
 --- !u!1 &825138688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2378,7 @@ GameObject:
   - component: {fileID: 1151943063}
   - component: {fileID: 1151943062}
   - component: {fileID: 1151943061}
+  - component: {fileID: 1151943067}
   m_Layer: 0
   m_Name: Catch batterfly (2)
   m_TagString: Untagged
@@ -2250,6 +2510,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 387768961}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayThisSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1151943065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2288,6 +2560,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151943059}
   m_CullTransparentMesh: 1
+--- !u!114 &1151943067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151943059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba089f87a5e84572bbd283414a83ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPlayer: {fileID: 40409351}
 --- !u!1 &1172034747
 GameObject:
   m_ObjectHideFlags: 0
