@@ -6,33 +6,11 @@ public class FoodInventoryManager : MonoBehaviour
 {
     public static FoodInventoryManager Instance { get; private set; }
 
-    [SerializeField] private int fishAmount = 0;
     [SerializeField] private int levelIncreaseRequirement;
-    public int FishAmount { 
-        get 
-        {
-            return fishAmount;
-        }
-        set 
-        {
-            fishAmount = value;
-            UpdateFoodInventoryStats();
-        }
-    }
+    [SerializeField] private FoodTypeSO noteSO;
 
-    [SerializeField] private int noteAmount;
-    public int NoteAmount
-    {
-        get
-        {
-            return noteAmount;
-        }
-        set
-        {
-            noteAmount = value;
-            UpdateFoodInventoryStats();
-        }
-    }
+    private Dictionary<FoodTypeSO, int> foodInventory = new Dictionary<FoodTypeSO, int>();
+
 
     private void Awake()
     {
@@ -43,6 +21,23 @@ public class FoodInventoryManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+    public void AddFood(FoodTypeSO foodType, int amount)
+    {
+        if (!foodInventory.ContainsKey(foodType))
+        {
+            foodInventory[foodType] = 0;
+        }
+        foodInventory[foodType] += amount;
+        UpdateFoodInventoryStats();
+    }
+    public void RemoveFood(FoodTypeSO foodType, int amount)
+    {
+        if (foodInventory.ContainsKey(foodType))
+        {
+            foodInventory[foodType] = Mathf.Max(0, foodInventory[foodType] - amount);
+            UpdateFoodInventoryStats();
+        }
     }
 
     private void Start()
@@ -55,13 +50,14 @@ public class FoodInventoryManager : MonoBehaviour
         CheckForDifficultyIncrease();
     }
 
+    public int GetFoodAmount(FoodTypeSO foodType)
+    {
+        return foodInventory.ContainsKey(foodType) ? foodInventory[foodType] : 0;
+    }
+
     private void CheckForDifficultyIncrease()
     {
-        //if (fishAmount >= MinigameLevelManager.Instance.FishLevelIndex*levelIncreaseRequirement)
-        //{
-        //    MinigameLevelManager.Instance.FishLevelIndex++;
-        //}
-        if (noteAmount >= MinigameLevelManager.Instance.MusicLevelIndex*levelIncreaseRequirement)
+        if (GetFoodAmount(noteSO) >= MinigameLevelManager.Instance.MusicLevelIndex*levelIncreaseRequirement)
         {
             MinigameLevelManager.Instance.MusicLevelIndex++;
         }

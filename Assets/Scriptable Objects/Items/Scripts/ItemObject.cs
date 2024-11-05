@@ -42,7 +42,7 @@ public class Item
     public string Name;
     public int Id = -1;
     [Header("Only needed for horses")]
-    public Sprite horseFoodIcon;
+    public FoodTypeSO horseFoodPreference;
     //public ItemBuff[] buffs;
     public Item()
     {
