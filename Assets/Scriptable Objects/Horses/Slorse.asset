@@ -19,3 +19,4 @@ MonoBehaviour:
   data:
     Name: 
     Id: 12
+    horseFoodPreference: {fileID: 11400000, guid: 84454989f3038df42b896ce247ab78cc, type: 2}
