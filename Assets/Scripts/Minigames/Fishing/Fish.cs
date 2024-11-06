@@ -6,6 +6,7 @@ public class Fish : MonoBehaviour, ICatchable
 {
 
     protected bool _isRodReset = false;
+    [SerializeField] protected FoodTypeSO foodSO;
 
     private void OnEnable()
     {
@@ -46,7 +47,7 @@ public class Fish : MonoBehaviour, ICatchable
         MinigameScore.Instance.AddScore();
         if (FoodInventoryManager.Instance != null)
         {
-            FoodInventoryManager.Instance.FishAmount++;
+            FoodInventoryManager.Instance.AddFood(foodSO, 1);
         }
         Destroy(gameObject);
     }

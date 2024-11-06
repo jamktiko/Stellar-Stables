@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e83dd08fae6487347b0ae332312f828a, type: 3}
-  m_Name: Fish
+  m_Name: Bone
   m_EditorClassIdentifier: 
   _foodPrefab: {fileID: 0}
   _foodName: 
-  foodSprite: {fileID: 21300000, guid: 1c13818711ffe8d4e9c01a87d47dbe32, type: 3}
+  foodSprite: {fileID: 21300000, guid: d870afb91ac6302499f81ee62e6d4dab, type: 3}

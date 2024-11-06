@@ -44,6 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0f210dfbddc8e41850272b640a1144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishAmount: 0
   levelIncreaseRequirement: 20
-  noteAmount: 0
+  noteSO: {fileID: 11400000, guid: f0f49f60342f6a94e9105f8cb24bd712, type: 2}
