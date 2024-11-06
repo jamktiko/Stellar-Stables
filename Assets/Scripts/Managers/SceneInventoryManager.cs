@@ -47,6 +47,10 @@ public class SceneInventoryManager : MonoBehaviour
             }
         
         DynamicInterface.instance.gameObject.SetActive(shouldEnable);
+        if (shouldEnable)
+        {
+            StablesScroller.instance.ResetInterfacePosition();
+        }
     }
     public bool IsActiveScene(SceneName sceneEnum)
     {
