@@ -52,6 +52,19 @@ public class SlotData : MonoBehaviour
             UpdateSlotData(); 
         }
 
+        if (FoodInventoryManager.Instance != null)
+        {
+            FoodInventoryManager.Instance.OnFoodInventoryChanged.AddListener(UpdateFoodIcons);
+        }
+
+    }
+
+    private void OnDisable()
+    {
+        if (FoodInventoryManager.Instance != null)
+        {
+            FoodInventoryManager.Instance.OnFoodInventoryChanged.RemoveListener(UpdateFoodIcons);
+        }
     }
 
     private void SetFoodSlotObjects()
@@ -75,21 +88,16 @@ public class SlotData : MonoBehaviour
             {
                 foodImageObjects[i].sprite = null;
                 foodNumberObjects[i].text = "0";
+                foodDisplayObjects[i].GetComponentInChildren<FoodTypeReference>().FoodTypeRef = null;
                 foodDisplayObjects[i].SetActive(false);
             }
             else
             {
                 foodDisplayObjects[i].SetActive(true);
+                foodDisplayObjects[i].GetComponentInChildren<FoodTypeReference>().FoodTypeRef = tempSlotData.data.horseFoodPreference;
                 foodImageObjects[i].sprite = tempSlotData.data.horseFoodPreference.foodSprite;
                 int foodNumberToSet = FoodInventoryManager.Instance.GetFoodAmount(tempSlotData.data.horseFoodPreference);
-                if (foodNumberToSet > 99)
-                {
-                    foodNumberObjects[i].text = "99+";
-                }
-                else
-                {
-                    foodNumberObjects[i].text = foodNumberToSet.ToString();
-                }
+                foodNumberObjects[i].text = foodNumberToSet > 99 ? "99+" : foodNumberToSet.ToString();
             }
         }
 

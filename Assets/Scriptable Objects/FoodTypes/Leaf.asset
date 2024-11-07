@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _foodPrefab: {fileID: 0}
   _foodName: 
-  foodSprite: {fileID: 0}
+  foodSprite: {fileID: -8208833853547818238, guid: d07b803c54ae9fb4ebfc1e8a13b12f4c, type: 3}
