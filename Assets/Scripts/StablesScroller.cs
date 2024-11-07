@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StablesScroller : MonoBehaviour
 {
+    public static StablesScroller instance;
     [SerializeField] private float scrollSpeed = 200f;
     [SerializeField] private float buttonSpeed = 100f;
     [SerializeField] private float smoothness = 0.2f;
@@ -14,13 +15,30 @@ public class StablesScroller : MonoBehaviour
     private float currentVelocity;
     private bool isHeldUp;
     private bool isHeldDown;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject.transform.parent.gameObject);
+            Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
+        }
+    }
     private void Start()
     {
         interfaceTransform = DynamicInterface.instance.GetComponent<RectTransform>();
         targetPositionY = interfaceTransform.anchoredPosition.y;
         minY = interfaceTransform.anchoredPosition.y;
     }
-
+    public void ResetInterfacePosition()
+    {
+        interfaceTransform.anchoredPosition = Vector2.zero;
+        targetPositionY = 0;
+        //Debug.Log("StablesScroller ran thang.");
+    }
     private void Update()
     {
         ProcessScrollInput();
