@@ -61,7 +61,9 @@ public class Draggable : DraggingHandler
     {
         base.OnDragEnd(obj);
         GetComponent<RectTransform>().position = Input.mousePosition;
-        //GetComponent<InteractableObject>().CheckConditions();
+        //GetComponent<RectTransform>().localPosition = GetMousePositionInCanvasSpace();
+
+
         if (TryGetComponent(out InteractableObject interactableObject))
         {
             interactableObject.CheckConditions();
