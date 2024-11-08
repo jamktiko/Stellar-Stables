@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FoodInventoryManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class FoodInventoryManager : MonoBehaviour
 
     [SerializeField] private int levelIncreaseRequirement;
     [SerializeField] private FoodTypeSO noteSO;
+
+    public UnityEvent OnFoodInventoryChanged = new UnityEvent();
 
     private Dictionary<FoodTypeSO, int> foodInventory = new Dictionary<FoodTypeSO, int>();
 
@@ -47,6 +50,7 @@ public class FoodInventoryManager : MonoBehaviour
 
     private void UpdateFoodInventoryStats()
     {
+        OnFoodInventoryChanged.Invoke();
         CheckForDifficultyIncrease();
     }
 
