@@ -86,6 +86,28 @@ public class DraggingHandler : MonoBehaviour
         if (MouseData.tempObjectBeingDragged != null)
             MouseData.tempObjectBeingDragged.GetComponent<RectTransform>().position = Input.mousePosition;
     }
+
+    //public virtual void OnDrag(GameObject draggedObject)
+    //{
+    //    if (MouseData.tempObjectBeingDragged != null)
+    //    {
+    //        RectTransform draggedRectTransform = MouseData.tempObjectBeingDragged.GetComponent<RectTransform>();
+
+    //        draggedRectTransform.localPosition = GetMousePositionInCanvasSpace();
+    //    }
+    //}
+    public Vector2 GetMousePositionInCanvasSpace()
+    {
+        GameObject canvas = GameObject.FindWithTag("Canvas");
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvas.transform as RectTransform,
+            Input.mousePosition,
+            Camera.main,
+            out Vector2 localPoint
+        );
+        return localPoint;
+    }
     public GameObject CreateTempItem(GameObject draggedObject, Dictionary<GameObject, InventorySlot> slotsOnInterface)
     {
         GameObject tempItem = null;

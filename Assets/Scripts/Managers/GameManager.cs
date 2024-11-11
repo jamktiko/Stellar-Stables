@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour
             if (IsActiveScene(rootSceneOfCanvas))
             {
                 canvas.SetActive(true);
+                //canvas.GetComponent<Canvas>().worldCamera = Camera.main;
             }
         }
     }
