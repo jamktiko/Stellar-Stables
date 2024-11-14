@@ -19,10 +19,12 @@ public class ConditionResultPair
     {
         return conditions.Count == 0 || conditions.All(o => ((o as ICondition)?.IsConditionMet() ?? true) == true);
     }
-
-    public bool TryExecute()
+    public (bool areAllConditionsMet, bool result) TryExecute()
     {
-        if (AreAllConditionsMet() && (!hasBeenCompleted || isRepeatable))
+        bool conditionsMet = AreAllConditionsMet();
+        bool buttonDeleted = false;
+
+        if (conditionsMet && (!hasBeenCompleted || isRepeatable))
         {
             results.ForEach(c => (c as IResult)?.Execute());
 
@@ -31,9 +33,25 @@ public class ConditionResultPair
                 hasBeenCompleted = true;
             }
 
-            return deleteButtonOnCompletion;
+            buttonDeleted = deleteButtonOnCompletion;
         }
-        return false;
+
+        return (conditionsMet, buttonDeleted);
     }
+    //public bool TryExecute()
+    //{
+    //    if (AreAllConditionsMet() && (!hasBeenCompleted || isRepeatable))
+    //    {
+    //        results.ForEach(c => (c as IResult)?.Execute());
+
+    //        if (!isRepeatable)
+    //        {
+    //            hasBeenCompleted = true;
+    //        }
+
+    //        return deleteButtonOnCompletion;
+    //    }
+    //    return false;
+    //}
 }
 

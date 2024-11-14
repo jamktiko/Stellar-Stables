@@ -10,7 +10,7 @@ public class DragOntoCondition : MonoBehaviour, ICondition
 {
     [Header("Pick either a Tag or a specific GameObject as the target. \nYou can leave the other variable blank.")]
     [Space(20)]
-    [SerializeField] private bool isThisObjectConsumable;
+    //[SerializeField] private bool isThisObjectConsumable;
     [SerializeField] private bool isTargetObjectConsumable;
     [Header("Target is ANY object with this tag (Multi)")]
     public string targetObjectTag;
@@ -21,14 +21,14 @@ public class DragOntoCondition : MonoBehaviour, ICondition
     {
         if (MouseData.objectHoveredOver != null && (!string.IsNullOrEmpty(targetObjectTag) && MouseData.objectHoveredOver.gameObject.CompareTag(targetObjectTag) || (objectToDragOnto != null && MouseData.objectHoveredOver.gameObject == objectToDragOnto.gameObject)))
         {
-            if (isThisObjectConsumable)
-            {
-                Destroy(this.gameObject);
-            }
+            //if (isThisObjectConsumable)
+            //{
+            //    this.gameObject.SetActive(false);
+            //}
 
             if (isTargetObjectConsumable)
             {
-                Destroy(MouseData.objectHoveredOver.gameObject);
+                MouseData.objectHoveredOver.gameObject.SetActive(false);
             }
             return true;
         }
