@@ -21,6 +21,13 @@ public class InteractCheckHandler : MonoBehaviour
     public void RunAnimation(bool isSuccess)
     {
         animator.gameObject.transform.position = Input.mousePosition;
-        animator.SetBool("ConditionMet", isSuccess);
+        if (isSuccess)
+        {
+            animator.SetTrigger("Success");
+        }
+        else
+        {
+            animator.SetTrigger("Failure");
+        }
     }
 }

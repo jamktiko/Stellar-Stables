@@ -400,6 +400,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
+--- !u!1 &282640301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5619731202387130752, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
+  m_PrefabInstance: {fileID: 7308430948304841883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &282640306
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282640301}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &343815346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,10 +2554,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4692405753983533315, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541370555151754383, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541370555151754383, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3676339580835100332, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
+    - {fileID: 4965783209640851892, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5619731202387130752, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282640306}
   m_SourcePrefab: {fileID: 100100000, guid: 8bfcaeef50726a145b864a317ea777b9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
