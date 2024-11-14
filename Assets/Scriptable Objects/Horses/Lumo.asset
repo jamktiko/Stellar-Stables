@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c92f6916f51c84180ccd6986ebd922, type: 3}
   m_Name: Lumo
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: d99b21ff95b984462b0d742b9e2c472b, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 4a278ee78b20c4abca984bfe662503ab, type: 3}
   stackable: 0
   type: 3
   description: 
   data:
     Name: 
-    Id: 4
+    Id: 14
     horseFoodPreference: {fileID: 11400000, guid: f5b74e7da43f16946b07720b7722b70f, type: 2}
