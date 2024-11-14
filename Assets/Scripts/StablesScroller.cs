@@ -36,7 +36,8 @@ public class StablesScroller : MonoBehaviour
     public void ResetInterfacePosition()
     {
         interfaceTransform.anchoredPosition = Vector2.zero;
-        targetPositionY = 0;
+        targetPositionY = 0f;
+        currentVelocity = 0f;
         //Debug.Log("StablesScroller ran thang.");
     }
     private void Update()
@@ -88,7 +89,19 @@ public class StablesScroller : MonoBehaviour
     }
     private void MoveInterface()
     {
-        float newPositionY = Mathf.SmoothDamp(interfaceTransform.anchoredPosition.y, targetPositionY, ref currentVelocity, smoothness);
-        interfaceTransform.anchoredPosition = new Vector2(interfaceTransform.anchoredPosition.x, newPositionY);
+        if (Mathf.Abs(interfaceTransform.anchoredPosition.y - targetPositionY) < 0.1f)
+        {
+            currentVelocity = 0f;
+            interfaceTransform.anchoredPosition = new Vector2(interfaceTransform.anchoredPosition.x, targetPositionY);
+        }
+        else
+        {
+            float newPositionY = Mathf.SmoothDamp(interfaceTransform.anchoredPosition.y, targetPositionY, ref currentVelocity, smoothness);
+            interfaceTransform.anchoredPosition = new Vector2(interfaceTransform.anchoredPosition.x, newPositionY);
+        }
+
+
+        //float newPositionY = Mathf.SmoothDamp(interfaceTransform.anchoredPosition.y, targetPositionY, ref currentVelocity, smoothness);
+        //interfaceTransform.anchoredPosition = new Vector2(interfaceTransform.anchoredPosition.x, newPositionY);
     }
 }
