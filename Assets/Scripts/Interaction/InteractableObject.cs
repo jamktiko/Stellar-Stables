@@ -13,17 +13,44 @@ public class InteractableObject : MonoBehaviour
     }
     public void CheckConditions()
     {
-        foreach (var pair in conditionResultPairs)
+        if (StaticInterface.instance.inventory.EmptySlotCount != 0)
         {
-            //Debug.Log("CheckConditions ran");
-            if (!pair.hasBeenCompleted || pair.isRepeatable)
+            foreach (var pair in conditionResultPairs)
             {
-                if (pair.TryExecute())
+                if (!pair.hasBeenCompleted || pair.isRepeatable)
                 {
-                    this.gameObject.SetActive(false);
+                    (bool conditionsMet, bool deleteButtonOnCompletion) = pair.TryExecute();
+
+                    InteractCheckHandler.instance.RunAnimation(conditionsMet);
+
+                    if (conditionsMet)
+                    {
+                        CheckSucceeded();
+
+                        if (deleteButtonOnCompletion)
+                        {
+                            this.gameObject.SetActive(false);
+                        }
+                    }
+                    else
+                    {
+                        CheckFailed();
+                    }
                 }
             }
-
         }
+        else
+        {
+            CheckFailed();
+            InteractCheckHandler.instance.RunAnimation(false);
+        }
+    }
+    public void CheckFailed()
+    {
+        Debug.Log("Check failed.");
+    }
+    public void CheckSucceeded()
+    {
+        Debug.Log("Check success!");
     }
 }
