@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
         FindCanvases();
         ApplyDDOL();
         ToggleCanvases();
+        UnpauseGame();
+    }
+    private void UnpauseGame()
+    {
+        Time.timeScale = 1;
     }
     private void ApplyDDOL()
     {
