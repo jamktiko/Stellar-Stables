@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class InteractCheckHandler : MonoBehaviour
+public class AnimationHandler : MonoBehaviour
 {
-    public static InteractCheckHandler instance;
+    public static AnimationHandler instance;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject location;
+    [SerializeField] private Image imageAtCursor;
     private void Awake()
     {
         if (instance == null)
@@ -18,9 +21,10 @@ public class InteractCheckHandler : MonoBehaviour
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }
-    public void RunAnimation(bool isSuccess)
+    public void InteractionFeedback(bool isSuccess)
     {
-        animator.gameObject.transform.position = Input.mousePosition;
+        location.transform.position = Input.mousePosition;
+
         if (isSuccess)
         {
             animator.SetTrigger("Success");
@@ -29,5 +33,12 @@ public class InteractCheckHandler : MonoBehaviour
         {
             animator.SetTrigger("Failure");
         }
+    }
+    public void FoodFeedback(Sprite sprite)
+    {
+        Debug.Log($"sprite is: {sprite}");
+        location.transform.position = Input.mousePosition;
+        imageAtCursor.sprite = sprite;
+        //animator.SetTrigger("ImageTooltip");
     }
 }

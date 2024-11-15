@@ -25,6 +25,7 @@ public class CollectFood : MonoBehaviour
     {
         if (isEnabled)
         {
+            AnimationHandler.instance.FoodFeedback(foodType.foodSprite);
             FoodInventoryManager.Instance.AddFood(foodType, 1);
             isEnabled = false;
             image.enabled = false;
@@ -32,7 +33,6 @@ public class CollectFood : MonoBehaviour
             text.enabled = false;
 
             nextEnableTime = Time.time + respwanDelay;
-
         }
     }
 

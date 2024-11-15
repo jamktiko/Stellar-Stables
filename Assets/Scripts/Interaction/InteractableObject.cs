@@ -21,7 +21,7 @@ public class InteractableObject : MonoBehaviour
                 {
                     (bool conditionsMet, bool deleteButtonOnCompletion) = pair.TryExecute();
 
-                    InteractCheckHandler.instance.RunAnimation(conditionsMet);
+                    AnimationHandler.instance.InteractionFeedback(conditionsMet);
 
                     if (conditionsMet)
                     {
@@ -42,7 +42,7 @@ public class InteractableObject : MonoBehaviour
         else
         {
             CheckFailed();
-            InteractCheckHandler.instance.RunAnimation(false);
+            AnimationHandler.instance.InteractionFeedback(false);
         }
     }
     public void CheckFailed()
