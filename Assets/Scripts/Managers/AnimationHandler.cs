@@ -36,9 +36,13 @@ public class AnimationHandler : MonoBehaviour
     }
     public void FoodFeedback(Sprite sprite)
     {
-        Debug.Log($"sprite is: {sprite}");
+        animator.enabled = false;
+
         location.transform.position = Input.mousePosition;
+        Debug.Log($"sprite is: {sprite}");
+        
         imageAtCursor.sprite = sprite;
-        //animator.SetTrigger("ImageTooltip");
+        animator.enabled = true;
+        animator.SetTrigger("ImageTooltip");
     }
 }

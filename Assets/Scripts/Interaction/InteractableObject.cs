@@ -13,36 +13,28 @@ public class InteractableObject : MonoBehaviour
     }
     public void CheckConditions()
     {
-        if (StaticInterface.instance.inventory.EmptySlotCount != 0)
+        foreach (var pair in conditionResultPairs)
         {
-            foreach (var pair in conditionResultPairs)
+            if (!pair.hasBeenCompleted || pair.isRepeatable)
             {
-                if (!pair.hasBeenCompleted || pair.isRepeatable)
+                (bool conditionsMet, bool deleteButtonOnCompletion) = pair.TryExecute();
+
+                AnimationHandler.instance.InteractionFeedback(conditionsMet);
+
+                if (conditionsMet)
                 {
-                    (bool conditionsMet, bool deleteButtonOnCompletion) = pair.TryExecute();
+                    CheckSucceeded();
 
-                    AnimationHandler.instance.InteractionFeedback(conditionsMet);
-
-                    if (conditionsMet)
+                    if (deleteButtonOnCompletion)
                     {
-                        CheckSucceeded();
-
-                        if (deleteButtonOnCompletion)
-                        {
-                            this.gameObject.SetActive(false);
-                        }
-                    }
-                    else
-                    {
-                        CheckFailed();
+                        this.gameObject.SetActive(false);
                     }
                 }
+                else
+                {
+                    CheckFailed();
+                }
             }
-        }
-        else
-        {
-            CheckFailed();
-            AnimationHandler.instance.InteractionFeedback(false);
         }
     }
     public void CheckFailed()

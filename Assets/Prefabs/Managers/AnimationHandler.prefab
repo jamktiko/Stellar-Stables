@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3319427152975364741}
   - component: {fileID: 7953181430097849936}
   - component: {fileID: 6792908624587228416}
-  - component: {fileID: 2889249830398144099}
   m_Layer: 0
   m_Name: AnimationHandler
   m_TagString: Untagged
@@ -62,18 +61,6 @@ MonoBehaviour:
   animator: {fileID: 1557441469367296254}
   location: {fileID: 4060262144713941164}
   imageAtCursor: {fileID: 3920052193355129260}
---- !u!114 &2889249830398144099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102245561391809270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8873ec3b1a4ffeb4c9b78f737c1968c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4060262144713941164
 GameObject:
   m_ObjectHideFlags: 0
