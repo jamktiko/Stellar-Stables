@@ -356,7 +356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
   targetObjectTag: 
   objectToDragOnto: {fileID: 650512672}
@@ -1297,7 +1296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
   targetObjectTag: 
   objectToDragOnto: {fileID: 0}
@@ -1384,7 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItemConsumed: 1
   itemSO: {fileID: 11400000, guid: e9c5ac321fbc67744b87b62a3869200c, type: 2}
-  itemValue: 5
+  itemAmount: 5
 --- !u!114 &710704575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3736,7 +3734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
   targetObjectTag: 
   objectToDragOnto: {fileID: 0}
