@@ -9,6 +9,8 @@ public class AnimationHandler : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject location;
     [SerializeField] private Image imageAtCursor;
+    [SerializeField] private Sprite success;
+    [SerializeField] private Sprite failure;
     private void Awake()
     {
         if (instance == null)
@@ -27,10 +29,12 @@ public class AnimationHandler : MonoBehaviour
 
         if (isSuccess)
         {
+            imageAtCursor.sprite = success;
             animator.SetTrigger("Success");
         }
         else
         {
+            imageAtCursor.sprite = failure;
             animator.SetTrigger("Failure");
         }
     }
