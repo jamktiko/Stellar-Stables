@@ -83,7 +83,7 @@ public class StablesScroller : MonoBehaviour
 
         if (scrollInput != 0f)
         {
-            targetPositionY += scrollInput * scrollSpeed;
+            targetPositionY += -scrollInput * scrollSpeed;
             targetPositionY = Mathf.Clamp(targetPositionY, minY, maxY);
         }
     }
