@@ -2139,7 +2139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: conditionResultPairs.Array.data[0].results.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: conditionResultPairs.Array.data[0].conditions.Array.size
@@ -2147,6 +2147,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: conditionResultPairs.Array.data[0].results.Array.data[0]
+      value: 
+      objectReference: {fileID: 923387932}
+    - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      propertyPath: conditionResultPairs.Array.data[0].results.Array.data[1]
       value: 
       objectReference: {fileID: 923387932}
     - target: {fileID: 4844145616123296124, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
@@ -2190,6 +2194,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6311367849035453156, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 923387940}
+    - targetCorrespondingSourceObject: {fileID: 6311367849035453156, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 923387941}
   m_SourcePrefab: {fileID: 100100000, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
 --- !u!1001 &630107974
 PrefabInstance:
@@ -2989,6 +2996,19 @@ MonoBehaviour:
   title: Huge egg(Draggale)
   flavourText: 'There''s something moving inside, but it needs more warmth to hatch.
     What could be inside?       '
+--- !u!114 &923387941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923387912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6693950950dd9344c9146e7c851cba57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToToggle: {fileID: 0}
 --- !u!1 &953269968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,7 +3442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4349675943330183016, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4349675943330183016, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_TagString
@@ -4107,7 +4127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1228513282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4162,8 +4182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411.21634, y: -499.7}
-  m_SizeDelta: {x: 7, y: 7}
+  m_AnchoredPosition: {x: 946, y: 119.00006}
+  m_SizeDelta: {x: 5.5579, y: 4.1068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228513285
 MonoBehaviour:
@@ -5242,6 +5262,7 @@ GameObject:
   - component: {fileID: 1566122728}
   - component: {fileID: 1566122729}
   - component: {fileID: 1566122730}
+  - component: {fileID: 1566122731}
   m_Layer: 0
   m_Name: Get axe
   m_TagString: Untagged
@@ -5285,7 +5306,7 @@ MonoBehaviour:
   - conditions:
     - {fileID: 1566122727}
     results:
-    - {fileID: 1566122728}
+    - {fileID: 1566122731}
     isRepeatable: 0
     deleteButtonOnCompletion: 1
     hasBeenCompleted: 0
@@ -5435,6 +5456,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1566122731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566122718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6693950950dd9344c9146e7c851cba57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToToggle: {fileID: 1920407820}
 --- !u!1 &1709943778 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4349675943330183016, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
@@ -6535,7 +6569,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1228513284}
   - {fileID: 650512673}
   - {fileID: 923387913}
   - {fileID: 284644430}
@@ -6544,6 +6577,7 @@ RectTransform:
   - {fileID: 1063804391}
   - {fileID: 1961986674}
   - {fileID: 2015106847}
+  - {fileID: 1228513284}
   - {fileID: 355806825}
   m_Father: {fileID: 561905353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6916,7 +6950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 453981246434389947, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3158920010724070257, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: m_Pivot.x
@@ -6988,11 +7022,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3158920010724070257, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1076
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 3158920010724070257, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -495
+      value: -532
       objectReference: {fileID: 0}
     - target: {fileID: 3158920010724070257, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7036,7 +7070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: conditionResultPairs.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: conditionResultPairs.Array.data[0].isRepeatable
@@ -7056,7 +7090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: conditionResultPairs.Array.data[1].results.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: conditionResultPairs.Array.data[2].results.Array.size
@@ -7083,6 +7117,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2015106864}
     - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
+      propertyPath: conditionResultPairs.Array.data[1].results.Array.data[2]
+      value: 
+      objectReference: {fileID: 4856855640891343833}
+    - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: conditionResultPairs.Array.data[2].conditions.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -7105,7 +7143,7 @@ PrefabInstance:
     - target: {fileID: 7148676202040272541, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       propertyPath: conditionResultPairs.Array.data[2].conditions.Array.data[0]
       value: 
-      objectReference: {fileID: 4856855640891343833}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8338624878420526970, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
     - {fileID: 5949814428992726988, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
@@ -7135,10 +7173,10 @@ PrefabInstance:
       addedObject: {fileID: 4856855640891343829}
     - targetCorrespondingSourceObject: {fileID: 453981246434389947, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4856855640891343833}
+      addedObject: {fileID: 4856855640891343832}
     - targetCorrespondingSourceObject: {fileID: 453981246434389947, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4856855640891343832}
+      addedObject: {fileID: 4856855640891343833}
   m_SourcePrefab: {fileID: 100100000, guid: 45d18bd49129e6d44acc63083f78f32b, type: 3}
 --- !u!114 &4856855640891343828 stripped
 MonoBehaviour:
@@ -7272,12 +7310,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1920407820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6693950950dd9344c9146e7c851cba57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTargetObjectConsumable: 1
-  targetObjectTag: 
-  objectToDragOnto: {fileID: 306757610}
+  objectToToggle: {fileID: 1920407820}
 --- !u!1001 &6830435315275082336
 PrefabInstance:
   m_ObjectHideFlags: 0
