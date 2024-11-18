@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class AnimationHandler : MonoBehaviour
 {
     public static AnimationHandler instance;
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator floatingAnimator;
+    [SerializeField] private Animator foodbarAnimator;
     [SerializeField] private GameObject location;
     [SerializeField] private Image imageAtCursor;
     [SerializeField] private Sprite success;
@@ -30,28 +31,28 @@ public class AnimationHandler : MonoBehaviour
         if (isSuccess)
         {
             imageAtCursor.sprite = success;
-            animator.SetTrigger("Success");
+            floatingAnimator.SetTrigger("Success");
         }
         else
         {
             imageAtCursor.sprite = failure;
-            animator.SetTrigger("Failure");
+            floatingAnimator.SetTrigger("Failure");
         }
     }
     public void FoodFeedback(Sprite sprite)
     {
-        animator.enabled = false;
+        floatingAnimator.enabled = false;
 
         location.transform.position = Input.mousePosition;
         Debug.Log($"sprite is: {sprite}");
         
         imageAtCursor.sprite = sprite;
-        animator.enabled = true;
-        animator.SetTrigger("ImageTooltip");
+        floatingAnimator.enabled = true;
+        floatingAnimator.SetTrigger("ImageTooltip");
     }
 
     public void ShowFoods()
     {
-        animator.SetTrigger("ShowFoods");
+        foodbarAnimator.SetTrigger("ShowFoods");
     }
 }

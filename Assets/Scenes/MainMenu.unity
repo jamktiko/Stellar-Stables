@@ -2415,14 +2415,6 @@ PrefabInstance:
       propertyPath: itemSO
       value: 
       objectReference: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
-    - target: {fileID: 1626327387881911472, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
-      propertyPath: failure
-      value: 
-      objectReference: {fileID: 21300000, guid: 256d4482e5a17b84bb112218d854198c, type: 3}
-    - target: {fileID: 1626327387881911472, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
-      propertyPath: success
-      value: 
-      objectReference: {fileID: 21300000, guid: 7025ba760c76b3b4c950619e53a182d5, type: 3}
     - target: {fileID: 2595251657429662557, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: enabledOnScenes.Array.size
       value: 4
