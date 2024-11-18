@@ -7,6 +7,10 @@ public class EnterSceneResult : SceneLoader, IResult
 {
     public void Execute()
     {
+        Invoke(nameof(EnterWithDelay), 1.5f);
+    }
+    public void EnterWithDelay()
+    {
         LoadScene();
     }
 }

@@ -7,13 +7,13 @@ public class AnimationHandler : MonoBehaviour
 {
     public static AnimationHandler instance;
     [SerializeField] private Animator checkAnimator;
+    [SerializeField] private Image checkAtCursor;
     [SerializeField] private Animator foodAnimator;
+    [SerializeField] private Image foodAtCursor;
     [SerializeField] private Animator itemAnimator;
+    [SerializeField] private Image itemAtCursor;
     [SerializeField] private Animator foodbarAnimator;
     [SerializeField] private GameObject atCursorLocation;
-    [SerializeField] private Image checkAtCursor;
-    [SerializeField] private Image foodAtCursor;
-    [SerializeField] private Image itemAtCursor;
     [SerializeField] private Sprite success;
     [SerializeField] private Sprite failure;
     private void Awake()
@@ -57,12 +57,19 @@ public class AnimationHandler : MonoBehaviour
         foodbarAnimator.SetTrigger("ShowFoods");
     }
 
-    public void ItemFeedback(Sprite sprite)
+    public void ItemFeedback(Sprite sprite, bool reversed)
     {
         itemAnimator.enabled = false;
         atCursorLocation.transform.position = Input.mousePosition;
         itemAtCursor.sprite = sprite;
         itemAnimator.enabled = true;
-        itemAnimator.SetTrigger("ItemTooltip");
+        if (reversed)
+        {
+            itemAnimator.SetTrigger("ItemTooltipReversed");
+        }
+        else
+        {
+            itemAnimator.SetTrigger("ItemTooltip");
+        }
     }
 }
