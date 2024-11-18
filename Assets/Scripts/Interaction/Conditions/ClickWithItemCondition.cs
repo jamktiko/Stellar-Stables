@@ -8,7 +8,7 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
     //public UserInterface userInterface;
     [SerializeField] private bool isItemConsumed;
     [SerializeField] private ItemObject itemSO;
-    [SerializeField] private int itemValue;
+    [SerializeField] private int itemAmount;
     private Item item;
 
     public bool IsConditionMet()
@@ -17,7 +17,10 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
         
         for (int i = 0; i < StaticInterface.instance.inventory.Container.Items.Length; i++)
         {
-            if (StaticInterface.instance.inventory.Container.Items[i].item.Id == item.Id)
+            int itemInInventory = StaticInterface.instance.inventory.Container.Items[i].item.Id;
+            int amountOfItem = StaticInterface.instance.inventory.Container.Items[i].amount;
+
+            if (itemInInventory == item.Id && amountOfItem >= itemAmount)
             {
                 if (isItemConsumed) 
                 {

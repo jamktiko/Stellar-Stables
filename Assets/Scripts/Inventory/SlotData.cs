@@ -45,7 +45,7 @@ public class SlotData : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("Updated slot data on scene change.");
+        //Debug.Log("Updated slot data on scene change.");
         if (SceneManager.GetActiveScene().name == "Stables")
         {
             SetFoodSlotObjects();
