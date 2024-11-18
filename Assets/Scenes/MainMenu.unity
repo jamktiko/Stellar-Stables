@@ -2415,9 +2415,17 @@ PrefabInstance:
       propertyPath: itemSO
       value: 
       objectReference: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
+    - target: {fileID: 1862038616567743347, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_Name
+      value: FoodAtCursor
+      objectReference: {fileID: 0}
     - target: {fileID: 2595251657429662557, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: enabledOnScenes.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617994808971276471, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_Name
+      value: FoodbarLocation
       objectReference: {fileID: 0}
     - target: {fileID: 4493933854235039039, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2427,6 +2435,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 4493933854235039039, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5867985594884060081, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -2435,10 +2447,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6722051803663077710, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5922ec035de1c7c4c8229f0a068df0dd, type: 2}
     - target: {fileID: 7516360139012011149, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: itemSO
       value: 
       objectReference: {fileID: 11400000, guid: 5c97eed6056265044b3a310e0e9e4b4b, type: 2}
+    - target: {fileID: 8109945725794046236, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_Name
+      value: AtCursorLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749433295557266410, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_Name
+      value: Foodbar
+      objectReference: {fileID: 0}
     - target: {fileID: 8878199733490031948, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: m_IsActive
       value: 1
