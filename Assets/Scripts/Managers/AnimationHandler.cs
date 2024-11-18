@@ -49,4 +49,9 @@ public class AnimationHandler : MonoBehaviour
         animator.enabled = true;
         animator.SetTrigger("ImageTooltip");
     }
+
+    public void ShowFoods()
+    {
+        animator.SetTrigger("ShowFoods");
+    }
 }
