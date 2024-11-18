@@ -1869,6 +1869,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
   m_PrefabInstance: {fileID: 386548599}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &390630820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390630821}
+  - component: {fileID: 390630823}
+  - component: {fileID: 390630822}
+  m_Layer: 5
+  m_Name: arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &390630821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390630820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1277308516}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -362, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &390630822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390630820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -358945157454639822, guid: d07b803c54ae9fb4ebfc1e8a13b12f4c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &390630823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390630820}
+  m_CullTransparentMesh: 1
 --- !u!1 &401591355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,6 +2914,7 @@ GameObject:
   - component: {fileID: 653892152}
   - component: {fileID: 653892155}
   - component: {fileID: 653892156}
+  - component: {fileID: 653892157}
   m_Layer: 5
   m_Name: click once
   m_TagString: Untagged
@@ -2976,6 +3052,7 @@ MonoBehaviour:
   - conditions: []
     results:
     - {fileID: 653892156}
+    - {fileID: 653892157}
     isRepeatable: 1
     deleteButtonOnCompletion: 0
     hasBeenCompleted: 0
@@ -2994,6 +3071,20 @@ MonoBehaviour:
   message: Clicked!
   textbox: {fileID: 1377428766}
   obj: {fileID: 0}
+--- !u!114 &653892157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653892150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bd78d0fa0176d49b3e0b07e1a08bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToChange: {fileID: 390630822}
+  sprite: {fileID: 4025860936990054234, guid: d07b803c54ae9fb4ebfc1e8a13b12f4c, type: 3}
 --- !u!1 &697148499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,7 +3564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItemConsumed: 0
   itemSO: {fileID: 11400000, guid: b586bc56b37ceba4db7b0f19066fa622, type: 2}
-  itemValue: 0
+  itemAmount: 0
 --- !u!114 &972283850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4326,6 +4417,7 @@ RectTransform:
   - {fileID: 100577143}
   - {fileID: 606331050}
   - {fileID: 1859244652}
+  - {fileID: 390630821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4835,7 +4927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItemConsumed: 1
   itemSO: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
-  itemValue: 1
+  itemAmount: 0
 --- !u!114 &1464568880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5433,7 +5525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08b5fe38fe558640a3170391c5790c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isThisObjectConsumable: 0
   isTargetObjectConsumable: 0
   targetObjectTag: 
   objectToDragOnto: {fileID: 309782081}
@@ -6075,7 +6166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isItemConsumed: 0
   itemSO: {fileID: 11400000, guid: cde94d41f4f6ab84686a8e9a6e95061f, type: 2}
-  itemValue: 1
+  itemAmount: 0
 --- !u!114 &1976804346
 MonoBehaviour:
   m_ObjectHideFlags: 0
