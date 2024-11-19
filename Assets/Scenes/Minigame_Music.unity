@@ -2257,7 +2257,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 98af7fd13dd3c70459d9323dc25a48bb, type: 3}
   badNoteSpawnChance: 15
   spawnRateMin: 0.8
-  spawnRateMax: 2
+  spawnRateMax: 1.4
   numberOfSpawnPoints: 30
   radius: 10
   minigameLevel: 2
@@ -2744,7 +2744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 281171624}
   getHorseAtScore: 1
-  scoreToReach: 50
+  scoreToReach: 30
 --- !u!114 &1917730545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2757,7 +2757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288fd78006217c746a7b00bf3a58d9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 120
+  gameDuration: 45
   timerText: {fileID: 20737298}
   coverObject: {fileID: 1372887928}
 --- !u!4 &1917730546
@@ -2787,7 +2787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74267ba6c93df354a8c6590eb031fa66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableLives: 8
+  availableLives: 5
   livesText: {fileID: 1304023596}
 --- !u!114 &1917730548
 MonoBehaviour:
