@@ -58,6 +58,9 @@ public abstract class UserInterface : DraggingHandler
             InventorySlot mouseHoverSlotData = MouseData.interfaceMouseIsOver.slotsOnInterface[MouseData.objectHoveredOver];
             //slotHoveredOver = slot the mouse was over. aka the new slot
             inventory.SwapItems(slotsOnInterface[obj], mouseHoverSlotData);
+
+
+            //i can target the objectHoveredOver, get the click w item condition from it, check if item that u're dragging matches, then execute all results there
         }
     }
 

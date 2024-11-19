@@ -17,5 +17,6 @@ public class GiveItemResult : MonoBehaviour, IResult
     {
         item = itemSO.CreateItem();
         StaticInterface.instance.inventory.AddItem(item, itemValue);
+        AnimationHandler.instance.ItemFeedback(itemSO.uiDisplay, false);
     }
 }
