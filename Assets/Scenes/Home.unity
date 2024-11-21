@@ -1553,6 +1553,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870098107}
     m_Modifications:
+    - target: {fileID: 1672767457560433723, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672767457560433723, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 0.990005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672767457560433723, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_EffectColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5961384
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.r
+      value: 0.0786757
+      objectReference: {fileID: 0}
     - target: {fileID: 3733853816187867010, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_Name
       value: SceneLoader_Ocean
@@ -1640,6 +1664,30 @@ PrefabInstance:
     - target: {fileID: 6696498376130164609, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: sceneToLoad
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298155480906337546, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.41509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298155480906337546, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.35851595
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298155480906337546, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298155480906337546, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5916823
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298155480906337546, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6886792
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298155480906337546, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2983,6 +3031,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870098107}
     m_Modifications:
+    - target: {fileID: 1949295290650834816, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.41509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949295290650834816, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.35851595
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949295290650834816, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949295290650834816, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5916823
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949295290650834816, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6886792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949295290650834816, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2498290289162865931, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
       propertyPath: sceneToLoad
       value: 6
@@ -3070,6 +3142,30 @@ PrefabInstance:
     - target: {fileID: 5590190071496504584, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
       propertyPath: m_Name
       value: SceneLoader_Stables
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943662813867425300, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943662813867425300, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5961384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943662813867425300, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_Color.r
+      value: 0.0786757
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598651333894385329, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598651333894385329, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 0.990005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598651333894385329, guid: 203798a8a7ef7404a8c0f14a89fff845, type: 3}
+      propertyPath: m_EffectColor.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

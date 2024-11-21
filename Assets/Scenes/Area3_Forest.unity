@@ -3224,6 +3224,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031369950}
     m_Modifications:
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13679248
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94786364
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3733853816187867010, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_Name
       value: SceneLoader_Ocean
@@ -3307,6 +3319,10 @@ PrefabInstance:
     - target: {fileID: 4211400176073484497, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696498376130164609, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: sceneToLoad
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3831,6 +3847,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031369950}
     m_Modifications:
+    - target: {fileID: 4507491870288888679, guid: 65ed4f8f6bda42948b231185717cbf90, type: 3}
+      propertyPath: sceneToLoad
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645904144597233784, guid: 65ed4f8f6bda42948b231185717cbf90, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13679248
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645904144597233784, guid: 65ed4f8f6bda42948b231185717cbf90, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94786364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645904144597233784, guid: 65ed4f8f6bda42948b231185717cbf90, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5886836318476794724, guid: 65ed4f8f6bda42948b231185717cbf90, type: 3}
       propertyPath: m_Name
       value: SceneLoader_Desert

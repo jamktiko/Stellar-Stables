@@ -7829,6 +7829,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031369950}
     m_Modifications:
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.b
+      value: 0.028657902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10549216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186624209202676894, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8679245
+      objectReference: {fileID: 0}
     - target: {fileID: 3733853816187867010, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
       propertyPath: m_Name
       value: SceneLoader_Ocean
@@ -7913,6 +7925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6696498376130164609, guid: 847dbad9cad58ef478e6ebe69c29b763, type: 3}
+      propertyPath: sceneToLoad
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7926,6 +7942,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031369950}
     m_Modifications:
+    - target: {fileID: 2319450702601470956, guid: 8f4731eded78e2541b17479f26f09f55, type: 3}
+      propertyPath: m_Color.b
+      value: 0.028657902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319450702601470956, guid: 8f4731eded78e2541b17479f26f09f55, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10549216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319450702601470956, guid: 8f4731eded78e2541b17479f26f09f55, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8679245
+      objectReference: {fileID: 0}
     - target: {fileID: 3925053995287605155, guid: 8f4731eded78e2541b17479f26f09f55, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8009,6 +8037,10 @@ PrefabInstance:
     - target: {fileID: 4600464088712448240, guid: 8f4731eded78e2541b17479f26f09f55, type: 3}
       propertyPath: m_Name
       value: SceneLoader_Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829852811739738355, guid: 8f4731eded78e2541b17479f26f09f55, type: 3}
+      propertyPath: sceneToLoad
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
