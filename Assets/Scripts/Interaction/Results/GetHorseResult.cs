@@ -6,7 +6,7 @@ using UnityEngine;
 public class GetHorseResult : MonoBehaviour, IResult
 {
     [Header("This gives an item directly to the Stables' inventory.")]
-    [SerializeField] private ItemObject horseSO;
+    [SerializeField] private ItemObject[] horseSO;
     private InventoryObject inventorySO;
     private Item item;
 
@@ -17,9 +17,17 @@ public class GetHorseResult : MonoBehaviour, IResult
     }
     public void Execute()
     {
-        item = horseSO.CreateItem();
+        item = horseSO[0].CreateItem();
         inventorySO.AddItem(item, 1);
-        HorseFoundScreen.instance.StartPopup(horseSO);
+        HorseFoundScreen.instance.StartPopup(horseSO[0]);
+        Debug.Log("Horse granted!");
+    }
+
+    public void Execute(int horseIndex)
+    {
+        item = horseSO[horseIndex].CreateItem();
+        inventorySO.AddItem(item, 1);
+        HorseFoundScreen.instance.StartPopup(horseSO[horseIndex]);
         Debug.Log("Horse granted!");
     }
 }

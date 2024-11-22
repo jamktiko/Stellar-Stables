@@ -7,9 +7,6 @@ public class FoodInventoryManager : MonoBehaviour
 {
     public static FoodInventoryManager Instance { get; private set; }
 
-    [SerializeField] private int levelIncreaseRequirement;
-    [SerializeField] private FoodTypeSO noteSO;
-
     public UnityEvent OnFoodInventoryChanged = new UnityEvent();
 
     private Dictionary<FoodTypeSO, int> foodInventory = new Dictionary<FoodTypeSO, int>();
@@ -51,20 +48,11 @@ public class FoodInventoryManager : MonoBehaviour
     private void UpdateFoodInventoryStats()
     {
         OnFoodInventoryChanged.Invoke();
-        CheckForDifficultyIncrease();
     }
 
     public int GetFoodAmount(FoodTypeSO foodType)
     {
         return foodInventory.ContainsKey(foodType) ? foodInventory[foodType] : 0;
-    }
-
-    private void CheckForDifficultyIncrease()
-    {
-        if (GetFoodAmount(noteSO) >= MinigameLevelManager.Instance.MusicLevelIndex*levelIncreaseRequirement)
-        {
-            MinigameLevelManager.Instance.MusicLevelIndex++;
-        }
     }
 
 }

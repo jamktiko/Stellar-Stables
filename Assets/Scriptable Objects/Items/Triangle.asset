@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36c92f6916f51c84180ccd6986ebd922, type: 3}
-  m_Name: Blue Gem
+  m_Name: Triangle
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: dc37ebfb55021244da3259d2c2f798e5, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 22e063efcddcb554cadae514f1ccc835, type: 3}
   stackable: 1
   type: 4
   description: 
   data:
     Name: 
-    Id: 6
+    Id: 5
     horseFoodPreference: {fileID: 0}
