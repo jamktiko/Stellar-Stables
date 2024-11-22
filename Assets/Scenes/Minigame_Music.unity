@@ -2929,7 +2929,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa3aa2eff1cc614f9a6cecb1b2336ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horseSO: {fileID: 11400000, guid: f475e72f09e43ad4a9742c91ba7e549c, type: 2}
+  horseSO:
+  - {fileID: 11400000, guid: f475e72f09e43ad4a9742c91ba7e549c, type: 2}
+  - {fileID: 11400000, guid: d879051f9b30c444b8e9615c7d89d91c, type: 2}
+  - {fileID: 11400000, guid: 8556128571f5e3844bbaa1755bd5a357, type: 2}
 --- !u!1 &1994264484
 GameObject:
   m_ObjectHideFlags: 0

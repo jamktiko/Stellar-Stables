@@ -42,7 +42,8 @@ public class MinigameScore : MonoBehaviour
         {
             if (TryGetComponent(out GetHorseResult getHorse))
             {
-                getHorse.Execute();
+                getHorse.Execute(MinigameLevelManager.Instance.MusicLevelIndex-1);
+                MinigameLevelManager.Instance.MusicLevelIndex++;
                 horseGotten = true;
             }
         }

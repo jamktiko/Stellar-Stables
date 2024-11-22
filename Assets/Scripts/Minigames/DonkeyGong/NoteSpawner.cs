@@ -25,7 +25,7 @@ public class NoteSpawner : MonoBehaviour
     {
         GenerateSpawnPoints();
         StartCoroutine(SpawnNotes());
-        minigameLevel = MinigameLevelManager.Instance.FishLevelIndex;
+        minigameLevel = MinigameLevelManager.Instance.MusicLevelIndex;
     }
 
     // Update is called once per frame
