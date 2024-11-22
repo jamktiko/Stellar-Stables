@@ -1010,7 +1010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa3aa2eff1cc614f9a6cecb1b2336ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horseSO: {fileID: 11400000, guid: d7ea4b95631e67a47b849c0e1a5b1482, type: 2}
+  horseSO:
+  - {fileID: 11400000, guid: d7ea4b95631e67a47b849c0e1a5b1482, type: 2}
 --- !u!114 &632636456 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2531174620663512090, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}

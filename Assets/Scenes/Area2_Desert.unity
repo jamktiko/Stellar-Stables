@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 607290803}
   - component: {fileID: 607290804}
   m_Layer: 5
-  m_Name: End seq
+  m_Name: seqEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3628,8 +3628,8 @@ RectTransform:
   - {fileID: 947915492}
   - {fileID: 1629216818}
   - {fileID: 1198183322}
-  - {fileID: 1603287018}
   - {fileID: 635105341}
+  - {fileID: 1603287018}
   - {fileID: 1705051885}
   - {fileID: 607290796}
   - {fileID: 1623060465}
@@ -3661,7 +3661,7 @@ GameObject:
   - component: {fileID: 1075279364}
   - component: {fileID: 1075279365}
   m_Layer: 0
-  m_Name: Blue Gem
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4131,7 +4131,7 @@ GameObject:
   - component: {fileID: 1171369005}
   - component: {fileID: 1171369006}
   m_Layer: 0
-  m_Name: Green Gem
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5523,7 +5523,7 @@ GameObject:
   - component: {fileID: 1566122728}
   - component: {fileID: 1566122729}
   m_Layer: 0
-  m_Name: Click 3 times
+  m_Name: GetCaterpony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5701,7 +5701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa3aa2eff1cc614f9a6cecb1b2336ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horseSO: {fileID: 11400000, guid: 5c97eed6056265044b3a310e0e9e4b4b, type: 2}
+  horseSO:
+  - {fileID: 11400000, guid: 5c97eed6056265044b3a310e0e9e4b4b, type: 2}
 --- !u!114 &1566122729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5964,7 +5965,7 @@ GameObject:
   - component: {fileID: 1623060473}
   - component: {fileID: 1623060474}
   m_Layer: 0
-  m_Name: Red Gem
+  m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

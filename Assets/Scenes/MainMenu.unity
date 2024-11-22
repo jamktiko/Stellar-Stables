@@ -794,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &575954367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2697,6 +2697,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1975372766619991832, guid: 3dd2bcea1dc49404c9976fc2d304386f, type: 3}
+      propertyPath: horseSO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975372766619991832, guid: 3dd2bcea1dc49404c9976fc2d304386f, type: 3}
+      propertyPath: horseSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6487142a059b845fc93f7554d66ac77e, type: 2}
     - target: {fileID: 5168271139204816245, guid: 3dd2bcea1dc49404c9976fc2d304386f, type: 3}
       propertyPath: m_Name
       value: LumoFoxCounter

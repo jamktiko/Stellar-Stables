@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36c92f6916f51c84180ccd6986ebd922, type: 3}
-  m_Name: Green Gem
+  m_Name: Circle
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 32c33c874aad63944b567ee9e3eb4992, type: 3}
+  uiDisplay: {fileID: 21300000, guid: dc37ebfb55021244da3259d2c2f798e5, type: 3}
   stackable: 1
   type: 4
   description: 
   data:
     Name: 
-    Id: 7
+    Id: 6
     horseFoodPreference: {fileID: 0}
