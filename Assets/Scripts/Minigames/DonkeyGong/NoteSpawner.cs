@@ -56,22 +56,11 @@ public class NoteSpawner : MonoBehaviour
 
     private void SpawnNote()
     {
-        if (Random.Range(0f, 100f) < badNoteSpawnChance * minigameLevel / 2f && minigameLevel > 1)
-        {
-            //int randomIndex = Random.Range(0, spawnPoints.Count);
-            //Vector2 spawnPosition = spawnPoints[randomIndex];
-            //GameObject newNote = Instantiate(notePrefab, spawnPosition, Quaternion.identity);
-            //newNote.name = "BadNote";
-            //newNote.GetComponent<NoteRandomizer>().SetNoteSprites(badNoteVariations[Random.Range(0, badNoteVariations.Length)], colourVariations[Random.Range(0, colourVariations.Length)]); 
-        }
-        else
-        {
-            int randomIndex = Random.Range(0, spawnPoints.Count);
-            Vector2 spawnPosition = spawnPoints[randomIndex];
-            GameObject newNote = Instantiate(notePrefab, spawnPosition, Quaternion.identity);
-            newNote.name = "Note";
-            newNote.GetComponent<NoteRandomizer>().SetNoteSprites(noteVariations[Random.Range(0, noteVariations.Length)], colourVariations[Random.Range(0, colourVariations.Length)]);
-        }
+        int randomIndex = Random.Range(0, spawnPoints.Count);
+        Vector2 spawnPosition = spawnPoints[randomIndex];
+        GameObject newNote = Instantiate(notePrefab, spawnPosition, Quaternion.identity);
+        newNote.name = "Note";
+        newNote.GetComponent<NoteRandomizer>().SetNoteSprites(noteVariations[Random.Range(0, noteVariations.Length)], colourVariations[Random.Range(0, colourVariations.Length)]);
     }
 
 }
