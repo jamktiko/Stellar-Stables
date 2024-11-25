@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoxCounter : MonoBehaviour
+public class HorseCounter : MonoBehaviour
 {
-    public static FoxCounter instance;
-    public int foxAmount;
-    [SerializeField] private int foxesToGather;
+    public static HorseCounter instance;
+    [SerializeField] private int horseAmount;
+    [SerializeField] private int amountToCollect;
+    [SerializeField] private GameObject victoryScreen;
     private void Awake()
     {
         if (instance == null)
@@ -19,13 +20,12 @@ public class FoxCounter : MonoBehaviour
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }
-    public void AddFox()
+    public void HorseCollected()
     {
-        foxAmount++;
-
-        if (foxAmount >= foxesToGather)
+        horseAmount++;
+        if (horseAmount >= amountToCollect)
         {
-            GetComponent<GetHorseResult>().Execute();
+            victoryScreen.SetActive(true);
         }
     }
 }
