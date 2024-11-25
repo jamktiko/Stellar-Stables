@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horseAmount: 0
-  amountToCollect: 15
+  amountToCollect: 11
   victoryScreen: {fileID: 6059790972189969763}
 --- !u!114 &2665643315798018480
 MonoBehaviour:
