@@ -3194,7 +3194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: afd5df11edff14efaa68ffa475d1ce27, type: 3}
-  title: geyser zone
+  title: Geyser zone
   flavourText: It's warm and cozy here, like in the nest of a huge bird
 --- !u!114 &1017073526
 MonoBehaviour:
