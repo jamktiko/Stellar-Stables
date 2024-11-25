@@ -7,6 +7,8 @@ public class FoodInventoryManager : MonoBehaviour
 {
     public static FoodInventoryManager Instance { get; private set; }
 
+    [SerializeField] private int foodHappinessModifier = 1;
+
     public UnityEvent OnFoodInventoryChanged = new UnityEvent();
 
     private Dictionary<FoodTypeSO, int> foodInventory = new Dictionary<FoodTypeSO, int>();
@@ -35,8 +37,13 @@ public class FoodInventoryManager : MonoBehaviour
     {
         if (foodInventory.ContainsKey(foodType))
         {
-            foodInventory[foodType] = Mathf.Max(0, foodInventory[foodType] - amount);
-            UpdateFoodInventoryStats();
+            if (foodInventory[foodType] > 0)
+            {
+                foodInventory[foodType] = Mathf.Max(0, foodInventory[foodType] - amount);
+                StableHappinessManager.Instance.IncreaseHappiness(foodHappinessModifier);
+                UpdateFoodInventoryStats();
+            }
+
         }
     }
 

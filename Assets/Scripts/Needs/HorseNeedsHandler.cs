@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HorseNeedsHandler : MonoBehaviour
 {
-
+    // SCRAPPED 
     [SerializeField] private HorseSO _horse;
     [SerializeField] private int _overallHorseHappiness = 75;
     [SerializeField] private int _positiveNeighbourModifier;

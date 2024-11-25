@@ -42,6 +42,8 @@ public class HorseFoundScreen : MonoBehaviour
         textBox.SetActive(true);
         image.sprite = horseSprite;
 
+        StableHappinessManager.Instance.IsStablesFilled = true;
+
         yield return new WaitForSecondsRealtime(waitTime);
 
         image.gameObject.SetActive(false);
