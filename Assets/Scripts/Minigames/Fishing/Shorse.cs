@@ -27,6 +27,7 @@ public class Shorse : Fish
             inventorySO.AddItem(item, 1);
             MinigameLevelManager.Instance.FishLevelIndex++;
             HorseFoundScreen.instance.StartPopup(horseSO);
+            HorseCounter.instance.HorseCollected();
         }
         Destroy(gameObject);
     }

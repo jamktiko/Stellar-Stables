@@ -21,7 +21,7 @@ public class HorseFoundScreen : MonoBehaviour
         }
         else if (instance != this)
         {
-            Destroy(this.gameObject.transform.parent.gameObject);
+            Destroy(this.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }
@@ -41,6 +41,8 @@ public class HorseFoundScreen : MonoBehaviour
         textObject.SetActive(true);
         textBox.SetActive(true);
         image.sprite = horseSprite;
+
+        StableHappinessManager.Instance.IsStablesFilled = true;
 
         yield return new WaitForSecondsRealtime(waitTime);
 

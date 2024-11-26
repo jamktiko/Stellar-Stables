@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3682523565208857748}
   - component: {fileID: 5619181560693407435}
+  - component: {fileID: -1305937551093040645}
   m_Layer: 0
   m_Name: FoodInventoryManager
   m_TagString: Untagged
@@ -44,5 +45,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0f210dfbddc8e41850272b640a1144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIncreaseRequirement: 20
-  noteSO: {fileID: 11400000, guid: f0f49f60342f6a94e9105f8cb24bd712, type: 2}
+  OnFoodInventoryChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-1305937551093040645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532852872829394274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa240703758b2d44953e0be42a3e3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stablesInventory: {fileID: 11400000, guid: 9b3a5fb62e0034eb2a962dc49690ea9a, type: 2}
+  stableHappiness: 100
+  cycleLength: 15
+  hungerSatisfaction: 5

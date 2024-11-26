@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private List<GameObject> interactables = new List<GameObject>();
-
+    
     private void Awake()
     {
         if (instance == null)
@@ -26,13 +26,23 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void Start()
+    {
+        //CollectDDOLs();
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        FindCanvases();
-        ApplyDDOL();
-        ToggleCanvases();
-        UnpauseGame();
+            FindCanvases();
+            ApplyDDOL();
+            ToggleCanvases();
+            UnpauseGame();
     }
+
     private void UnpauseGame()
     {
         Time.timeScale = 1;
@@ -60,6 +70,7 @@ public class GameManager : MonoBehaviour
             if (!ContainsObjectWithName(canvasFound.name))
             {
                 interactables.Add(canvasFound);
+                //ddols.Add(canvasFound);
                 //Debug.Log($"canvasFound ADDED: {canvasFound}");
             }
             else

@@ -15,7 +15,7 @@ public class FoxCounter : MonoBehaviour
         }
         else if (instance != this)
         {
-            Destroy(this.gameObject.transform.parent.gameObject);
+            Destroy(this.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
         }
     }

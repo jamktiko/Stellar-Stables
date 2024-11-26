@@ -3194,7 +3194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: afd5df11edff14efaa68ffa475d1ce27, type: 3}
-  title: geyser zone
+  title: Geyser zone
   flavourText: It's warm and cozy here, like in the nest of a huge bird
 --- !u!114 &1017073526
 MonoBehaviour:
@@ -7638,6 +7638,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55073d2b09811643a3233187e4e4c8e, type: 3}
+--- !u!1001 &5758622064282969991
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1194.5015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 545.9045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.6297655
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235816767221824262, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254114714625816361, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
+      propertyPath: m_Name
+      value: QuitButton
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a13c1e9cfb1f7e0429aec264bef13199, type: 3}
 --- !u!1001 &6830435315275082336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7941,3 +7998,4 @@ SceneRoots:
   - {fileID: 953269971}
   - {fileID: 355806825}
   - {fileID: 1889653560}
+  - {fileID: 5758622064282969991}
