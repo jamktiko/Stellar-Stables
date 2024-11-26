@@ -23,6 +23,7 @@ public class ItemObject : ScriptableObject
 {
 
     public Sprite uiDisplay;
+    public HorseAnimationSO horseAnimation;
     public bool stackable;
     public ItemType type;
     [TextArea(15, 20)]
