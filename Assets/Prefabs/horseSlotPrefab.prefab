@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c590e6aab02041a4c956250a4d148017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTypeRef: {fileID: 0}
+  _foodTypeRef: {fileID: 0}
 --- !u!114 &2099721809360755149
 MonoBehaviour:
   m_ObjectHideFlags: 0
