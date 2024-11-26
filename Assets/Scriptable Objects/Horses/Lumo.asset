@@ -20,3 +20,4 @@ MonoBehaviour:
     Name: 
     Id: 14
     horseFoodPreference: {fileID: 11400000, guid: 31c35050f6f389d42a1e96fd821ed16d, type: 2}
+    horseAnimation: {fileID: 11400000, guid: 70a31da5b182b724f9cff1fa49fda5d1, type: 2}

@@ -36,8 +36,10 @@ public class HorseAnimationHandler : MonoBehaviour
 
     private IEnumerator StartAnimation()
     {
+        Debug.Log("Horse animation started.");
         do
         {
+            Debug.Log("animation frame step");
             for (int i = 0; i < horseAnimation.horseAnimationSprites.Length; i++)
             {
                 horseImage.sprite = horseAnimation.horseAnimationSprites[i];

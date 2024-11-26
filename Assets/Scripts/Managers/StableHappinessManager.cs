@@ -61,7 +61,6 @@ public class StableHappinessManager : MonoBehaviour
 
     private void HungerCycle()
     {
-        Debug.Log("Hunger cycled");
         DecreaseHappiness(1);
     }
 

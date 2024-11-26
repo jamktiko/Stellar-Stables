@@ -31,9 +31,9 @@ public class HorseFoundScreen : MonoBehaviour
     {
         if (!isActive)
         {
-            if (item.horseAnimation != null)
+            if (item.data.horseAnimation != null)
             {
-                StartCoroutine(TogglePopup(item.uiDisplay, item.horseAnimation)); 
+                StartCoroutine(TogglePopup(item.uiDisplay, item.data.horseAnimation)); 
             }
             else
             {
