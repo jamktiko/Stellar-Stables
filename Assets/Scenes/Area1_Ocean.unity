@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: fb44e22c7a4d64acc8569a78fc6b4075, type: 3}
+  sprite: {fileID: 21300000, guid: dd315302112934af889c043d0a6b82a7, type: 3}
   title: 'No FISHING '
   flavourText: "Fishing is prohibited. But why? There's so much fish in the water.
     If I had a fishing rod, I\u2019d definitely try fishing!"
