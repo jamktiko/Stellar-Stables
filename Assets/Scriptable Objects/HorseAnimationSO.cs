@@ -8,5 +8,5 @@ public class HorseAnimationSO : ScriptableObject
 {
 
     public Sprite[] horseAnimationSprites;
-
+    public float spriteCycleTime;
 }

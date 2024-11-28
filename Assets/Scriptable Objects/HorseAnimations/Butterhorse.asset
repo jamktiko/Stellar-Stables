@@ -15,3 +15,4 @@ MonoBehaviour:
   horseAnimationSprites:
   - {fileID: 21300000, guid: 838062de766298a4b8a0755e543fee15, type: 3}
   - {fileID: 21300000, guid: 12bc63dea638ed24787aa9fda5f1fe55, type: 3}
+  spriteCycleTime: 1

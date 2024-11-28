@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class HorseAnimationHandler : MonoBehaviour
 {
 
-    public float timeBetweenFrames = 0.75f;
     public HorseAnimationSO horseAnimation;
     [SerializeField] private Image horseImage;
     private bool isPlaying;
@@ -43,7 +42,7 @@ public class HorseAnimationHandler : MonoBehaviour
             for (int i = 0; i < horseAnimation.horseAnimationSprites.Length; i++)
             {
                 horseImage.sprite = horseAnimation.horseAnimationSprites[i];
-                yield return new WaitForSeconds(timeBetweenFrames);
+                yield return new WaitForSeconds(horseAnimation.spriteCycleTime);
             } 
         } while (isPlaying);
     }

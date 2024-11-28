@@ -18,3 +18,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6eb75db4de1ee634bac9ee61cc16223c, type: 3}
   - {fileID: 21300000, guid: 45dcb8d1b8b54aa4c9c99035bb6a0eb4, type: 3}
   - {fileID: 21300000, guid: e94f99426488a0d4db4bf8fc59bfc573, type: 3}
+  spriteCycleTime: 1.2

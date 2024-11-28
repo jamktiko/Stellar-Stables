@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102ca74149be15149992537cb69fa255, type: 3}
   m_Name: Shorse
   m_EditorClassIdentifier: 
-  horseAnimationSprites: []
+  horseAnimationSprites:
+  - {fileID: 21300000, guid: b5e5124ab0e14f54aa74642e9e90f886, type: 3}
+  - {fileID: 21300000, guid: 32646f7496378c24ca5f7b28d5e215a8, type: 3}
+  - {fileID: 21300000, guid: 5d885f7f8402fa049b66132bc1a3c20b, type: 3}
+  - {fileID: 21300000, guid: 32646f7496378c24ca5f7b28d5e215a8, type: 3}
+  spriteCycleTime: 1.5
