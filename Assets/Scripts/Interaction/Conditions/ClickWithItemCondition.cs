@@ -25,7 +25,7 @@ public class ClickWithItemCondition : MonoBehaviour, ICondition
                 if (isItemConsumed) 
                 {
                     //this removes the WHOLE item. not just 1 if it's a stack. shouldnt matter much tho unless we intend to have stackable items
-                    StaticInterface.instance.inventory.Container.Items[i].RemoveItem(); 
+                    StaticInterface.instance.inventory.Container.Items[i].RemoveItem();
                 }
 
                 AnimationHandler.instance.ItemFeedback(itemSO.uiDisplay, true);

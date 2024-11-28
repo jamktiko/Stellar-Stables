@@ -18,8 +18,11 @@ public class InventoryObject : ScriptableObject
     {
         database.UpdateID();
 
-        if (EmptySlotCount <= 0)
+        if (EmptySlotCount <= 0 && (!database.Items[_item.Id].stackable))
+        {
             return false;
+        }
+
         InventorySlot slot = FindItemOnInventory(_item);
         if(!database.Items[_item.Id].stackable || slot == null)
         {
@@ -28,6 +31,7 @@ public class InventoryObject : ScriptableObject
             DynamicInterface.instance.RunUpdateSlotDisplay();
             return true;
         }
+
         slot.AddAmount(_amount);
 
         StaticInterface.instance.RunUpdateSlotDisplay();
@@ -181,6 +185,7 @@ public class InventorySlot
     {
         item = new Item();
         amount = 0;
+        StaticInterface.instance.RunUpdateSlotDisplay();
     }
     public void AddAmount(int value)
     {
