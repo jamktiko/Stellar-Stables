@@ -24,9 +24,15 @@ public class InventoryObject : ScriptableObject
         if(!database.Items[_item.Id].stackable || slot == null)
         {
             SetEmptySlot(_item, _amount);
+            StaticInterface.instance.RunUpdateSlotDisplay();
+            DynamicInterface.instance.RunUpdateSlotDisplay();
             return true;
         }
         slot.AddAmount(_amount);
+
+        StaticInterface.instance.RunUpdateSlotDisplay();
+        DynamicInterface.instance.RunUpdateSlotDisplay();
+
         return true;
     }
     public int EmptySlotCount
@@ -76,6 +82,9 @@ public class InventoryObject : ScriptableObject
             InventorySlot temp = new InventorySlot( item2.item, item2.amount);
             item2.UpdateSlot(item1.item, item1.amount);
             item1.UpdateSlot(temp.item, temp.amount);
+
+            StaticInterface.instance.RunUpdateSlotDisplay();
+            DynamicInterface.instance.RunUpdateSlotDisplay();
         }
     }
     
