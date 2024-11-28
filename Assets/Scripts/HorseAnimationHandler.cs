@@ -11,6 +11,10 @@ public class HorseAnimationHandler : MonoBehaviour
     [SerializeField] private Image horseImage;
     private bool isPlaying;
 
+    private void OnDisable()
+    {
+        isPlaying = false;
+    }
     public void Play()
     {
         if (!isPlaying)
@@ -33,12 +37,11 @@ public class HorseAnimationHandler : MonoBehaviour
         }
     }
 
+
     private IEnumerator StartAnimation()
     {
-        Debug.Log("Horse animation started.");
         do
         {
-            Debug.Log("animation frame step");
             for (int i = 0; i < horseAnimation.horseAnimationSprites.Length; i++)
             {
                 horseImage.sprite = horseAnimation.horseAnimationSprites[i];
