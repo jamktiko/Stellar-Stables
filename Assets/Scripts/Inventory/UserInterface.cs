@@ -16,12 +16,12 @@ public abstract class UserInterface : DraggingHandler
     }
     void Start()
     {
-
+        RunUpdateSlotDisplay();
     }
 
     void Update()
     {
-        RunUpdateSlotDisplay();
+       // RunUpdateSlotDisplay();
         //ToggleInventory();
     }
 

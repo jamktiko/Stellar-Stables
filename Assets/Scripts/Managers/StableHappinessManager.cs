@@ -39,7 +39,7 @@ public class StableHappinessManager : MonoBehaviour
         
         if (IsStablesFilled)
         {
-            stableHappiness += change;
+            stableHappiness = Mathf.Min(110, stableHappiness + change);
             UpdateStats();
         }
     }
@@ -49,7 +49,7 @@ public class StableHappinessManager : MonoBehaviour
         
         if (IsStablesFilled)
         {
-            stableHappiness -= change;
+            stableHappiness = Mathf.Max(0, stableHappiness - change);
             UpdateStats(); 
         }
     }
@@ -61,7 +61,6 @@ public class StableHappinessManager : MonoBehaviour
 
     private void HungerCycle()
     {
-        Debug.Log("Hunger cycled");
         DecreaseHappiness(1);
     }
 

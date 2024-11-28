@@ -43,6 +43,8 @@ public class Item
     public int Id = -1;
     [Header("Only needed for horses")]
     public FoodTypeSO horseFoodPreference;
+    public HorseAnimationSO horseAnimation;
+
     //public ItemBuff[] buffs;
     public Item()
     {
