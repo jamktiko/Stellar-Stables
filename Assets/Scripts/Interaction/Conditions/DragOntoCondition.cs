@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(InteractableObject))]
 [RequireComponent(typeof(Draggable))]
@@ -25,6 +26,15 @@ public class DragOntoCondition : MonoBehaviour, ICondition
             //{
             //    this.gameObject.SetActive(false);
             //}
+            Sprite objectSprite = GetComponent<Image>().sprite;
+
+
+            if (TryGetComponent(out PlayAudio playAudio))
+            {
+                playAudio.PlayThisSoundEffect();
+            }
+
+            AnimationHandler.instance.ItemFeedback(objectSprite, true);
 
             if (isTargetObjectConsumable)
             {
