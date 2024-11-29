@@ -2099,6 +2099,10 @@ PrefabInstance:
       propertyPath: enabledOnScenes.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2760877093812423878, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3617994808971276471, guid: 2aa68093b426d76428d856c6612f908f, type: 3}
       propertyPath: m_Name
       value: FoodbarLocation
