@@ -185,7 +185,10 @@ public class InventorySlot
     {
         item = new Item();
         amount = 0;
-        StaticInterface.instance.RunUpdateSlotDisplay();
+        if (StaticInterface.instance != null)
+        {
+            StaticInterface.instance.RunUpdateSlotDisplay();
+        }
     }
     public void AddAmount(int value)
     {

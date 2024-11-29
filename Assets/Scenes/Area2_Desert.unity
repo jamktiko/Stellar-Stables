@@ -2388,6 +2388,7 @@ GameObject:
   - component: {fileID: 473013078}
   - component: {fileID: 473013073}
   - component: {fileID: 473013076}
+  - component: {fileID: 473013080}
   m_Layer: 0
   m_Name: Guitar
   m_TagString: Untagged
@@ -2521,6 +2522,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473013070}
   m_CullTransparentMesh: 1
+--- !u!114 &473013080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473013070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &498340833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,6 +4089,7 @@ GameObject:
   - component: {fileID: 762571430}
   - component: {fileID: 762571429}
   - component: {fileID: 762571427}
+  - component: {fileID: 762571433}
   m_Layer: 0
   m_Name: Harp
   m_TagString: Untagged
@@ -4208,6 +4223,19 @@ RectTransform:
   m_AnchoredPosition: {x: 965, y: -168.3}
   m_SizeDelta: {x: 180.8152, y: 91.6594}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &762571433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762571423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &774155015
 GameObject:
   m_ObjectHideFlags: 0
@@ -9306,6 +9334,7 @@ GameObject:
   - component: {fileID: 1794525188}
   - component: {fileID: 1794525194}
   - component: {fileID: 1794525193}
+  - component: {fileID: 1794525195}
   - component: {fileID: 1794525192}
   - component: {fileID: 1794525190}
   m_Layer: 0
@@ -9441,6 +9470,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794525185}
   m_CullTransparentMesh: 1
+--- !u!114 &1794525195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794525185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &1796798259
 GameObject:
   m_ObjectHideFlags: 0
