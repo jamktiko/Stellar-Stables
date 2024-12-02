@@ -30,7 +30,7 @@ public class StableHappinessManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Hunger Cycle invoked");
+        //Debug.Log("Hunger Cycle invoked");
         InvokeRepeating("HungerCycle", cycleLength, cycleLength);
     }
 
