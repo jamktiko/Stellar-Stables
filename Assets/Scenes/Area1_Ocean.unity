@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: dd315302112934af889c043d0a6b82a7, type: 3}
+  sprite: {fileID: 21300000, guid: b0395fc27e25647e9be64a19b29386d1, type: 3}
   title: 'No FISHING '
   flavourText: "Fishing is prohibited. But why? There's so much fish in the water.
     If I had a fishing rod, I\u2019d definitely try fishing!"
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3670016c4a1e049ccb863d87400576f6, type: 3}
+  sprite: {fileID: 21300000, guid: 17c619c32e4ec4b18bac8e2eff4a07c0, type: 3}
   title: swamp with bushes
   flavourText: you feel that the bushes harbors forgotten things
 --- !u!114 &284644440
@@ -2388,7 +2388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 34400f1ad9e6c498dbba7dd9219ae764, type: 3}
+  sprite: {fileID: 21300000, guid: 172b851d15cbc445aaa2499096bf4548, type: 3}
   title: Big crystal
   flavourText: 'The material of this crystal emits a mysterious aura around it. It''s
     hard to take your eyes off it.   '
@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a86ac03c9f64d49d088d00a481a46809, type: 3}
+  sprite: {fileID: 21300000, guid: fac5d6d07f08c4a56ad7a0a1244eef7e, type: 3}
   title: Huge egg(Draggale)
   flavourText: 'There''s something moving inside, but it needs more warmth to hatch.
     What could be inside?       '
@@ -4133,7 +4133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: afd5df11edff14efaa68ffa475d1ce27, type: 3}
+  sprite: {fileID: 21300000, guid: 4c9121137aadb4eeea5024d5fb187077, type: 3}
   title: Geyser zone
   flavourText: It's warm and cozy here, like in the nest of a huge bird
 --- !u!114 &1017073526
@@ -5294,7 +5294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 1d237dcaa504143548e316a342643f7b, type: 3}
+  sprite: {fileID: 21300000, guid: cf88426680b3440f5ab3b1d231793ec8, type: 3}
   title: The Stone Head
   flavourText: A massive stone sculpture resembling the head of a horse. It looks
     incredibly ancient.
@@ -5503,7 +5503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 636d44ac51f66444cadf56a0ae27831b, type: 3}
+  sprite: {fileID: 21300000, guid: 441da85b545d2478bafdad3bc5f06bec, type: 3}
   title: Strange statues
   flavourText: ' The stone structures vaguely resemble the shape of horse heads from
     your home world.'
@@ -5860,7 +5860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3670016c4a1e049ccb863d87400576f6, type: 3}
+  sprite: {fileID: 21300000, guid: 17c619c32e4ec4b18bac8e2eff4a07c0, type: 3}
   title: swamp with bushes
   flavourText: you feel that the bushes harbors forgotten things
 --- !u!114 &1343071088 stripped
@@ -6728,7 +6728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3670016c4a1e049ccb863d87400576f6, type: 3}
+  sprite: {fileID: 21300000, guid: 17c619c32e4ec4b18bac8e2eff4a07c0, type: 3}
   title: swamp with bushes
   flavourText: you feel that the bushes harbors forgotten things
 --- !u!1 &1796798259
@@ -7836,7 +7836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3670016c4a1e049ccb863d87400576f6, type: 3}
+  sprite: {fileID: 21300000, guid: 17c619c32e4ec4b18bac8e2eff4a07c0, type: 3}
   title: swamp with bushes
   flavourText: you feel that the bushes harbors forgotten things
 --- !u!1 &2009492352
@@ -8222,7 +8222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3670016c4a1e049ccb863d87400576f6, type: 3}
+  sprite: {fileID: 21300000, guid: 17c619c32e4ec4b18bac8e2eff4a07c0, type: 3}
   title: swamp with bushes
   flavourText: you feel that the bushes harbors forgotten things
 --- !u!1 &2088461845
@@ -8974,7 +8974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f1b55bfeb03f54983ebaf6c11fc354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 0e9f64eaa8605492ab8cf9f7d5df9032, type: 3}
+  sprite: {fileID: 21300000, guid: dc875feaca93d4e51826c6773fc3e2b7, type: 3}
   title: mushroom axe
   flavourText: A strange mushroom fruit. It looks like an axe. Sharp, so you can
     chop down bushes.
