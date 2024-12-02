@@ -25,9 +25,9 @@ public class CollectFood : MonoBehaviour
     {
         if (isEnabled)
         {
+            FoodInventoryManager.Instance.AddFood(foodType, 1);
             AnimationHandler.instance.FoodFeedback(foodType.foodSprite);
             AnimationHandler.instance.ShowFoods();
-            FoodInventoryManager.Instance.AddFood(foodType, 1);
             isEnabled = false;
             image.enabled = false;
             button.enabled = false;
