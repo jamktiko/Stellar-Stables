@@ -40,11 +40,9 @@ public class AnimationHandler : MonoBehaviour
     private void Start()
     {
         foodImages = new List<Image>();
-        //Transform[] childs = foodbarAnimator.gameObject.GetComponentsInChildren<Transform>();
-
         foreach (Transform child in foodbarAnimator.gameObject.transform)
         {
-            Debug.Log("child is: " + child);
+            //Debug.Log("child is: " + child);
             Image image = child.GetComponent<Image>();
             foodImages.Add(image);
         }
