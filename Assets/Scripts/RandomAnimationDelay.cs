@@ -11,13 +11,27 @@ public class RandomAnimationDelay : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
+        BeginAnimationLoop();
+    }
+    private void OnEnable()
+    {
+        BeginAnimationLoop();
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+    private void BeginAnimationLoop()
+    {
         float randomDelay = Random.Range(minDelay, maxDelay);
         Invoke(nameof(StartAnimation), randomDelay);
     }
-
     private void StartAnimation()
     {
-        StartCoroutine(RepeatAnimation());
+        if (gameObject.activeInHierarchy)
+        {
+            StartCoroutine(RepeatAnimation());
+        }
     }
     private IEnumerator RepeatAnimation()
     {
