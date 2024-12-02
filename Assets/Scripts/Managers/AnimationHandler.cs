@@ -2,20 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AnimationHandler : MonoBehaviour
 {
     public static AnimationHandler instance;
+    [Header("Sprites that appear at cursor")]
+    [SerializeField] private GameObject atCursorLocation;
+    [Space(7)]
     [SerializeField] private Animator checkAnimator;
     [SerializeField] private Image checkAtCursor;
-    [SerializeField] private Animator foodAnimator;
-    [SerializeField] private Image foodAtCursor;
-    [SerializeField] private Animator itemAnimator;
-    [SerializeField] private Image itemAtCursor;
-    [SerializeField] private Animator foodbarAnimator;
-    [SerializeField] private GameObject atCursorLocation;
     [SerializeField] private Sprite success;
     [SerializeField] private Sprite failure;
+    [Space(7)]
+    [SerializeField] private Animator foodAnimator;
+    [SerializeField] private Image foodAtCursor;
+    [Space(7)]
+    [SerializeField] private Animator itemAnimator;
+    [SerializeField] private Image itemAtCursor;
+    [Space(3)]
+    [Header("Foodbar")]
+    [SerializeField] private Animator foodbarAnimator;
+    [SerializeField] private List<Image> foodImages = new List<Image>();
+    [SerializeField] private List<FoodTypeSO> foodSOs = new List<FoodTypeSO>();
     private void Awake()
     {
         if (instance == null)
@@ -26,6 +35,18 @@ public class AnimationHandler : MonoBehaviour
         {
             Destroy(this.gameObject.transform.parent.gameObject);
             Debug.LogWarning($"There was more than one {GetType().Name}, deleting extra.");
+        }
+    }
+    private void Start()
+    {
+        foodImages = new List<Image>();
+        //Transform[] childs = foodbarAnimator.gameObject.GetComponentsInChildren<Transform>();
+
+        foreach (Transform child in foodbarAnimator.gameObject.transform)
+        {
+            Debug.Log("child is: " + child);
+            Image image = child.GetComponent<Image>();
+            foodImages.Add(image);
         }
     }
     public void InteractionFeedback(bool isSuccess)
@@ -54,6 +75,18 @@ public class AnimationHandler : MonoBehaviour
 
     public void ShowFoods()
     {
+        // int foodNumberToSet = FoodInventoryManager.Instance.GetFoodAmount(tempSlotData.data.horseFoodPreference);
+        // foodNumberObjects[i].text = foodNumberToSet > 99 ? "99+" : foodNumberToSet.ToString();
+
+        for (int i = 0; i < foodImages.Count; i++)
+        {
+            foodImages[i].sprite = foodSOs[i].foodSprite;
+
+            int foodNumberToSet = FoodInventoryManager.Instance.GetFoodAmount(foodSOs[i]);
+            TextMeshProUGUI foodText = foodImages[i].gameObject.GetComponentInChildren<TextMeshProUGUI>();
+            foodText.text = foodNumberToSet > 99 ? "99+" : foodNumberToSet.ToString();
+        }
+
         foodbarAnimator.SetTrigger("ShowFoods");
     }
 
