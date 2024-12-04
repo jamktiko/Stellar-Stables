@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 8584844019649163963}
   - component: {fileID: 7268455757896555512}
   - component: {fileID: 1706733358055401046}
+  - component: {fileID: 4421693041118969392}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -307,7 +308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000016689, y: -316.86}
+  m_AnchoredPosition: {x: 0.000016689, y: -322}
   m_SizeDelta: {x: 115, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8584844019649163963
@@ -392,6 +393,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4421693041118969392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550415205480496895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.8493731, b: 0.7971698, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5033299305447341256
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.2961, y: -20.1968}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 543.4077, y: 159.6636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3262533765585481392
@@ -468,8 +484,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255967
-  m_fontColor: {r: 0.3726415, g: 0.0035154943, b: 0.0035154943, a: 1}
+    rgba: 4278191675
+  m_fontColor: {r: 0.23113209, g: 0.025051003, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -602,8 +618,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255967
-  m_fontColor: {r: 0.37254903, g: 0.003921569, b: 0.003921569, a: 1}
+    rgba: 4278191675
+  m_fontColor: {r: 0.23113209, g: 0.025051003, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -775,8 +791,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255967
-  m_fontColor: {r: 0.37254903, g: 0.003921569, b: 0.003921569, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
