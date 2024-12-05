@@ -49,6 +49,11 @@ public class Fish : MonoBehaviour, ICatchable
         {
             FoodInventoryManager.Instance.AddFood(foodSO, 1);
         }
+
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.sfxPlayer.Play();
+        }
         Destroy(gameObject);
     }
 

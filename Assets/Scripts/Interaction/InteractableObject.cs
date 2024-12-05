@@ -39,10 +39,10 @@ public class InteractableObject : MonoBehaviour
     }
     public void CheckFailed()
     {
-        Debug.Log("Check failed.");
+        //Debug.Log("Check failed.");
     }
     public void CheckSucceeded()
     {
-        Debug.Log("Check success!");
+        //Debug.Log("Check success!");
     }
 }

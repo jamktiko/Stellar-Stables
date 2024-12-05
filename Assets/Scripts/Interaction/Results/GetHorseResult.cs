@@ -21,7 +21,7 @@ public class GetHorseResult : MonoBehaviour, IResult
         inventorySO.AddItem(item, 1);
         HorseFoundScreen.instance.StartPopup(horseSO[0]);
         HorseCounter.instance.HorseCollected();
-        Debug.Log("Horse granted!");
+        //Debug.Log("Horse granted!");
     }
 
     public void Execute(int horseIndex)
@@ -30,6 +30,6 @@ public class GetHorseResult : MonoBehaviour, IResult
         inventorySO.AddItem(item, 1);
         HorseFoundScreen.instance.StartPopup(horseSO[horseIndex]);
         HorseCounter.instance.HorseCollected();
-        Debug.Log("Horse granted!");
+        //Debug.Log("Horse granted!");
     }
 }

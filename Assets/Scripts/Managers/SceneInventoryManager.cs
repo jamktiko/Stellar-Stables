@@ -38,7 +38,7 @@ public class SceneInventoryManager : MonoBehaviour
         }
 
         //Debug.Log($"StaticInterface is: {StaticInterface.instance.gameObject.name}");
-        StaticInterface.instance.gameObject.SetActive(shouldEnable);
+        StaticInterface.instance.gameObject.transform.parent.gameObject.SetActive(shouldEnable);
     }
     private void ToggleStablesInventory()
     {
@@ -50,7 +50,7 @@ public class SceneInventoryManager : MonoBehaviour
                 //Debug.Log($"ENABLED on STABLES. active scene is {SceneManager.GetActiveScene().name}");
             }
         
-        DynamicInterface.instance.gameObject.SetActive(shouldEnable);
+        DynamicInterface.instance.gameObject.transform.parent.gameObject.SetActive(shouldEnable);
         if (shouldEnable)
         {
             StablesScroller.instance.ResetInterfacePosition();
