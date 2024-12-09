@@ -47,4 +47,4 @@ MonoBehaviour:
   scrollSpeed: 600
   buttonSpeed: 15
   smoothness: 0.2
-  maxY: 2740
+  maxY: 3100

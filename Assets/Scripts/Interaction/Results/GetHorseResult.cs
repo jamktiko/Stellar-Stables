@@ -6,7 +6,7 @@ using UnityEngine;
 public class GetHorseResult : MonoBehaviour, IResult
 {
     [Header("This gives an item directly to the Stables' inventory.")]
-    [SerializeField] private ItemObject[] horseSO;
+    public ItemObject[] horseSO;
     private InventoryObject inventorySO;
     private Item item;
 

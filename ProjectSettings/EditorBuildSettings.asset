@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame_Fishing.unity
     guid: 321cfcb1129d8b9449a02d0284264447
   - enabled: 1
+    path: Assets/Scenes/Minigame_Workout.unity
+    guid: 38d0b0bf55e02204da621e38ab4a01e9
+  - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: b45097b31b0ec3c4280edd52a4db50cb
   m_configObjects:

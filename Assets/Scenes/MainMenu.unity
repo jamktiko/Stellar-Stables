@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6365092372359187377, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
       propertyPath: stableSlotItems.Array.size
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8744929613724384840, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
       propertyPath: m_Pivot.x

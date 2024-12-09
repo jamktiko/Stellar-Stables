@@ -18,71 +18,129 @@ MonoBehaviour:
     Items:
     - AllowedItems: 03000000
       item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
+        Name: 
+        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
+      amount: 0
+    - AllowedItems: 03000000
+      item:
         Name: Definitely
         Id: 11
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
       amount: 1
     - AllowedItems: 03000000
       item:
         Name: 
         Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
       amount: 0
     - AllowedItems: 03000000
       item:
         Name: 
         Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
       amount: 0
     - AllowedItems: 03000000
       item:
         Name: 
         Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 03000000
-      item:
-        Name: 
-        Id: -1
+        horseFoodPreference: {fileID: 0}
+        horseAnimation: {fileID: 0}
+        horseSFXClips: []
       amount: 0

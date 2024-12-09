@@ -14,13 +14,13 @@ public class SlotData : MonoBehaviour
     [SerializeField] private ItemDatabaseObject horseDatabase;
     [SerializeField] private InventoryObject stablesInventory;
 
-    public  ItemObject[] stableSlotItems = new ItemObject[14];
+    public  ItemObject[] stableSlotItems = new ItemObject[16];
 
-    private UnityEngine.UI.Image[] foodImageObjects = new UnityEngine.UI.Image[14];
-    private TextMeshProUGUI[] foodNumberObjects = new TextMeshProUGUI[14];
-    private GameObject[] foodDisplayObjects = new GameObject[14];
-    private HorseAnimationHandler[] horseAnimationHandlers = new HorseAnimationHandler[14];
-    private HorseSFX[] horseSFXplayers = new HorseSFX[14];
+    private UnityEngine.UI.Image[] foodImageObjects = new UnityEngine.UI.Image[16];
+    private TextMeshProUGUI[] foodNumberObjects = new TextMeshProUGUI[16];
+    private GameObject[] foodDisplayObjects = new GameObject[16];
+    private HorseAnimationHandler[] horseAnimationHandlers = new HorseAnimationHandler[16];
+    private HorseSFX[] horseSFXplayers = new HorseSFX[16];
     private ItemObject tempSlotData;
     public void UpdateSlotData()
     {
