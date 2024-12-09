@@ -44,7 +44,7 @@ public class Item
     [Header("Only needed for horses")]
     public FoodTypeSO horseFoodPreference;
     public HorseAnimationSO horseAnimation;
-    public AudioClip horseSFXClip;
+    public AudioClip[] horseSFXClips;
 
     //public ItemBuff[] buffs;
     public Item()

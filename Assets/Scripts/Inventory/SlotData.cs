@@ -20,7 +20,8 @@ public class SlotData : MonoBehaviour
     private TextMeshProUGUI[] foodNumberObjects = new TextMeshProUGUI[14];
     private GameObject[] foodDisplayObjects = new GameObject[14];
     private HorseAnimationHandler[] horseAnimationHandlers = new HorseAnimationHandler[14];
-
+    private HorseSFX[] horseSFXplayers = new HorseSFX[14];
+    private ItemObject tempSlotData;
     public void UpdateSlotData()
     {
 
@@ -74,6 +75,7 @@ public class SlotData : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
+            horseSFXplayers[i] = transform.GetChild(i).GetComponentInChildren<HorseSFX>();
             horseAnimationHandlers[i] = transform.GetChild(i).Find("ItemDisplay").gameObject.GetComponentInChildren<HorseAnimationHandler>();
             foodDisplayObjects[i] = transform.GetChild(i).Find("FoodDisplay").gameObject;
             foodImageObjects[i] = foodDisplayObjects[i].GetComponentInChildren<UnityEngine.UI.Image>();
@@ -86,9 +88,11 @@ public class SlotData : MonoBehaviour
 
         for (int i = 0; i < foodImageObjects.Length; i++)
         {
-            ItemObject tempSlotData = GetSlotData(i);
+            tempSlotData = GetSlotData(i);
+
             if (tempSlotData == null) 
             {
+                horseSFXplayers[i].horseSO = null;
                 horseAnimationHandlers[i].Stop();
                 foodImageObjects[i].sprite = null;
                 foodNumberObjects[i].text = "0";
@@ -97,7 +101,9 @@ public class SlotData : MonoBehaviour
             }
             else
             {
-                horseAnimationHandlers[i].horseSO = tempSlotData;
+                horseSFXplayers[i].horseSO = tempSlotData;
+                horseSFXplayers[i].audioClips = tempSlotData.data.horseSFXClips;
+
                 foodDisplayObjects[i].SetActive(true);
                 foodDisplayObjects[i].GetComponentInChildren<FoodTypeReference>().FoodTypeRef = tempSlotData.data.horseFoodPreference;
                 foodImageObjects[i].sprite = tempSlotData.data.horseFoodPreference.foodSprite;

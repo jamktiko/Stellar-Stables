@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class HorseSFX : MonoBehaviour
 {
+    public ItemObject horseSO;
     [SerializeField] private AudioSource audioSource;
-    public AudioClip audioClip;
+    public AudioClip[] audioClips;
     public void PlaySFX()
     {
-        if (TryGetComponent(out HorseAnimationHandler horseAnimHandler))
+        Debug.Log("horseSO is null: " + (horseSO == null));
+
+        if (horseSO != null)
         {
-            if (horseAnimHandler.horseSO != null)
-            {
-                ItemObject currentHorse = horseAnimHandler.horseSO;
-                audioClip = currentHorse.data.horseSFXClip;
-                audioSource.clip = audioClip;
-                audioSource.Play();
-            }
-            else
-            {
-                Debug.Log("slot empty or missing clip for horse SO");
-            }
+            int randomClipIndex = Random.Range(0, audioClips.Length);
+            audioSource.clip = audioClips[randomClipIndex];
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.Log("slot empty or missing clip for horse SO");
         }
     }
 }

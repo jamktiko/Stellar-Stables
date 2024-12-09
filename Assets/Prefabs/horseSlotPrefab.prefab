@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 1481865711647210183}
   - component: {fileID: 4682680820429695554}
   - component: {fileID: 3394560384503247935}
+  - component: {fileID: 8735173543617251053}
   m_Layer: 5
   m_Name: horseSlotPrefab
   m_TagString: Untagged
@@ -692,7 +693,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1498415840103865296}
+      - m_Target: {fileID: 8735173543617251053}
         m_TargetAssemblyTypeName: HorseSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -721,7 +722,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1498415840103865296}
+        - m_Target: {fileID: 8735173543617251053}
           m_TargetAssemblyTypeName: HorseSFX, Assembly-CSharp
           m_MethodName: PlaySFX
           m_Mode: 1
@@ -829,6 +830,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8735173543617251053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195125655950208887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d9fcea9c191af4b9723027ec9ba058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horseSO: {fileID: 0}
+  audioSource: {fileID: 3394560384503247935}
+  audioClips: []
 --- !u!1 &7301104704915102329
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +991,6 @@ GameObject:
   - component: {fileID: 7224541042777754638}
   - component: {fileID: 1265240688896632881}
   - component: {fileID: 322253261552011538}
-  - component: {fileID: 1498415840103865296}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -1052,20 +1067,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d2c797d0827964483a4dc33a84eea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horseSO: {fileID: 0}
   horseAnimation: {fileID: 0}
   horseImage: {fileID: 1265240688896632881}
---- !u!114 &1498415840103865296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7573921092368275388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d9fcea9c191af4b9723027ec9ba058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 3394560384503247935}
-  audioClip: {fileID: 0}

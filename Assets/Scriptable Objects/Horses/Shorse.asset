@@ -21,3 +21,8 @@ MonoBehaviour:
     Id: 5
     horseFoodPreference: {fileID: 11400000, guid: 31c35050f6f389d42a1e96fd821ed16d, type: 2}
     horseAnimation: {fileID: 11400000, guid: 354bf081a339e994ba99210c05c9ffc3, type: 2}
+    horseSFXClips:
+    - {fileID: 8300000, guid: 11c5fcf462b535645946a84d7c40285b, type: 3}
+    - {fileID: 8300000, guid: e2ef733edb2e7394e8577a8fa0f47c3a, type: 3}
+    - {fileID: 8300000, guid: 38871cc2d714c39439bedd5b6906239a, type: 3}
+    - {fileID: 8300000, guid: 42e523110b0bbbf4b8b0cec19eb9284a, type: 3}
