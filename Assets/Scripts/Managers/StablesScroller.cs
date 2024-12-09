@@ -35,6 +35,7 @@ public class StablesScroller : MonoBehaviour
     }
     public void ResetInterfacePosition()
     {
+        interfaceTransform = DynamicInterface.instance.GetComponent<RectTransform>();
         interfaceTransform.anchoredPosition = Vector2.zero;
         targetPositionY = 0f;
         currentVelocity = 0f;

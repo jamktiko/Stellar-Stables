@@ -14,7 +14,7 @@ public class SlotData : MonoBehaviour
     [SerializeField] private ItemDatabaseObject horseDatabase;
     [SerializeField] private InventoryObject stablesInventory;
 
-    [SerializeField] private ItemObject[] stableSlotItems = new ItemObject[14];
+    public  ItemObject[] stableSlotItems = new ItemObject[14];
 
     private UnityEngine.UI.Image[] foodImageObjects = new UnityEngine.UI.Image[14];
     private TextMeshProUGUI[] foodNumberObjects = new TextMeshProUGUI[14];
@@ -97,6 +97,7 @@ public class SlotData : MonoBehaviour
             }
             else
             {
+                horseAnimationHandlers[i].horseSO = tempSlotData;
                 foodDisplayObjects[i].SetActive(true);
                 foodDisplayObjects[i].GetComponentInChildren<FoodTypeReference>().FoodTypeRef = tempSlotData.data.horseFoodPreference;
                 foodImageObjects[i].sprite = tempSlotData.data.horseFoodPreference.foodSprite;
@@ -104,7 +105,7 @@ public class SlotData : MonoBehaviour
                 {
                     Debug.Log("Horse animation set in stables");
                     horseAnimationHandlers[i].horseAnimation = tempSlotData.data.horseAnimation;
-                    horseAnimationHandlers[i].Play(); 
+                    horseAnimationHandlers[i].Play();
                 }
                 int foodNumberToSet = FoodInventoryManager.Instance.GetFoodAmount(tempSlotData.data.horseFoodPreference);
                 foodNumberObjects[i].text = foodNumberToSet > 99 ? "99+" : foodNumberToSet.ToString();

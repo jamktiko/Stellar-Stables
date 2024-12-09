@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6365092372359187377, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
+      propertyPath: stableSlotItems.Array.size
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8744929613724384840, guid: b6267518b5ae4e349ab137bdae5b343c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1807,9 +1811,41 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 99
       objectReference: {fileID: 0}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2161158215940599575, guid: 61d096893c2506c479309bf485d1332a, type: 3}
       propertyPath: m_Name
       value: HorseCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059790972189969763, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6969174446183205429, guid: 61d096893c2506c479309bf485d1332a, type: 3}
       propertyPath: m_LocalPosition.x

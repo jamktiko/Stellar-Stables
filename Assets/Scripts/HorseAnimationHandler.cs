@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HorseAnimationHandler : MonoBehaviour
 {
-
+    public ItemObject horseSO;
     public HorseAnimationSO horseAnimation;
     [SerializeField] private Image horseImage;
     private bool isPlaying;
@@ -26,6 +26,8 @@ public class HorseAnimationHandler : MonoBehaviour
 
     public void Stop()
     {
+        horseSO = null;
+
         if (isPlaying)
         {
             isPlaying = false;
