@@ -1998,7 +1998,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!114 &636935729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,7 +2819,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!1 &930599504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,7 +4201,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!1001 &1254226227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5637,7 +5637,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!114 &1534658175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7164,7 +7164,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!1 &1761273620
 GameObject:
   m_ObjectHideFlags: 0
@@ -7667,7 +7667,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!1 &1790385035
 GameObject:
   m_ObjectHideFlags: 0
@@ -7801,7 +7801,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 1
 --- !u!114 &1790389849
 MonoBehaviour:
   m_ObjectHideFlags: 0

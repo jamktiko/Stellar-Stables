@@ -17,6 +17,7 @@ public class RandomAnimationDelay : MonoBehaviour
     }
     private void OnEnable()
     {
+        animator = GetComponent<Animator>();
         BeginAnimationLoop();
     }
     private void OnDisable()
