@@ -5,6 +5,8 @@ using UnityEngine;
 public class RandomAnimationDelay : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private string[] animTriggers;
+    [SerializeField] private bool playRandomTrigger;
     [SerializeField] private float minDelay = 1f;
     [SerializeField] private float maxDelay = 5f;
     private void Start()
@@ -15,6 +17,7 @@ public class RandomAnimationDelay : MonoBehaviour
     }
     private void OnEnable()
     {
+        animator = GetComponent<Animator>();
         BeginAnimationLoop();
     }
     private void OnDisable()
@@ -36,12 +39,28 @@ public class RandomAnimationDelay : MonoBehaviour
     private IEnumerator RepeatAnimation()
     {
         {
-            animator.SetTrigger("GetWiggling");
+            if (IsAnimationFinished())
+            {
+                if (!playRandomTrigger)
+                {
+                    animator.SetTrigger(animTriggers[0]);
+                }
+                else
+                {
+                    int randomTriggerIndex = Random.Range(0, animTriggers.Length);
+                    animator.SetTrigger(animTriggers[randomTriggerIndex]);
+                }
+            }
 
             float randomDelay = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(randomDelay);
 
             StartCoroutine(RepeatAnimation());
         }
+    }
+    private bool IsAnimationFinished()
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        return stateInfo.normalizedTime >= 1 && !animator.IsInTransition(0);
     }
 }

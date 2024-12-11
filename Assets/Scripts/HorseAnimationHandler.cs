@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class HorseAnimationHandler : MonoBehaviour
 {
-
     public HorseAnimationSO horseAnimation;
     [SerializeField] private Image horseImage;
     private bool isPlaying;

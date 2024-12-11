@@ -14,13 +14,14 @@ public class SlotData : MonoBehaviour
     [SerializeField] private ItemDatabaseObject horseDatabase;
     [SerializeField] private InventoryObject stablesInventory;
 
-    [SerializeField] private ItemObject[] stableSlotItems = new ItemObject[14];
+    public  ItemObject[] stableSlotItems = new ItemObject[16];
 
-    private UnityEngine.UI.Image[] foodImageObjects = new UnityEngine.UI.Image[14];
-    private TextMeshProUGUI[] foodNumberObjects = new TextMeshProUGUI[14];
-    private GameObject[] foodDisplayObjects = new GameObject[14];
-    private HorseAnimationHandler[] horseAnimationHandlers = new HorseAnimationHandler[14];
-
+    private UnityEngine.UI.Image[] foodImageObjects = new UnityEngine.UI.Image[16];
+    private TextMeshProUGUI[] foodNumberObjects = new TextMeshProUGUI[16];
+    private GameObject[] foodDisplayObjects = new GameObject[16];
+    private HorseAnimationHandler[] horseAnimationHandlers = new HorseAnimationHandler[16];
+    private HorseSFX[] horseSFXplayers = new HorseSFX[16];
+    private ItemObject tempSlotData;
     public void UpdateSlotData()
     {
 
@@ -74,6 +75,7 @@ public class SlotData : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
+            horseSFXplayers[i] = transform.GetChild(i).GetComponentInChildren<HorseSFX>();
             horseAnimationHandlers[i] = transform.GetChild(i).Find("ItemDisplay").gameObject.GetComponentInChildren<HorseAnimationHandler>();
             foodDisplayObjects[i] = transform.GetChild(i).Find("FoodDisplay").gameObject;
             foodImageObjects[i] = foodDisplayObjects[i].GetComponentInChildren<UnityEngine.UI.Image>();
@@ -86,9 +88,11 @@ public class SlotData : MonoBehaviour
 
         for (int i = 0; i < foodImageObjects.Length; i++)
         {
-            ItemObject tempSlotData = GetSlotData(i);
+            tempSlotData = GetSlotData(i);
+
             if (tempSlotData == null) 
             {
+                horseSFXplayers[i].horseSO = null;
                 horseAnimationHandlers[i].Stop();
                 foodImageObjects[i].sprite = null;
                 foodNumberObjects[i].text = "0";
@@ -97,6 +101,9 @@ public class SlotData : MonoBehaviour
             }
             else
             {
+                horseSFXplayers[i].horseSO = tempSlotData;
+                horseSFXplayers[i].audioClips = tempSlotData.data.horseSFXClips;
+
                 foodDisplayObjects[i].SetActive(true);
                 foodDisplayObjects[i].GetComponentInChildren<FoodTypeReference>().FoodTypeRef = tempSlotData.data.horseFoodPreference;
                 foodImageObjects[i].sprite = tempSlotData.data.horseFoodPreference.foodSprite;
@@ -104,7 +111,7 @@ public class SlotData : MonoBehaviour
                 {
                     Debug.Log("Horse animation set in stables");
                     horseAnimationHandlers[i].horseAnimation = tempSlotData.data.horseAnimation;
-                    horseAnimationHandlers[i].Play(); 
+                    horseAnimationHandlers[i].Play();
                 }
                 int foodNumberToSet = FoodInventoryManager.Instance.GetFoodAmount(tempSlotData.data.horseFoodPreference);
                 foodNumberObjects[i].text = foodNumberToSet > 99 ? "99+" : foodNumberToSet.ToString();
