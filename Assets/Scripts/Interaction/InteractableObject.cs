@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class InteractableObject : MonoBehaviour
 
                 if (conditionsMet)
                 {
-                    CheckSucceeded();
+                    if (!pair.isRepeatable)
+                    {
+                        DisableButton();
+                    }
 
                     if (deleteButtonOnCompletion)
                     {
@@ -41,8 +45,11 @@ public class InteractableObject : MonoBehaviour
     {
         //Debug.Log("Check failed.");
     }
-    public void CheckSucceeded()
+    public void DisableButton()
     {
+        Button button = GetComponent<Button>();
+        Destroy(button);
+
         //Debug.Log("Check success!");
     }
 }

@@ -2062,11 +2062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -67.250244
+      value: 288
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -126.82947
+      value: -181
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2297,7 +2297,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &561905353
 RectTransform:
@@ -2588,11 +2588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3058345506436435980, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -204
+      value: -172
       objectReference: {fileID: 0}
     - target: {fileID: 3058345506436435980, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -552
+      value: -478
       objectReference: {fileID: 0}
     - target: {fileID: 3058345506436435980, guid: 14ddb0565d1a6d144a7ef74d0546faf5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4517,11 +4517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145.25024
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -55.829468
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4658,11 +4658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -191.25024
+      value: -141
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -182.82947
+      value: -109
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7440,11 +7440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -534.25024
+      value: -430
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85.82947
+      value: -57
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8806,11 +8806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -330.25024
+      value: -295
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -146.82947
+      value: -88
       objectReference: {fileID: 0}
     - target: {fileID: 5621190018465441128, guid: 04d0a6bf0c7a29d47a762622e75ce043, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
