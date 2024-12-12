@@ -2052,7 +2052,7 @@ MonoBehaviour:
     results:
     - {fileID: 636935720}
     isRepeatable: 0
-    deleteButtonOnCompletion: 1
+    deleteButtonOnCompletion: 0
     hasBeenCompleted: 0
 --- !u!114 &636935722
 MonoBehaviour:
@@ -2898,7 +2898,7 @@ MonoBehaviour:
     results:
     - {fileID: 929661524}
     isRepeatable: 0
-    deleteButtonOnCompletion: 1
+    deleteButtonOnCompletion: 0
     hasBeenCompleted: 0
 --- !u!114 &929661526
 MonoBehaviour:
@@ -3451,8 +3451,8 @@ RectTransform:
   m_GameObject: {fileID: 1063288343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 11668074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3696,7 +3696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3826,7 +3826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4281,7 +4281,7 @@ MonoBehaviour:
     results:
     - {fileID: 1234224551}
     isRepeatable: 0
-    deleteButtonOnCompletion: 1
+    deleteButtonOnCompletion: 0
     hasBeenCompleted: 0
 --- !u!114 &1234224553
 MonoBehaviour:
@@ -5392,7 +5392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5486,8 +5486,8 @@ RectTransform:
   m_GameObject: {fileID: 1533971920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 11668074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5731,7 +5731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5914,8 +5914,8 @@ RectTransform:
   m_GameObject: {fileID: 1542430560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 11668074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6138,7 +6138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6329,8 +6329,8 @@ RectTransform:
   m_GameObject: {fileID: 1606732839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 11668074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6574,7 +6574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6790,7 +6790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7244,7 +7244,7 @@ MonoBehaviour:
     results:
     - {fileID: 1737574313}
     isRepeatable: 0
-    deleteButtonOnCompletion: 1
+    deleteButtonOnCompletion: 0
     hasBeenCompleted: 0
 --- !u!114 &1737574315
 MonoBehaviour:
@@ -7747,7 +7747,7 @@ MonoBehaviour:
     results:
     - {fileID: 1784954402}
     isRepeatable: 0
-    deleteButtonOnCompletion: 1
+    deleteButtonOnCompletion: 0
     hasBeenCompleted: 0
 --- !u!114 &1784954404
 MonoBehaviour:
@@ -8368,7 +8368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f80e1ee20f88ed488a25ae9d3045472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cee4b00a3b96b8442a8266fdae2d0133, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

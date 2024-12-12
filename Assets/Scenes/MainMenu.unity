@@ -1811,6 +1811,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 99
       objectReference: {fileID: 0}
+    - target: {fileID: 865594805680480715, guid: 61d096893c2506c479309bf485d1332a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1883692584262245091, guid: 61d096893c2506c479309bf485d1332a, type: 3}
       propertyPath: m_fontAsset
       value: 
