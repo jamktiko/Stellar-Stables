@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HappinessTextUpdate : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI happinessText;
+    [SerializeField] private Image barImage;
 
     private void OnEnable()
     {
@@ -22,7 +24,9 @@ public class HappinessTextUpdate : MonoBehaviour
 
     private void UpdateFoodStat()
     {
-        happinessText.text = "Stables Overall Happiness:    " + StableHappinessManager.Instance.GetHappiness() + "%";
+        happinessText.text = "Happiness:    " + StableHappinessManager.Instance.GetHappiness() + "%";
+        float happiness = StableHappinessManager.Instance.GetHappiness() / 100f;
+        barImage.fillAmount = happiness;
     }
 
 }
